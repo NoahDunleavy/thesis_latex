@@ -1,0 +1,150 @@
+%Warnings to suppress
+
+%This is the header page table of contents, etc
+\documentclass[12pt,american]{report}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}   %image imports
+\graphicspath{{C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/}}
+\usepackage{geometry} %to set page margins
+\geometry{verbose,letterpaper,tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1in} %% sets paper size and margins
+\usepackage{subcaption} %enable sub captioning
+\usepackage{hyperref}   %to be able to click references on pdf 
+\usepackage{amsmath}    %represent text as math
+\usepackage[font=scriptsize,labelfont=bf]{caption}   %see font sizes, families, and styles doc for options
+\captionsetup{justification=centering}
+\usepackage{placeins} %for floatbarrier - forces images before next section starts
+\usepackage{matlab-prettifier}  %matlab code coloring
+\usepackage[acronym]{glossaries}
+\makeglossaries%
+\usepackage{xcolor} %todo flag text
+\usepackage[dvipsnames]{xcolor} %more colors
+\newcommand\myworries[1]{\textcolor{red}{#1}}
+\usepackage{setspace}
+%\singlespacing        %% 1-spacing (default)
+%\onehalfspacing       %% 1,5-spacing
+%\doublespacing        %% 2-spacing
+
+%Set Matlab code format
+%[frame=single, numbers=left, style=Matlab-Pyglike]
+\lstset{
+    language=Matlab, %self explanatory
+    basicstyle=\ttfamily\small, %monospaced typewriter, small font 
+    keywordstyle=\color{blue}, %words like 'for' and 'end'
+    commentstyle=\color{green!50!black}, %dark green
+    stringstyle=\color{magenta}, %try to match matlab
+    breaklines=true, %auto split code lines that are long
+    breakatwhitespace=true, %only split at spaces
+    columns=fullflexible,
+    breakautoindent=false,
+    frame=single, %draw a frame around the code (could do none, leftline, etc, or shadowbox)
+    framerule=0.2mm,             %thin frame
+    backgroundcolor=\color{white}, %background color for the code block
+    numbers=left, %number lines
+    stepnumber=1, %frequency of line numbering
+    numberstyle=\small\color{gray}, %line number style
+    captionpos=b, %if we caption code, where to label itshowstringspaces=false
+    showstringspaces=false %hide string spaces for cleaner
+}
+
+\pagestyle{plain}      %% select plain page style: no headers, page numbers center bottom
+
+\setcounter{tocdepth}{4}  %subsubsections + paragraphs
+
+%Make axronyms
+\newacronym{rl}{RL}{Reinforcement Learning}
+\newacronym{lqr}{LQR}{Linear Quadratic Regulator}
+\newacronym{zoh}{ZOH}{Zero-Order Hold}
+
+
+\begin{document}
+
+\pagenumbering{roman}        %% roman page numbers for front matter
+
+\renewcommand\thepage{}
+\include{TitlePage}
+\newpage
+% a blank page follows the title page, this page is not numbered
+\mbox{}
+\newpage
+
+\renewcommand\thepage{\arabic{page}}
+\pagenumbering{roman}        %% roman page numbers for front matterstarting with page ii
+\setcounter{page}{2}
+
+\doublespacing%              %% set spacing to double
+
+\include{Abstract}
+\include{Acknowledgements}
+
+\singlespacing%
+\tableofcontents             %% include TOC
+\listoffigures               %% include list of figures
+\addcontentsline{toc}{chapter}{List of Figures} 
+\include{List of Acronyms and Variable Names}
+\cleardoublepage%             %% start new page
+
+\pagenumbering{arabic}       %% arabic page numbers for body of text starting with page 1
+
+\doublespacing%
+%\include{Introduction}
+
+
+\chapter{Introduction}
+\include{Background}
+\chapter{Methods and Experimentation}
+\include{Reinforcement Learning on Iterative Learning Control}
+\include{Basis Functions}
+\include{Conjugate Basis}
+\chapter{Results}
+\include{Conjugate Basis on RL}
+\chapter{Summary}
+\include{Summary Results}
+\chapter{Recommendations for Future Work}
+\include{Future Work}
+
+\appendix
+\chapter{Matlab Code}
+\section{Simulations and Examples}
+\include{Matlab Code/Background Code}
+\include{Matlab Code/Basis Functions Code}
+\include{Matlab Code/Background Code}
+\include{Matlab Code/Derive and Demo Conjugates}
+\include{Matlab Code/RL on ILC Code}
+\section{Functions}
+\include{Matlab Code/Controllability Check}
+\include{Matlab Code/Decoupled Learning for Iterative Learning Control}
+\include{Matlab Code/Default Figure Properties}
+\include{Matlab Code/Discounted LQR Solution}
+\include{Matlab Code/Draw a Goal}
+\include{Matlab Code/Figure Saving}
+\include{Matlab Code/Generate Chebyshev Polynomials}
+\include{Matlab Code/Generate Conjugate Basis Functions}
+\include{Matlab Code/Generate Iterative Conjugates}
+\include{Matlab Code/ILC Simulation}
+\include{Matlab Code/P Matrix from ABCD}
+\include{Matlab Code/Plot Basis Coefficients}
+\include{Matlab Code/Plot Controller History}
+\include{Matlab Code/Plot Dual Mass}
+\include{Matlab Code/Plot ILC}
+\include{Matlab Code/Policy Learning for Iterative Learning Control}
+\include{Matlab Code/Random Range}
+\include{Matlab Code/Render Poles}
+
+\singlespacing%
+
+% \chapter{Methods and Experimentation}
+% \include{Reinforcement Learning on Iterative Learning Control}
+% \include{Basis Functions}
+% \include{Linear Quadratic Learning and Conjugate Basis Functions}
+% \include{Reinforcement Learning in the Conjugate Basis Space}
+% \chapter{Results}
+% \chapter{Discussion}
+% \chapter{Conclusion}
+% 
+% \chapter{Appendices}
+% 
+% \chapter{References}
+
+\end{document}

@@ -1,0 +1,145 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Dual Spring-Mass-Damper System}}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Continuous Model Open-loop Simulation Mass 1 Position}}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Continuous Model Open-loop Simulation Mass 2 Position}}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Discrete Model Open-loop Simulation Mass 1 Position}}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Discrete Model Open-loop Simulation Mass 2 Position}}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Zoomed in Discrete over Continuous Model Open-loop Simulation of Mass 1 Position}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Zoomed in Discrete over Continuous Model Open-loop Simulation of Mass 2 Position}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Simple Pole Placement Locations}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Mass 1 Position with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Mass 2 Position with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Input 1 Magnitude with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Input 2 Magnitude with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Deadbeat Pole Placement Locations}}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Mass 1 Position with a Deadbeat Controller}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Mass 2 Position with a Deadbeat Controller}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Input 1 Magnitude with a Deadbeat Controller}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Input 2 Magnitude with a Deadbeat Controller}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Illustration of Principle of Optimality}}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Pole Locations of a Q/R = 100 LQR Controller on our Spring-Mass System}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Mass 1 Position with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Mass 2 Position with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Input 1 Magnitude with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Input 2 Magnitude with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Pole Locations of a Q/R = 10 LQR Controller on our Spring-Mass System}}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Mass 1 Position with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.26}{\ignorespaces Mass 2 Position with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.27}{\ignorespaces Input 1 Magnitude with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.28}{\ignorespaces Input 2 Magnitude with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.29}{\ignorespaces Simple ILC Controller Error Progression}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.30}{\ignorespaces Mass 1 Position Sequence over select Trials}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.31}{\ignorespaces Mass 2 Position Sequence over select Trials}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.32}{\ignorespaces Input 1 Magnitude Sequence over select Trials}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.33}{\ignorespaces Input 2 Magnitude Sequence over select Trials}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.34}{\ignorespaces Simple ILC Controller Progression to draw a Circle}}{30}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.35}{\ignorespaces Simple ILC Controller learning `Dartmouth'}}{31}{figure.caption.22}%
+\contentsline {figure}{\numberline {1.36}{\ignorespaces Mass 1 Position Sequence over select Trials learning `Dartmouth'}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.37}{\ignorespaces Mass 2 Position Sequence over select Trials learning `Dartmouth'}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.38}{\ignorespaces Mass 1 Position through Policy Iteration Trials}}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.39}{\ignorespaces Mass 2 Position through Policy Iteration Trials}}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.40}{\ignorespaces Input 1 Magnitude through Policy Iteration Trials}}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.41}{\ignorespaces Input 2 Magnitude through Policy Iteration Trials}}{45}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.42}{\ignorespaces Input 1 Controller Weights through Policy Iteration Trials}}{46}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.43}{\ignorespaces Input 2 Controller Weights through Policy Iteration Trials}}{46}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.44}{\ignorespaces Mass 1 Position through Input Decoupling Trials}}{51}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.45}{\ignorespaces Mass 2 Position through Input Decoupling Trials}}{51}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.46}{\ignorespaces Input 1 Magnitude through Input Decoupling Trials}}{51}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.47}{\ignorespaces Input 2 Magnitude through Input Decoupling Trials}}{51}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.48}{\ignorespaces Input 1 Controller Weights through Input Decoupling Trials}}{52}{figure.caption.34}%
+\contentsline {figure}{\numberline {1.49}{\ignorespaces Input 2 Controller Weights through Input Decoupling Trials}}{52}{figure.caption.34}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Select Controller Weights on Input 1 through Policy Iteration Trials}}{58}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Select Controller Weights on Input 7 through Policy Iteration Trials}}{58}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Select Controller Weights on Input 13 through Policy Iteration Trials}}{58}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Select Controller Weights on Input 20 through Policy Iteration Trials}}{58}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Error Magnitude of Output through Policy Iteration Trials}}{58}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Mass 1 Positions through Policy Iteration Iterations}}{59}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Mass 2 Positions through Policy Iteration Iterations}}{59}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Input 1 Magnitudes through Policy Iteration Iterations}}{59}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Input 2 Magnitudes through Policy Iteration Iterations}}{59}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Shaped Output through Policy Iteration Trials}}{60}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Select Controller Weights on Input 1 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Select Controller Weights on Input 7 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Select Controller Weights on Input 13 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Select Controller Weights on Input 20 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Error Magnitude of Output through Policy Iteration Trials with Reduced R}}{63}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Mass 1 Positions through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Mass 2 Positions through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Input 1 Magnitudes through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Input 2 Magnitudes through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Shaped Output through Policy Iteration Trials with Reduced R}}{65}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Select Controller Weights on Input 1 through Input Decoupling Trials}}{68}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Select Controller Weights on Input 7 through Input Decoupling Trials}}{68}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Select Controller Weights on Input 13 through Input Decoupling Trials}}{68}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Select Controller Weights on Input 20 through Input Decoupling Trials}}{68}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Error Magnitude of Output through Input Decoupling Trials}}{69}{figure.caption.49}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Mass 1 Positions through Input Decoupling Trials}}{69}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Mass 2 Positions through Input Decoupling Trials}}{69}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Input 1 Magnitudes through Input Decoupling Trials}}{69}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Input 2 Magnitudes through Input Decoupling Trials}}{69}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Shaped Output through Input Decoupling Trials}}{70}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Select Chebyshev Polynomials}}{75}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Example Signal constructed from Chebyshev Polynomials and Weights}}{76}{figure.caption.54}%
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Example Chebyshev Weights to Generate Signal in Fig.~\ref {fig:example_cheby_signal}}}{77}{figure.caption.55}%
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Input 1 - explicitly constructed from basis functions to be in $\Phi _u$}}{82}{figure.caption.60}%
+\contentsline {figure}{\numberline {2.35}{\ignorespaces Input 2 - explicitly constructed from basis functions to be in $\Phi _u$}}{83}{figure.caption.61}%
+\contentsline {figure}{\numberline {2.36}{\ignorespaces Output 1 - True $\underline {y}^\ast $ and goal constructed from $\alpha ^\ast $}}{84}{figure.caption.64}%
+\contentsline {figure}{\numberline {2.37}{\ignorespaces Output 2 - True $\underline {y}^\ast $ and goal constructed from $\alpha ^\ast $}}{85}{figure.caption.65}%
+\contentsline {figure}{\numberline {2.38}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{86}{figure.caption.66}%
+\contentsline {figure}{\numberline {2.39}{\ignorespaces Progression of $e_\beta $ through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{86}{figure.caption.67}%
+\contentsline {figure}{\numberline {2.40}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{87}{figure.caption.68}%
+\contentsline {figure}{\numberline {2.41}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{87}{figure.caption.69}%
+\contentsline {figure}{\numberline {2.42}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{88}{figure.caption.70}%
+\contentsline {figure}{\numberline {2.43}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{88}{figure.caption.71}%
+\contentsline {figure}{\numberline {2.44}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{89}{figure.caption.72}%
+\contentsline {figure}{\numberline {2.45}{\ignorespaces Output 1 - explicitly constructed from basis functions to be in $\Phi _y$}}{91}{figure.caption.74}%
+\contentsline {figure}{\numberline {2.46}{\ignorespaces Output 2 - explicitly constructed from basis functions to be in $\Phi _y$}}{91}{figure.caption.75}%
+\contentsline {figure}{\numberline {2.47}{\ignorespaces Input 1 - True $\underline {u}^\ast $ and goal constructed from $\beta ^\ast $}}{93}{figure.caption.78}%
+\contentsline {figure}{\numberline {2.48}{\ignorespaces Input 2 - True $\underline {y}^\ast $ and goal constructed from $\beta ^\ast $}}{93}{figure.caption.79}%
+\contentsline {figure}{\numberline {2.49}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{94}{figure.caption.80}%
+\contentsline {figure}{\numberline {2.50}{\ignorespaces Progression of $e$ through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{95}{figure.caption.81}%
+\contentsline {figure}{\numberline {2.51}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{95}{figure.caption.82}%
+\contentsline {figure}{\numberline {2.52}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{96}{figure.caption.83}%
+\contentsline {figure}{\numberline {2.53}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{96}{figure.caption.84}%
+\contentsline {figure}{\numberline {2.54}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{97}{figure.caption.85}%
+\contentsline {figure}{\numberline {2.55}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{98}{figure.caption.86}%
+\contentsline {figure}{\numberline {2.56}{\ignorespaces Output 1 - Goal for $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{100}{figure.caption.89}%
+\contentsline {figure}{\numberline {2.57}{\ignorespaces Output 2 - Goal for $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{101}{figure.caption.90}%
+\contentsline {figure}{\numberline {2.58}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{101}{figure.caption.91}%
+\contentsline {figure}{\numberline {2.59}{\ignorespaces Progression of $e_\beta $ through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{102}{figure.caption.92}%
+\contentsline {figure}{\numberline {2.60}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{102}{figure.caption.93}%
+\contentsline {figure}{\numberline {2.61}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{103}{figure.caption.94}%
+\contentsline {figure}{\numberline {2.62}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{103}{figure.caption.95}%
+\contentsline {figure}{\numberline {2.63}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{104}{figure.caption.96}%
+\contentsline {figure}{\numberline {2.64}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{105}{figure.caption.97}%
+\contentsline {figure}{\numberline {2.65}{\ignorespaces Input 1 - Goal for $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{106}{figure.caption.99}%
+\contentsline {figure}{\numberline {2.66}{\ignorespaces Input 2 - Goal for $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{107}{figure.caption.100}%
+\contentsline {figure}{\numberline {2.67}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{107}{figure.caption.101}%
+\contentsline {figure}{\numberline {2.68}{\ignorespaces Progression of $e_\beta $ through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{108}{figure.caption.102}%
+\contentsline {figure}{\numberline {2.69}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{108}{figure.caption.103}%
+\contentsline {figure}{\numberline {2.70}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{109}{figure.caption.104}%
+\contentsline {figure}{\numberline {2.71}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{109}{figure.caption.105}%
+\contentsline {figure}{\numberline {2.72}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{110}{figure.caption.106}%
+\contentsline {figure}{\numberline {2.73}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{111}{figure.caption.107}%
+\contentsline {figure}{\numberline {2.74}{\ignorespaces Progression of $e_\alpha $ through rolling basis space episodes}}{115}{figure.caption.111}%
+\contentsline {figure}{\numberline {2.75}{\ignorespaces Progression of $e$ through rolling basis space episodes}}{116}{figure.caption.112}%
+\contentsline {figure}{\numberline {2.76}{\ignorespaces Progression of $\underline {u}_1$ through rolling basis space episodes}}{116}{figure.caption.113}%
+\contentsline {figure}{\numberline {2.77}{\ignorespaces Progression of $\underline {u}_2$ through rolling basis space episodes}}{117}{figure.caption.114}%
+\contentsline {figure}{\numberline {2.78}{\ignorespaces Progression of shaped outputs through rolling basis space episodes}}{118}{figure.caption.115}%
+\contentsline {figure}{\numberline {2.79}{\ignorespaces Progression of $\beta $ through rolling basis space episodes}}{119}{figure.caption.116}%
+\contentsline {figure}{\numberline {2.80}{\ignorespaces Output Generated from Batch Generated Basis Space $\Phi $ with weights $\beta ^\ast $ overlaid on the Goal Output}}{130}{figure.caption.121}%
+\contentsline {figure}{\numberline {2.81}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 1$ overlaid on the Goal Output}}{137}{figure.caption.124}%
+\contentsline {figure}{\numberline {2.82}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 3$ overlaid on the Goal Output}}{137}{figure.caption.125}%
+\contentsline {figure}{\numberline {2.83}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 10$ overlaid on the Goal Output}}{138}{figure.caption.126}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Error Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}}{144}{figure.caption.130}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Shaped Output Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}}{145}{figure.caption.131}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs}}{149}{figure.caption.135}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Shaped Output Progression through Application of a Final Controller Learned One Basis at a Time}}{150}{figure.caption.136}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Error Progression through Policy Learning ILC Trials with Scaled COnjugate Output Basis}}{153}{figure.caption.139}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs and $\Phi _y = \underline {y}^\ast $}}{154}{figure.caption.141}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs and outputs}}{157}{figure.caption.144}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,19 @@
+%Warnings to suppress (manually decide for each file)
+
+\FloatBarrier%
+Reinforcement Learning offers a powerful way to determine the Optimal Linear Quadratic Regulator Controller for a system, without any information on the system model. It's functionality translates well into the Iterative Learning Control problem, but the very formulation of ILC cripples the usefulness of RL techniques. A $p$ step process will take our number of states ($n$) and inputs ($r$) to learn and scale them to $n_{ILC} = pn$ and $r_{ILC} = pr$, respectively. This exponentially increases the number of trials needed for any RL technique to learn.
+
+To reverse this increase in dimensions, we explored the realm of basis spaces. The presented a path to infinitely reduce the dimensions of a given problem. For our ILC problem, it did not necessarily matter that our goal $\underline{y}^\ast$ was capture, but we had to be able to properly generate our $\underline{u}^\ast$. Additionally, we showed that we cannot accurately create more rich enough control data when we have less error data coming in. As such, the conditions on basis spaces were found to be
+\begin{equation}
+    \underline{u}^\ast \in \Phi_u
+    \qquad
+    \eta_u \leq \eta_y
+\end{equation}
+
+Under these conditions, we were practically no better off than we started. The only way to guarantee $\underline{u}^\ast \in \Phi_u$ was to define a full rank input basis space. Any attempt to start small and grow additionally made learning inefficient, as previously learned functions could be weighted differently to obtain optimality in the presence of other functions. The fact that independent inputs could lead to related outputs on the system forced us to take a different approach if we wished the grow a basis space. Enter conjugate basis functions.
+
+Conjugate basis functions behave just as basis functions do, but they are specifically designed for a system and its costs. A conjugate basis function is defined such that its presence in a given basis space of other similarly-conjugate functions does not affect the optimality of learned weights on the others. This feature enables us to learn a controller in RL with respect to a finite number of basis functions at a time, and then grow those basis functions without having to relearn what was already found.
+
+Even while learning and expanding the basis space describing the system, the RL problem can be applied in reduced dimensions without compromising the optimality of previous controllers.
+
+In the process of solving for conjugate basis functions, we can also find the optimal weighting for them. This means for a controllerless ILC problem, we can approach learning $\underline{u}^\ast$ from two directions at once. The conjugate approach offers a way to learn the $\underline{u}^\ast$ in a discrete number of steps, while the basis functions $\phi$ generated in the process can be used to learn a controller. This two-pronged approach means that even if we end up needing $r_{ILC}$ basis functions to capture our $\underline{u}^\ast$, we can find that in a definite number of trials. Then both while finding this $\underline{u}^\ast$ and after it has been found, we can learn the controller to keep it there should new disturbances or errors be introduced.

@@ -1,0 +1,524 @@
+%Warnings to suppress (manually decide for each file)
+% chktex-file 8 %suppress warning about dash lengths
+% chktex-file 36 %suppress warning about spaces and ()
+
+\FloatBarrier\section{Conjugate Basis Functions}
+~\label{sec:conjugate_basis_functions}
+\myworries{Check the derivation where we use $e_{j-1}$ as opposed to y-w like in paper}
+Since the major challenge to being able to dynamically select our input basis functions is their ability to produce similar outputs, we then want to find a set of inputs which produce independent (or orthogonal) outputs on a system. The framework for this exists in \myworries{Frueh and Phan 2000: LQL}
+
+\FloatBarrier\subsection{What are Conjugate Basis Functions}
+Conjugate Basis Functions are a special case of Basis Functions, defined for a system and cost. Whereas before we had functions that only had to be independent of each other, now the functions must be independent in the output the produce and the cost they incur. 
+
+Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions}~\ref{sub:what_are_basis}, and then some. As \myworries{Frueh and Phan} describe in their paper on `Linear Quadratic Optimal Learning Control' (LQL), the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
+
+Suppose we have $e$ episodes worth of data, and we run one more episode to improve our $\Phi$ and $\beta$. The properties of LQL dictate that
+\begin{equation}
+    \Phi^{e+1} = \begin{bmatrix}
+        \Phi^e & \phi_{e+1}
+    \end{bmatrix}
+    \quad\quad
+    \beta^{e+1} = \begin{bmatrix}
+        \beta^e \\ \beta_{e+1}
+    \end{bmatrix}
+    \label{eq:conjugate_subspace}
+\end{equation}
+See that if $\underline{u}^e$ was the optimal input for $\Phi^e$, then $\underline{u}^{e+1}$ will be optimal for $\Phi^{e+1}$ and
+\begin{equation}
+    \underline{u}^{e+1} = \underline{u}^e + \phi_{e+1}\beta_{e+1}
+\end{equation}
+such that our pre-existing optimal input components do not change from the addition of a new basis function. 
+
+\FloatBarrier\subsection{Deriving Conjugate Basis Functions}
+To derive our Conjugate Basis Functions, we must first define a cost function. Recall we want to send our error $e$ to zero via control of $\delta\underline{u}$. In the converged ILC state, both $e$ and $\delta\underline{u}$ are 0. We will define our cost-per-episode the same way we defined our utility function for the ILC problem in Eq.~\ref{eq:ilc_utility}, except expressing it as $J$ instead of $U_j$
+\begin{equation}
+    J = {\delta_j \underline{u}}^T R {\delta_j \underline{u}} + {e_j}^T Q {e_j}
+    \label{eq:conjugate_cost}
+\end{equation}
+where $R$ is some $r_{ILC} \times r_{ILC}$ cost matrix, and $Q$ a $n_{ILC} \times n_{ILC}$ one.
+
+We want to find a $\delta_j \beta$ then to minimize this cost function, as with all our previous controls. We begin with the following relationships \myworries{Show the whole process in an appendix}
+\begin{equation}
+    \begin{split}
+        \delta_j \underline{u} &= \Phi(\beta_{j-1} + \delta_j \beta) \\
+        e_j &= e_{j-1} - P \delta_j \underline{u}
+    \end{split}
+\end{equation}
+and substitute them into Eq.~\ref{eq:conjugate_cost}
+\begin{equation}
+    J = {\left(\Phi(\beta_{j-1} + \delta_j \beta)\right)}^T R {\left(\Phi(\beta_{j-1} + \delta_j \beta)\right)} + {\left(e_{j-1} - P \delta_j \underline{u}\right)}^T Q {\left(e_{j-1} - P \delta_j \underline{u}\right)}
+    \label{eq:conjugate_cost_in_beta}
+\end{equation}
+
+For reasons that will be seen shortly, as well as in the efforts of minimizing page space, we will define matrices $R_b$ and $\mathcal{C}$
+\begin{equation}
+    R_b = \Phi^T R \Phi
+\end{equation}
+\begin{equation}
+    \mathcal{C} = R_b + \Phi^T P^T Q P \Phi
+    \label{eq:conjuct_setup_matrix}
+\end{equation}
+
+By setting $\frac{\partial J}{\partial \delta_j \beta} = 0$, we can solve for the $\delta_j \beta$ which minimizes our cost function as
+\begin{equation}
+    \begin{split}
+        \delta_j \beta &= {(-2\mathcal{C})}^{-1} {2\mathcal{C}}\beta_{j-1} + {(2\mathcal{C})}^{-1}2\Phi^T P^T Qe_{j-1} \\
+        &=-\beta_{j-1} + {\mathcal{C}}^{-1}\Phi^T P^T Q e_{j-1}
+    \end{split}
+\end{equation}
+
+By the definition of the $\delta$ operator, we can write
+\begin{equation}
+    \beta_j = {\mathcal{C}}^{-1}\Phi^T P^T Q e_{j-1}
+    \label{eq:beta_j_with_conjunct}
+\end{equation}
+
+We will make one final step to simplify future logic, and that is assume every attempt is a deadbeat attempt. Meaning $j=1$ always. This enables us to substitute $e_{j=1}$ as our open loop error, and do away with episodic $\beta$ notation:
+\begin{equation}
+    \beta = {\mathcal{C}}^{-1}\Phi^T P^T Q (\underline{y}^\ast - \underline{d})
+    \label{eq:beta_j_with_conjunct_e_0}
+\end{equation}
+where $\underline{d}$ can be collected from an open-loop response ($\underline{u} = 0$.)
+
+
+Suppose we set $\eta = 2$. Our basis space $\Phi$ would then have 2 functions $\phi$ and we would have 2 $\beta$s:
+\begin{equation}
+    \Phi = \begin{bmatrix}\phi_1 & \phi_2 \end{bmatrix}
+\end{equation}
+\begin{equation}
+    \beta = 
+    \begin{bmatrix}
+        \beta_1 \\ \beta_2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \mathcal{C}_1^{-1} \phi_1^T P^T Q e_{j-1} \\
+        \mathcal{C}_2^{-1}\phi_2^T P^T Q e_{j-1}
+    \end{bmatrix}
+\end{equation}
+where $\mathcal{C}_1$ and $\mathcal{C}_2$ are rows 1 and 2 of $\mathcal{C}$
+
+We would like it that if we expanded $\Phi$ to include $\phi_3$, that $\beta_3$ would be generated without impacting $\beta_1$ and $\beta_2$ -- as by the goal property of conjugate basis functions shown in Eq.~\ref{eq:conjugate_subspace}. Yet $\mathcal{C}$ is a function of $\Phi$ so we run the risk of our previous $\beta$s changing when $\Phi$ changes - that is unless $\mathcal{C}$ is somehow defined to behave as a constant.
+
+This brings us to our `conjunctionality condition':
+\begin{equation}
+    \mathcal{C} = I_{\eta \times \eta}
+\end{equation}
+which when written in terms of our basis space $\Phi$
+\begin{equation}
+    \Phi^T \left(R + P^T QP\right) \Phi = I_{\eta \times \eta}
+    \label{eq:conjuct_cond_I}
+\end{equation}
+or if explicitly written by $\phi_i$
+\begin{equation}
+    \phi_i^T \left(R + P^T QP\right) \phi_j =
+    \begin{Bmatrix}
+        0,\ i \neq j \\
+        1,\ i = j
+    \end{Bmatrix}
+\end{equation}
+
+So long as the condition in Eq.~\ref{eq:conjuct_cond_I} is met, we can create $\beta$s which solely depend on their associated $\phi$, are optimal to minimize our cost function~\ref{eq:conjugate_cost}, and do not impact the optimality of other $\phi_i \beta_i$ inputs as we previously saw in~\ref{sub:dynamic_arb_basis}.
+\begin{equation}
+    \beta_i = \phi_i^T P Q (\underline{y}^\ast - \underline{d})
+    \label{eq:optimal_beta_lql}
+\end{equation}
+
+\FloatBarrier\subsection{Extracting Conjugate Basis Functions}
+The issue we face now is we do not know $P$, so we must derive a method to extract $\beta$. We of course need a collection of input-output data, which is easily collected. We can more easily show the underlying logic with the batch approach, then we will explore a more computationally and logically efficient iterative approach.
+
+\FloatBarrier\subsubsection{The Batch Approach}
+Suppose we have a collection of episodic data for both input $\underline{u}_i^e$ and their associated output $\underline{y}_i^e$ where $i = 0, 1, \dots b$ and $b$ is the number of conjugate basis functions to generate. We can apply our $\delta$ operator to this data set to produce $\delta_1 \underline{u}^e,\ \delta_2 \underline{u}^e,\ \dots,\ \delta_b \underline{u}^e$ and the same sequence for our outputs. We will define the batch notation ${\left[{x}^e\right]}_b$
+\begin{equation}
+    {\left[{x}^e\right]}_b  = \left[{x}_1^e,\ {x}_2^e,\ \dots, {x}_b^e\right]
+\end{equation}
+so that ${\left[\delta\underline{u}^e\right]}_b$ is all the changes in our episodes inputs, and ${\left[\delta\underline{y}^e\right]}_b$ the change in outputs. We can apply this delta-batch operation to Eq.~\ref{eq:y_Pu_d} to show:
+\begin{equation}
+    {\left[\delta\underline{y}^e\right]}_b = P {\left[\delta\underline{u}^e\right]}_b
+    \label{eq:del_y_batch_P_del_u_batch}
+\end{equation}
+As with all earlier examples, the $\delta$ operator removes the existence of a $\underline{d}$ term.
+
+We now want to find conjugate functions spanned by our inputs ${\left[\delta\underline{u}^e\right]}_b$ in our conjugate space $\Phi$. That is:
+\begin{equation}
+    {\left[\delta\underline{u}^e\right]}_b = \Phi {\left[\rho\right]}_b
+    \label{eq:inputs_to_conj_map}
+\end{equation}
+We create matrix \textbf{W} from this delta-batch data
+\begin{equation}
+        \textbf{W} = {{\left[\delta\underline{u}^e\right]}_b^T} R {\left[\delta\underline{u}^e\right]}_b + {{\left[\delta\underline{y}^e\right]}_b^T} Q {\left[\delta\underline{y}^e\right]}_b
+\end{equation}
+substituting in Eq.~\ref{eq:del_y_batch_P_del_u_batch} and Eq.~\ref{eq:inputs_to_conj_map}
+\begin{equation}
+    \begin{split}
+        \textbf{W} &= {{\left[\delta\underline{u}^e\right]}_b^T} R {\left[\delta\underline{u}^e\right]}_b + {(P {\left[\delta\underline{u}^e\right]}_b^T)} Q P {\left[\delta\underline{u}^e\right]}_b \\
+        &= {{\left[\delta\underline{u}^e\right]}_b^T} R {\left[\delta\underline{u}^e\right]}_b +  {{\left[\delta\underline{u}^e\right]}_b^T} P^T Q P {\left[\delta\underline{u}^e\right]}_b \\
+        &= {{\left[\delta\underline{u}^e\right]}_b^T} \left(R + P^T Q P\right) {\left[\delta\underline{u}^e\right]}_b \\
+        &= {{\left[\rho\right]}_b^T} \Phi^T \left(R + P^T Q P\right) \Phi {\left[\rho\right]}_b \\
+        &= {{\left[\rho\right]}_b^T} {{\left[\rho\right]}_b}
+    \end{split}
+    \label{eq:w_for_batch}
+\end{equation}
+The final step can be made due to our conjunctionality condition of $\Phi^T \left(R + P^T Q P\right) \Phi = I$ from Eq.~\ref{eq:conjuct_cond_I}.
+
+To extract ${{\left[\rho\right]}_b}$ then, we preform the Cholesky decomposition on $\textbf{W}$. It can be shown that ${{\left[\rho\right]}_b}$ is then an upper-right triangular $b \times b$ matrix. From ${{\left[\rho\right]}_b}$, we can reverse Eq.~\ref{eq:inputs_to_conj_map} to extract our conjugate basis $\Phi$:
+\begin{equation}
+    \Phi = {\left[\delta\underline{u}^e\right]}_b {{\left[\rho\right]}_b}^{-1}
+    \label{eq:conj_from_rho}
+\end{equation}
+
+One will note that we use ${{\left[\rho\right]}_b}^{-1}$ and not ${{\left[\rho\right]}_b}^+$. We must ensure that ${{\left[\rho\right]}_b}^{-1}$ exists by generating a ${\left[\delta\underline{u}^e\right]}_b$ that is full rank by our choice of inputs.
+
+As well as generating the optimal basis function, LQL also finds the $\beta$ to associate with said function to minimize our costs. Recall Eq.~\ref{eq:optimal_beta_lql}, which gives us our optimal $\beta$ in terms of basis space, system, costs, and error. We do not know $P$, yet we can extract $P\Phi$ by starting with Eq.~\ref{eq:del_y_batch_P_del_u_batch} and Eq.~\ref{eq:inputs_to_conj_map} so that
+\begin{equation}
+    P \Phi {\left[\rho\right]}_b = {\left[\delta\underline{y}^e\right]}_b
+\end{equation}
+which can be re-written as
+\begin{equation}
+    P \Phi = {\left[\delta\underline{y}^e\right]}_b {\left[\rho\right]}_b^{-1}
+\end{equation}
+and we will define $H_b = P \Phi$. 
+
+Given this, we can write
+\begin{equation}
+    \begin{split}
+        H_b &= {\left[\delta\underline{y}^e\right]}_b {\left[\rho\right]}_b^{-1} \\
+        &= \begin{bmatrix}
+            h_1 & h_2 & \cdots & h_b
+        \end{bmatrix}
+    \end{split}
+    \label{eq:batch_Hb}
+\end{equation}
+which can be transposed and plugged into Eq.~\ref{eq:optimal_beta_lql} so that
+\begin{equation}
+    \beta^\ast = H_b^T Q e_{j-1}
+    \label{eq:beta_batch}
+\end{equation}
+Recall our assumption of deadbeat operation, so we can re-formulate as
+\begin{equation}
+    \beta^\ast = H_b^T Q (\underline{y}^\ast - \underline{d})
+\end{equation}
+
+\FloatBarrier\paragraph{Batch Example}
+~\label{par:batch_ex}
+We begin the setup of this example exactly as we did the example shown in~\ref{par:fipo}. So we set $p=100$, create a $\Phi_u$ of the first 10 chebyshev polynomials, and build $\underline{u}^\ast = \Phi_u \beta^\ast$, where
+\begin{equation}
+    \beta^\ast = {\begin{bmatrix}1 & 0.2 & -0.3 & 4 & 0 & 0 & 0 & -1 & 0 & 0\end{bmatrix}}^T
+    \tag{\ref{eq:beta_star_in_basis}}
+\end{equation}
+This then defines our $\underline{y}^\ast = P\underline{u}^\ast + \underline{d}$. Once again we can be assured that the inputs we will sweep do capture $\underline{u}^\ast$, and this is always a safe assumption. Recall we can always try more inputs, and there will be a definitive number $\ell = r_{ILC}$ that will guarantee a complete capture.
+
+We then define our sequence of inputs as the basis functions chosen. It is not necessary to use chebyshev polynomials -- we simply choose them for consistency with our earlier section. Recall we need $b+1$ pairs of $\underline{u}$/$\underline{y}$ data, so we will also include the open-loop response. So
+\begin{equation}
+    \begin{split}
+        {\left[\underline{u}^e\right]}_b  &= 
+        \begin{bmatrix}
+            \underline{u}_0^e & \underline{u}_0^e & \cdots & \underline{u}_b^e
+        \end{bmatrix}
+        \\ &= 
+        \begin{bmatrix}
+            0_{\ell \times 1} & T_0 & \cdots & T_9
+        \end{bmatrix}
+    \end{split}
+\end{equation}
+so that
+\begin{equation}
+    {\left[\underline{y}^e\right]}_b  = 
+    \begin{bmatrix}
+        \underline{d} & PT_0+\underline{d} & \cdots & PT_9+\underline{d}
+    \end{bmatrix}
+\end{equation}
+
+The next step is to apply the $\delta$ operator. Eq.~\ref{eq:delta_operator} defined the operator to be the difference between the the previous and current trial. It is important to recognize this is largely arbitrary and we could change the order of the inputs to change our $\delta$ results without compromising the underlying logic. As such, we create a slightly modified operator, $\underline{\delta}$. This is just to add some notation to the deadbeat assumption we have been employing. We define this as:
+\begin{equation}
+    \underline{\delta x_j} = x_j - x_0
+\end{equation}
+
+Again note this changes none of our logic, it is purely for convenience. Now we can relate each change in input/output to our open loop response. So 
+\begin{equation}
+    {\left[\underline{\delta u}^e\right]}_b =
+    \begin{bmatrix}
+        T_0 & T_1 & \cdots & T_9
+    \end{bmatrix}
+\end{equation}
+and
+\begin{equation}
+    {\left[\underline{\delta y}^e\right]}_b  = 
+    \begin{bmatrix}
+        PT_0 & PT_1 & \cdots & PT_9
+    \end{bmatrix}
+\end{equation}
+
+Notice we have removed any dependency on $\underline{d}$ and we can conveniently represent our $\underline{\delta}_j\underline{u}^e$ as just the $\underline{u}^e$. Eq.~\ref{eq:del_y_batch_P_del_u_batch} can be seen to still apply. So we easily generate our batched output as
+\begin{equation}
+    {\left[\underline{\delta y}^e\right]}_b  = P\Phi_u
+\end{equation}
+
+Next we must define our cost matrices $R$ and $Q$ so we may compute \textbf{W}. Unlike our earlier \myworries{RL on ILC}, we can set $R = 0_{r_{ILC} \times r_{ILC}}$ without problem. We then set $Q = 100I_{n_{ILC} \times n_{ILC}}$. Thus
+\begin{equation}
+    \textbf{W} = {\left[\underline{\delta y}^e\right]}_b^T Q {\left[\underline{\delta y}^e\right]}_b
+\end{equation}
+which we can take the Cholesky decomposition of to get
+\begin{equation}
+    {\left[\rho\right]}_b = chol(\textbf{W})
+\end{equation}
+
+In this example, our upper-triangular, $b \times b$ matrix ${\left[\rho\right]}_b$ comes out to be
+\begin{equation}
+    {\left[\rho\right]}_b = 
+    \begin{bmatrix}
+        3.4701 &  -1.0633 & \cdots & -0.0665  &  0.0120 \\
+        0  &  2.8076 & \cdots & 0.0835 &  -0.0029 \\
+        \vdots & \vdots &  & \vdots & \vdots \\
+        0 &  0 & \cdots & 0.1818 &  -0.1143 \\
+        0  &  0 & \cdots & 0 &  0.1922 \\
+    \end{bmatrix}
+\end{equation}
+
+Our $\Phi$ extracted as in Eq.~\ref{eq:conj_from_rho} is then $\ell \times b = 200 \times 10$ and is partially shown below.
+\begin{equation}
+    \Phi = 
+    \begin{bmatrix}
+        0.2882  & -0.2470& \cdots  &15.0650 & -15.1293\\
+        0.2882  & -0.2435& \cdots  &10.5444 &  -9.6316\\
+        \vdots & \vdots &  & \vdots & \vdots \\
+        0.2882  &  0.4617& \cdots  &54.8935  & 69.7895\\
+        0.2882  &  0.4653& \cdots  &66.6008  & 87.3660
+    \end{bmatrix}
+\end{equation}
+
+We verify this satisfies the condition of Eq.~\ref{eq:conjuct_cond_I} and indeed $\Phi$ is such that $\mathcal{C} = I_{10 \times 10}$
+
+The associated $\beta^\ast$ can be calculated as
+\begin{equation}
+    \beta^\ast =
+    \begin{bmatrix}
+            8.0301  \\ -13.0317  \\ -11.3577  \\  5.2253  \\ -0.4801  \\ 
+            0.5204  \\  0.1702   \\ -0.2106   \\  0.0000  \\  0.0000
+    \end{bmatrix}
+\label{eq:conjugate_beta_star}
+\end{equation}
+
+One will note that after 8 basis functions, the coefficients drop to 0. This is because once we have tried all the inputs that make up $\underline{u}^\ast$, we can perfectly the true signal without any additional information. If we apply $\underline{u} = \Phi \beta^\ast$, we see we capture our goal output perfectly (Figure~\ref{fig:batch_learned})
+
+\begin{figure}[htbp] 
+    \centering  
+    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Batched Learned Input}} 
+    \caption{Output Generated from Batch Generated Basis Space $\Phi$ with weights $\beta^\ast$ overlaid on the Goal Output}
+~\label{fig:batch_learned}
+\end{figure}
+
+\FloatBarrier\subsubsection{The Iterative Approach}
+While this batch approach is convenient for notation, it is computational sloppy and inefficient. The whole logic of conjugate basis functions is that we should only need to compute one conjugate basis function at a time, and it would be preferable to do so in real time. We will now show a process to derive just $\phi_{b+1}$ given $b$ pre-existing basis functions.
+
+To generate a new $\phi$ we need to introduce a new input to ${\left[\underline{u}^e\right]}_b$, ensuring full rank is maintained. This new input $\underline{u}_{b+1}^e$ can be added to our batch so that
+\begin{equation}
+    {\left[\underline{u}^e\right]}_{b+1} = \left[{\left[\underline{u}^e\right]}_b,\ \underline{u}_{b+1}^e\right]
+\end{equation}
+
+$\underline{u}_{b+1}^e$ logically produces a $\underline{y}_{b+1}^e$ which can similarly be added to the output batch.
+\begin{equation}
+    {\left[\underline{y}^e\right]}_{b+1} = \left[{\left[\underline{y}^e\right]}_b,\ \underline{y}_{b+1}^e\right]
+\end{equation}
+
+By applying our $\delta$ operator\footnote{Note we are not using the $\underline{\delta}$ shown in the Batch example for the derivation, even though we could} and returning to Eq.~\ref{eq:w_for_batch}, we can write
+\begin{equation}
+    {{\left[\rho\right]}_{b+1}^T} {{\left[\rho\right]}_{b+1}} = {{\left[\delta\underline{u}^e\right]}_{b+1}^T} R {\left[\delta\underline{u}^e\right]}_{b+1} + {{\left[\delta\underline{y}^e\right]}_{b+1}^T} Q {\left[\delta\underline{y}^e\right]}_{b+1}
+    \label{eq:full_b1_W}
+\end{equation}
+
+For our $b+1$th trial, we want to get $\rho_{b+1}$, or the last column of ${{\left[\rho\right]}_{b+1}}$. We can then write Eq.~\ref{eq:full_b1_W} in terms of only its last columns
+\begin{equation}
+    {{\left[\rho\right]}_{b+1}^T} \rho_{b+1} = {{\left[\delta\underline{u}^e\right]}_{b+1}^T} R \delta\underline{u}^e_{b+1} + {{\left[\delta\underline{y}^e\right]}_{b+1}^T} Q \delta\underline{y}^e_{b+1}
+    \label{eq:b1_W}
+\end{equation}
+
+We can expand this as
+\begin{equation}
+    \begin{bmatrix}
+        \rho_1^T \\ \vdots \\ \rho_{b+1}^T
+    \end{bmatrix}
+    \rho_{b+1} 
+    = 
+    \begin{bmatrix}
+        {{\left(\delta_1 \underline{u}^e\right)}^T} R \delta_{b+1} \underline{u}^e + {{\left(\delta_1 \underline{y}^e\right)}^T} Q \delta_{b+1}\underline{y}^e \\ 
+        \vdots \\ 
+        {{\left(\delta_{b+1} \underline{u}^e\right)}^T} R \delta_{b+1} \underline{u}^e + {{\left(\delta_{b+1} \underline{y}^e\right)}^T} Q \delta_{b+1}\underline{y}^e 
+    \end{bmatrix}
+    \label{eq:b1_W_expanded}
+\end{equation}
+
+Recall that that ${{\left[\rho\right]}_{b+1}}$ is upper-right triangular. Given this, we can extract the first element of $\rho_{b+1}$ as
+\begin{equation}
+    \rho_{b+1}(1) = \frac{1}{\rho_1(1)} \left[{(\delta_1 \underline{u}^e)}^T R \delta_{b+1} \underline{u}^e + {(\delta_1 \underline{y}^e)}^T Q \delta_{b+1} \underline{y}^e \right]
+    \label{eq:first_rho_iterative}
+\end{equation}
+The 2nd through $b$th element can be similarly calculate, but must account for the already computed elements of $\rho$, such that
+\begin{equation}
+    \begin{split}
+        \rho_{b+1}(i) = \frac{1}{\rho_i(i)} \left[{(\delta_i \underline{u}^e)}^T R \delta_{b+1} \underline{u}^e + {(\delta_i \underline{y}^e)}^T Q \delta_{b+1} \underline{y}^e - \sum_{j=1}^{i-1} \rho_i(j)\rho_{b+1}(j)\right] \\
+        i = 2, 3, \ldots, b
+    \end{split}
+    \label{eq:middle_rho_iterative}
+\end{equation}
+and the final element $\rho_{b+1}(b+1)$ can be more easily computed by first defining $\gamma$ to capture all the previous components
+\begin{equation}
+    \begin{split}
+        \gamma &= \sum_{j=1}^{b} {(\rho_{b+1}(j))}^2    \\
+        &= 
+        \begin{bmatrix}
+            \rho_{b+1}(1) & \cdots & \rho_{b+1}(b)
+        \end{bmatrix}
+        \begin{bmatrix}
+            \rho_{b+1}(1) \\ \vdots \\ \rho_{b+1}(b)
+        \end{bmatrix}
+    \end{split}
+\end{equation}
+so we can write
+\begin{equation}
+    \rho_{b+1}(b+1) = \sqrt{{(\delta_{b+1} \underline{u}^e)}^T R \delta_{b+1} \underline{u}^e + {(\delta_{b+1} \underline{y}^e)}^T Q \delta_{b+1} \underline{y}^e - \gamma}
+    \label{eq:last_rho_iterative}
+\end{equation}
+
+We can then derive our new conjugate basis function $\phi_{b+1}$
+\begin{equation}
+    \phi_{b+1} = \frac{1}{\rho_{b+1}(b+1)} \left[\delta_{b+1} \underline{u}^e - \sum_{i=1}^{b}\phi_i \rho_{b+1}(i)\right]
+    \label{eq:new_phi_iterative}
+\end{equation}
+and the associated $\beta^\ast$ from
+\begin{equation}
+    h_{b+1} = \frac{1}{\rho_{b+1}(b+1)}\left[\delta_{b+1}\underline{y}^e - \sum_{i=1}^{b}h_i\rho_{b+1}(i)\right]
+    \label{eq:new_h_iterative}
+\end{equation}
+\begin{equation}
+    \beta^\ast(b+1) = h_{b+t}^T Q (\underline{y}^\ast - \underline{d})
+    \label{eq:new_beta_iterative}
+\end{equation}
+
+With this approach, we can efficiently increase our number of basis functions as we go, while maintaining the conjunct properties of optimality on all previous inputs. The iterative algorithm follows a simple sequence for a $p$ step process
+\begin{enumerate}
+    \item Choose your $Q$ and $R$
+    \item Define your input sequences $\underline{u}^e_i$ such that they span the whole input space
+    \item Perform two initial experiments $\underline{u}^e_0$ and $\underline{u}^e_1$ to generate $\underline{y}^e_0$ and $\underline{y}^e_1$\footnote{Typically $\underline{u}^e_0$ is no input such that $\underline{y}^e_0 = \underline{d}$}
+    \item Extract $\phi_1$ from Eq.~\ref{eq:w_for_batch} and~\ref{eq:conj_from_rho}
+    \begin{itemize}
+        \item Compute $\beta^\ast$ for $\phi_1$ (Eq.~\ref{eq:batch_Hb} and Eq.~\ref{eq:beta_batch}) and apply it to the system
+    \end{itemize}
+    \item Perform a third experiment with $\underline{u}^e_2$ to generate $\underline{y}^e_2$. Use Eqs.~\ref{eq:first_rho_iterative} and~\ref{eq:last_rho_iterative} to extract $\rho_2$, then plug into Eq.~\ref{eq:new_phi_iterative} to compute $\phi_2$
+    \begin{itemize}
+        \item Compute $\beta^\ast$ for the given $\phi_2$ (Eq.~\ref{eq:new_h_iterative} and Eq.~\ref{eq:new_beta_iterative}) and apply it to the system
+    \end{itemize}
+    \item Repeat with $\underline{u}^e_i$ to extract $\phi_i$ as needed, using Eqs.~\ref{eq:first_rho_iterative}--~\ref{eq:new_phi_iterative}
+    \begin{itemize}
+        \item Compute $\beta^\ast$ for the given $\phi_i$ (Eq.~\ref{eq:new_h_iterative} and Eq.~\ref{eq:new_beta_iterative}) and apply it to the system
+    \end{itemize}
+    \item Stop once the cost function is minimized, or error is acceptable
+\end{enumerate}
+
+\FloatBarrier\paragraph{Iterative Example}
+We start off by repeating the setup of $\underline{u}^\ast$ and $\underline{y}^\ast$ from the Batch Example~\ref{par:batch_ex}.
+
+To begin the iterative approach, we must first run two episode to such that we may compute our first $\underline{\delta}_1$\footnote{We are once again using the $\underline{\delta}_j x = x_j - x_0$ for convenience}. As before, we let our 0th episode contain the open loop data, and apply $T_0$ as $\underline{u}^e_1$ to create $\underline{y}^e_1$.
+
+Since we are using the $\underline{\delta}$ operator, as in the batch example, $\underline{\delta}_1 \underline{u}^e = \underline{u}_1^e$, and $\underline{\delta}_1 \underline{y}^e = \underline{y}_1^e - \underline{d}$. This applies across all episodes, and allows for neater notation. 
+
+Working through the calculation of our first basis function, we find
+\begin{equation}
+    \begin{split}
+        \textbf{W} &= 12.0415 \\
+        \rho_1 &= 3.4701    \\
+        \phi_1 &= \begin{bmatrix}
+            0.2882 & 0.2882 & \cdots & 0.2882 & 0.2882
+        \end{bmatrix}^T   \\
+        h_1 &= \begin{bmatrix}
+            0.0000 & 0.0000 & \cdots & 0.0059 & 0.0073
+        \end{bmatrix}^T   \\
+        \beta_1 &= 8.0301
+    \end{split}
+\end{equation}
+the most important result being that our $\beta_1$ matches that of the $\beta_1$ found in the batch approach.
+
+Applying then just $\phi_1 \beta_1$ to our system we see from Figure~\ref{fig:iterative_1_basis}, it clearly is not sufficient to produce the output we desire. So we proceed with our second basis function.
+
+We excite the system with $\underline{u}^e_2 = T_1$ to generate $\underline{y}^e_2$. We must solve for $\rho_2$ in multiple steps now, but we find
+\begin{equation}
+    \begin{split}
+        \rho_2(1) &= -1.0633 \\
+        \gamma &= 1.1305    \\
+        \rho_2(2) &= 2.8076 \\
+        \phi_2 &= \begin{bmatrix}
+            -0.2470 & -0.2435 & \cdots & 0.4617 & 0.4653
+        \end{bmatrix}^T \\
+        h_2 &= \begin{bmatrix}
+            0.0000 & 0.0000 & \cdots & 0.0077 & 0.0098
+        \end{bmatrix}^T   \\
+        \beta_2 &= -13.0317
+    \end{split}
+\end{equation}
+once again matching that exactly of our batched approach.
+
+Just for completeness, we will show one more example where we excite with $\underline{u}^e_3 = T_2$. Following the steps outlined, we get
+\begin{equation}
+    \begin{split}
+        \rho_3(1) &= -1.3392  \\
+        \rho_3(2) &= -1.7959 \\
+        \gamma &= 5.0187    \\
+        \rho_3(3) &= 2.8832 \\
+        \phi_3 &= \begin{bmatrix}
+            0.3268 &   0.3152 & \cdots &   0.7544  &  0.7705
+        \end{bmatrix}^T \\
+        h_3 &= \begin{bmatrix}
+            0.0000 & 0.0000 & \cdots & 0.0179 & 0.0222
+        \end{bmatrix}^T   \\
+        \beta_2 &= -11.3577
+    \end{split}
+\end{equation}
+
+With explicit examples for all the three major steps, we now carry out the rest of the trials.
+\footnote{See function \textit{generate\_iterative\_conjugate} in Code Appendix~\ref{code:iterative_conj} to provide a more structured understanding.}
+After 10 trials (plus the one open-loop response), we find
+\begin{equation}
+    \Phi = 
+    \begin{bmatrix}
+        0.2882  & -0.2470& \cdots  &15.0650 & -15.1293\\
+        0.2882  & -0.2435& \cdots  &10.5444 &  -9.6316\\
+        \vdots & \vdots &  & \vdots & \vdots \\
+        0.2882  &  0.4617& \cdots  &54.8935  & 69.7895\\
+        0.2882  &  0.4653& \cdots  &66.6008  & 87.3660
+    \end{bmatrix}
+\end{equation}
+\begin{equation}
+    \beta^\ast = \begin{bmatrix}
+        8.0301 \\ -13.0317  \\ -11.3577  \\  5.2253 \\  -0.4801  \\  0.5204 \\   0.1702 \\  -0.2106  \\  0.0000  \\  0.0000
+    \end{bmatrix}^T
+\end{equation}
+which we can see completely matches our batched approach.
+
+With each additional basis function, the output we are able to capture gets closer to that of our goal $\underline{y}^\ast$. Figure~\ref{fig:iterative_1_basis} shows that with just one basis function, we do not capture much. By Figure~\ref{fig:iterative_3_basis} where we have three basis functions, things are looking better. And as we saw in the batched example, once we have tried enough inputs to span that space that contains $\underline{u}^\ast$, we can perfectly capture $\underline{y}^\ast$, as in Figure~\ref{fig:iterative_10_basis}.
+
+\begin{figure}[htbp] 
+    \centering  
+    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis}} 
+    \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 1$ overlaid on the Goal Output}
+~\label{fig:iterative_1_basis}
+\end{figure}
+\begin{figure}[htbp] 
+    \centering  
+    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis}} 
+    \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 3$ overlaid on the Goal Output}
+~\label{fig:iterative_3_basis}
+\end{figure}
+\begin{figure}[htbp] 
+    \centering  
+    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 10 Basis}} 
+    \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 10$ overlaid on the Goal Output}
+~\label{fig:iterative_10_basis}
+\end{figure}
+
+We have now shown a methodology to efficiently calculate conjugate basis functions on the fly, without compromising the optimality of pre-existing inputs.
+
+\FloatBarrier\subsubsection{Properties}
+We see that both the batch and the iterative approach yield the same conjugate basis space $\Phi$ and optimal weights $\beta$. By definition, these basis functions are created such that their application as inputs are optimal, and independent of any other basis functions in the output they produce on a system. The addition of one new basis function does not impact the learned portion of any prior one on the system.
+
+\myworries{Show how it works when the input is outside of the space}
+
