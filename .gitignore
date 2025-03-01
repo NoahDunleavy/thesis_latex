@@ -9,6 +9,7 @@
 *.lot
 *.acn
 *.glo
+*.ist
 *.synctex.gz
 *.fls
 *.fdb_latexmk
