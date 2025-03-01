@@ -4,7 +4,7 @@
 
 \FloatBarrier\section{RL on ILC in a Conjugate Basis Space}
 ~\label{sec:rl_on_conjugate_basis_ilc}
-We have explored\myworries{Intro here}
+We have explored now a way to safely extract a number of basis functions for a problem, and a way to grow the number without impact previously learned optimal weightings of them. We now wish the see if these learned basis functions can be applied back to describe a space that we can apply RL in, and the properties we may explot.
 
 \FloatBarrier\subsection{Tying it all together}
 Recall the original problem of in the Iterative Control Problem, the dimensions on states and inputs scale by the number of steps $p$. This translates exponentially to the number of trials needed to update a controller in the \ac{RL} framework, and given that $p$ is typically large this can result in millions of failed trials before learning is even attempted.
@@ -29,8 +29,8 @@ and the addition of one additional basis function would have it such that
 \FloatBarrier\subsubsection{The Conjugate LQR Controller}
 We know the conditions to ensure a found controller captures $\underline{y}^\ast$ in the basis space, so that is not what we will be testing here. We are now interested the scenario where we do \underline{not} capture $\underline{u}^\ast$ in our $\Phi$, but we still find a controller in this space. It should be that if we find $F_{\phi_1}$ and $F_{\phi_2}$ separately, they would have the exact same parameters as controller $F^{\Phi_2}$\footnote{So long as they all use the same basis space on the output.}.
 
-\FloatBarrier\paragraph{Example \myworries{name}}
-We know our RL techniques are capable of extracting the discount LQR controller, so we will cut through the noise in our example and simply use \textit{manualLQR}. 
+\FloatBarrier\paragraph{Example -- LQR in The Conjugate Space}
+We know our RL techniques are capable of extracting the discount LQR controller, so we will cut through the noise in our example and simply use \textit{discounted\_LQR}.
 
 We return to our earlier $\underline{y}^\ast$ of a circle. We set $p = 10$, and use Eq.~\ref{eq:y1_y2_star} to set the goal. Our first step is to generate our conjugate basis functions. We use the batch approach in this example. With the parameters
 \begin{equation}
@@ -96,9 +96,7 @@ These two results by themselves are not that important. It is when we learn a ne
         0.0924  &  0.0071  & \cdots &  -0.0001  &  0.0004
     \end{bmatrix}
 \end{equation}
-We will note that the controllers are `almost' exactly identical. $F_{\phi_2}$'s first term differs from that of $F^{\Phi_2}$'s first term of the second row by 0.0001. Given the rest of the controller matches exactly and the rest of the theory seems to be consistent, we attribute this to computational rounding\myworries{Is this ok?}
-
-\myworries{we use discounted and manual lqr different places. same thing but fix. Just delete/move one and see what still works.}\myworries{We need to have R sufficiently large. whyyyyyyy}
+We will note that the controllers are `almost' exactly identical. $F_{\phi_2}$'s first term differs from that of $F^{\Phi_2}$'s first term of the second row by 0.0001. Given the rest of the controller matches exactly and the rest of the theory seems to be consistent, we attribute this to computational rounding\footnote{On the topic of computational limits, we once again are limited on how small we can set are $R$ matrix. This will lead to some visually slow processes in our demonstration, but it is all in the effort of proving the theory still works. Methods to ensure proper numerical condition can be further explored in the future, as mentioned in the Future Work section}.
 
 For completeness, we will run an ILC Trial as we did when exploring the requirements on basis functions. For our $p = 10$, $n_{ILC}=r_{ILC}=20$ system trying to draw a circle, we generate 20 conjugate basis functions. Once again employing our $\mathcal{L}_\beta = 0.5H^+$ controller, we see that perfect control is possible just as it was before (Figures~\ref{fig:conj_ilc_error} and~\ref{fig:conj_ilc_shape}).
 
@@ -118,22 +116,21 @@ For completeness, we will run an ILC Trial as we did when exploring the requirem
 \FloatBarrier\subsubsection{Dynamic Conjugate Basis Space}
 Now we have shown that one controller can be learned at a time, in any order, with any number at a time, regardless of the representative space chosen. This will allow us to revisit our idea of a dynamic input basis space explored earlier in Section~\ref{sub:dynamic_arb_basis}.
 
-For our dynamic basis space, there are a few different scenarios to consider. Recall our starting notation in \myworries{Basis introduction} where our input basis space had notation $\Phi_u$ and our output had notation $\Phi_y$. We will re-introduce this now to consider our options.
+For our dynamic basis space, there are a few different scenarios to consider. Recall our starting notation in section~\ref{sec:basis_functions} where our input basis space had notation $\Phi_u$ and our output had notation $\Phi_y$. We will re-introduce this now to consider our options.
 
-\FloatBarrier\subsubsection{Fixed Resolution} $\Phi_y = I$
+\FloatBarrier\subsubsection{Fixed Resolution: $\Phi_y = I$}
 In the first scenario, we define a fixed resolution $\Phi_y = I_{\eta_y + \times \eta_y}$ and a $\Phi_u = \phi_i$, where $\phi_i$ is the most recently learned conjugate basis function. 
 We use a fixed, full-resolution $\Phi_y$ such that the controller we learn in this input space $\phi_i$ can be stacked with other controllers for spaces $\phi_j$ (where $i \neq j$) to form a larger controller, as we did with input decoupling. 
 Here, we would run two initial trials to generate our first $\phi_1$, the begin learning the controller in that space. While learning, we would produce $\underline{u}$s that could be used to generate a $\phi_2$ and have that ready to go when we are done learning with $\phi_1$. 
 This process could be repeated, and would at worst be done in a finite number of $r_{ILC} \ \phi$s. However, one would need to properly choose $\eta_y$ to ensure that the $\eta_u$ used to capture $\underline{u}^\ast$ obeyed our condition in Eq.~\ref{eq:basis_ilc_num_basis_condition} of $\eta_y \geq \eta_u$. At worst, this means $\eta_y = r_{ILC}$\footnote{Remember we only need to fully capture $\underline{u}^\ast$, so if $\underline{y}^\ast$ is not fully captured, that is ok.}.
 
-\FloatBarrier\paragraph{Example \myworries{name}}
+\FloatBarrier\paragraph{Example -- Full Resolution Identity on Output}
 We are back to our goal shown in Figure~\ref{fig:conj_ilc_shape}. To handle the worst case scenario, set $\eta_y = 20$. Our conjugate basis parameters (generated iteratively, but will still work out to match Eq.~\ref{eq:circle_conj_basis}) are
 \begin{equation}
     Q = 100I_{20 \times 20}
     \quad
     R = 0_{20 \times 20}
 \end{equation}
-\myworries{Some note about choice of R not mattering}
 
 Our RL parameters will be similar. Recall the earlier computational issues with $R=0$ and the need for proper exploration noise, shown in our derivation of $F_{LQR}$ in Eq.~\ref{eq:rl_ilc_lqr_small_R_controller}. 
 \begin{equation}
@@ -225,14 +222,9 @@ As mentioned above, we do not apply the previously learned controllers through t
 ~\label{fig:policy_ilc_rolling_final_shaped}
 \end{figure}
 
-
-\myworries{Some note about the first input causing the most drastic reduction in error? Talk about how conjugate basis fucntions don't impact eachother once place in, but the order they are created in matters}
-
 It can be easy to confuse this approach with input decoupling. While they are very similar, this approach has the benefit of where it will not need to loop back through to update certain controllers after determining subsequent ones. Once a controller is determined for its space, it is known to be optimal and independent of any other controllers.
 
-\myworries{Show the R = 1 examples}
-
-\FloatBarrier\subsubsection{Fixed Resolution} $\Phi_y = \Phi^b$
+\FloatBarrier\subsubsection{Fixed Resolution $\Phi_y = \Phi^b$}
 Another option is to us a fixed resolution $\Phi_y = \Phi^b$, where we have $b$ conjugate basis functions already generated. The issue that arises in this scenario is one very similar to our earlier attempts of RL on ILC, where we had to introduce more exploration ($v(k)$) when our $R$ was small. While the math and logic remains sound with our conjugate basis, behind the scenes were are numerically poor. 
 
 This can best be seen by inspecting $\phi_1$ in our examples, in which every component is $6.1844$. Compare this to when we used $I$ and only one component had a value of $1$. It is easy to see that the basis coefficients that results from these different basis functions (see Eq.~\ref{eq:a_pinv_Ty_y}) will differ drastically in magnitude. To rectify this discrepancy in magnitude, we are best off scaling our $\Phi_y$ and $\Phi_u$ such that $\left|\Phi_y\right|> \left|\Phi_u\right|$. A scaling which increases the magnitude of $\Phi_y$ results in smaller $\alpha$s, whereas a similar scaling will increase the impact that learned $\delta \beta$s have on our true input $\underline{u}$.
@@ -241,7 +233,7 @@ We must be careful when scaling conjugate basis functions, so that they continue
 
 So where to deal with small $R$s we had to introduce more exploration noise, for large $\Phi$s we must scale $\Phi_y$ up relative to $\Phi_u$.
 
-\FloatBarrier\paragraph{Example \myworries{name}}
+\FloatBarrier\paragraph{Example -- Full Resolution Conjugate Basis on Output}
 In this example, we start with the entirety of our basis functions pre-generated (computed through $p+1$ trials). Keeping the same parameters and goal from above, our $\Phi^b$ can be seen in Eq.~\ref{eq:circle_conj_basis}.
 
 We then set our LQR parameters as
@@ -306,46 +298,69 @@ We can see this controller works to reduce error in Figure~\ref{fig:fixed_conjug
 \begin{figure}[htbp] 
     \centering  
     \includegraphics[width=1\textwidth]{{RL on Conjugate/Scaled Conjugate Basis Application - Error Progression}} 
-    \caption{Error Progression through Policy Learning ILC Trials with Scaled COnjugate Output Basis}
+    \caption{Error Progression through Policy Learning ILC Trials with Scaled Conjugate Output Basis}
 ~\label{fig:fixed_conjugate_scaled}
 \end{figure}
 
-\FloatBarrier\subsubsection{Fixed Resolution} $\Phi_y = \underline{y}^\ast$
-If we have shown we can learn one controller at a time, then it should stand to reason that we could only use one output basis function at a time. Logically, we would choose this to be $\underline{y}^\ast$, though as previously stated it does not matter.
+\FloatBarrier\subsubsection{Fixed Resolution $\Phi_y = \underline{y}^\ast$}
+If we have shown we can learn one controller at a time, then it should stand to reason that we could only use one output basis function at a time. Logically, we would choose this to be $\underline{y}^\ast$, though as previously stated it does not matter --  we will see that some additional steps must be taken.
 
-Unfortunately, this does not yield the same controller as the would-be $F_{LQR}^\gamma$. 
+\FloatBarrier\paragraph{Example -- $\Phi_y = \underline{y}^\ast$}
+The first step is to establish our basis functions. $\Phi_u$ will be our conjugate basis functions $\Phi$, and $\Phi_y = 100\underline{y}^\ast$. We have previously shown that there is some trade-off between the magnitudes of the basis functions, that can lead to ill-conditioning. For this example, it was found that scaling $\underline{y}^\ast$ by 100 (bringing the norm to 316) was sufficient to prevent issues. 
+
+We then set our LQR parameters as
 \begin{equation}
-    F_{LQR}^\gamma = \begin{bmatrix}
-        -48.1718 \\
-        -523.8764 \\
+    \begin{split}
+        Q = 1000 \quad R = 10I_{r_{ILC} \times r_{ILC}} \\
+        \gamma = 0.8 \quad v(k) \in \left[-1, 1\right]
+    \end{split}
+\end{equation}
+Similar to the scaling of $\Phi_y$, there is potential for future work here. The produced result of this approach of $Q/R = 100$ is not the same when we scale both items down by 10.\myworries{Here}
+
+We then iteratively learn $F_{\phi_i}$s. For each $\phi_i$, our $Q$ stays fixed at $100$ since we only have one `output' $\alpha$, but our $R$ rolls along the diagonals of $R$. In this example, that they are all the same value, but it is an important consideration to be aware of. As before, we stack each learned $F_{\phi_i}$ and find after all $20$ possible controllers
+\begin{equation}
+    F = 
+    \begin{bmatrix}
+        -1.2603 \times 10^{-2} \\
+        -3.6281 \times 10^{-3} \\
         \vdots \\
-        942.8774 \\
-        23.1104
-    \end{bmatrix}
-    \quad
-    \neq
-    \quad
-    F^\Phi = \begin{bmatrix}
-        -100.3519 \\
-        -348.1112 \\
-        \vdots \\
-        4,7980.26 \\
-        -131.0653
+        1.8588 \times 10^{-4} \\
+        -9.6489 \times 10^{-3}
     \end{bmatrix}
 \end{equation}
+for the output basis space $\Phi_y = \underline{y}^\ast$ and input basis space $\Phi_u = \Phi$.
 
-Attempting to apply this controller results in an unstable systems, in which the error moves towards infinity.
+We check this against our LQR solution of perfect knowledge to get
+\begin{equation}
+    F_{LQR}^\gamma = 
+    \begin{bmatrix}
+        -1.2603 \times 10^{-2} \\
+        -3.6281 \times 10^{-3} \\
+        \vdots \\
+        1.8588 \times 10^{-4} \\
+        -9.6487 \times 10^{-3}
+    \end{bmatrix}
+\end{equation}
+which is practically identical\footnote{The small error on the final term is negligible.}.
+
+Applying this controller, we see in Figure~\ref{fig:policy_ilc_rolling_error_y_ast} that it does work!
+
 \begin{figure}
     \centering  
-    \includegraphics[width=1\textwidth]{{RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression}} 
-    \caption{Error Progression through Policy Learning ILC Trials with Rolling $\phi$ on inputs and $\Phi_y = \underline{y}^\ast$}
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression}} 
+    \caption{Error Progression through Policy Learning ILC Trials with Rolling $\phi$ on inputs and $\Phi_y = \underline{y}^\ast$. Given the relatively high $R$, 0 error is not achieved quickly but it can be seen to be being reduced.}
 ~\label{fig:policy_ilc_rolling_error_y_ast}
 \end{figure}
 
-\myworries{Talk about why this wont work}
+If this result seems too good to be true, that is because it is. Unfortunately, it is not possible to build a controller that is tall (more inputs produced from a smaller number of states) and have it be guaranteed stable. With some modifications to our $Q$ and $R$, and by extending the number of simulated trials, we end up with the results in Figure~\ref{fig:policy_ilc_y_star_crushed}. Our earlier decrease in error can be seen to eventually hit a steady state. For initial improvements this may be a desirable approach then, but is not nearly sufficient to produce zero error.
+\begin{figure}
+    \centering  
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/LQR Controller Application of Conjugate Input Basis with y star Output Basis, Full Run - Error Progression}} 
+    \caption{Complete Error Progression through Policy Learning ILC Trials with Rolling $\phi$ on inputs and $\Phi_y = \underline{y}^\ast$. It can now be seen that the tall controller constructed one element at a time, while efficient to build, does not bring about desired results on no error.}
+~\label{fig:policy_ilc_y_star_crushed}
+\end{figure}
 
-
-\FloatBarrier\paragraph{Growing} $\Phi_y = \Phi^b$
+\FloatBarrier\paragraph{Growing $\Phi_y = \Phi^b$}
 The final approach to try is relaxing our assumption of holding $\Phi_y$ fixed. 
 Suppose we learn one conjugate function $\phi_1$, and use that for our basis functions. 
 So $\Phi_u = \phi_1$ and $\Phi_y = \lambda\phi_1$ (scaled for reasons previously shown). 
@@ -356,33 +371,27 @@ Now our LQR controller is $1 \times 2$, and by stacking our previously learned c
 
 The appeal of this approach is that we get to minimize $\eta$ in both input and output space, as we are applying RL to learn the associated controller. So after only $4$ trials, we could update our first controller. Then $9$, and so on, where each added controller $i$ needs ${(1 + i)}^2$ trials to update itself once through RL techniques.
 
-\FloatBarrier\paragraph{Example -- Growing}
-For one last time now, let us set up our learning problem.\myworries{Ensure this is the last}
-
+\FloatBarrier\paragraph{Example -- Growing $\Phi_y = \Phi^b$}
 We establish the parameters our parameters from which we will define our conjugate basis functions $\phi$, as we will be learning iteratively. Sticking with the earlier examples
 \begin{equation}
     Q = 100I_{20 \times 20}
     \quad
-    R = 0_{20 \times 20};
+    R = 0_{20 \times 20}
 \end{equation}
-\myworries{Show earlier that R does not matter for conjugate generation}
 
 Next, we establish the learning parameters with which we will be working. There is a frustrating balancing act between our $R$, $v(k)$, and now the amount by which we scale our $\Phi_y$ vs $\Phi_u$ - $\lambda$. To demonstrate the functionality of this approach without extreme numbers, we choose
 \begin{equation}
     \begin{split}
         Q = 100I_{20 \times 20}
-        &\quad
+        \qquad
         R = I_{20 \times 20}
         \\
         \gamma = 0.8
-        &\quad
-        v(k) \in [-1, 1]
-        \\
+        \quad
+        v(k) \in [-1, 1] \quad
         \lambda = 10
     \end{split}
 \end{equation}
-\myworries{Reformat}
-
 The process now is very similar to our earlier examples with a fixed $\Phi_y = I$.
 
 To start, we generate our first $\phi_1$. However, with each generated $\phi$, we now must update our $\Phi_u$ and $\Phi_y$. On this initial pass:
@@ -436,16 +445,15 @@ In the end, we find
 
 Note that this is \underline{not} our $F_{LQR}^\gamma$ in the space of $\Phi_u = \Phi$ and $\Phi_y = 10\Phi$. However, the bottom row of both should perfectly match as they are both defined in that space. 
 
-Due to our relatively large $R$, the application of this controller does take a while to converge, as you can see in Figure~\ref{fig:policy_ilc_rolling_phi_error_y}. Yet it can be shown that this method does work. 
+Due to our relatively large $R$, we wouldn't expect the application of this controller to converge quickly. It would seem that from Figure~\ref{fig:policy_ilc_rolling_phi_error_y} this approach works.
 
 \begin{figure}
     \centering  
-    \includegraphics[width=1\textwidth]{{RL on Conjugate/Growing Basis on IO - Error Progression}} 
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/Growing Basis on IO - Error Progression}} 
     \caption{Error Progression through Policy Learning ILC Trials with Rolling $\phi$ on inputs and outputs}
 ~\label{fig:policy_ilc_rolling_phi_error_y}
 \end{figure}
 
-It would of course be desirable to lower the $R$. \myworries{Show the poles}
+Fearing similar results from our earlier example of a fixed $\Phi_y = \lambda \underline{y}^\ast$, we check the poles of our system. Recall that anything $> 1$ indicates the system is unstable under the listed controller. For this example, we have 5 such poles that indicate instability. They exceed $1$ by magnitudes of $1 \times 10^{-7}$ or smaller. However small they may be, though, an unstable pole is still unstable. After running one billion trials, under our above parameters, the controller was still unable to send our system error to zero.
 
-\myworries{Mention the controller where we do one basis on both IO, and then try to identity matrix it. Also say someone else could explore lowering R in the lqr approach}
-\myworries{The final example, but instead of triangular, build a diagnonal? (I could do that fast)}
+It would of course be desirable to lower the $R$. We have seen that smaller $R$s help reduce the magnitude of these poles. More on this in Section~\ref{sec:future_work} on Future Work.
