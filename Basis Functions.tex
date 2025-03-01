@@ -214,10 +214,10 @@ We will use our perfect knowledge to ensure our controller works to control our 
 
 An important note moving forward is that some of the shaped outputs look like arbitrary nonsense. That is because they are. In examples where we define our $\underline{u}^\ast$ to set the $\underline{y}^\ast$ it is much harder to pick pleasant and recognizable images while still preserving the understandability of our theory. The presented goal `shapes' are no more arbitrary than the circle goal in Figure~\ref{fig:ilc_shaped_circle} or the word `Dartmouth' in Figure~\ref{fig:ilc_shaped_dartmouth}. 
 
-\FloatBarrier\paragraph{\ac{FIPO}}
+\FloatBarrier\paragraph{{FIPO}}
 ~\label{par:fipo}
 
-The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. 
+The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. In other words, we will have a \ac{FIPO} describing their respective spaces.
 
 We can always construct a basis space to capture $\underline{y}^\ast$ by setting one of the functions of $\Phi_y$ equal to $\underline{y}^\ast$, so this is the first logical one to challenge. However we must ensure our input can be captured in our input basis space,so we construct our input basis space out of the first 10 chebyshev polynomials\footnote{Each function must be 200 points in resolution,  as our number of ILC inputs is 200 ($p \times r$)}, using the method shown in Eq.~\ref{eq:cheby_recurrence}.
 \begin{equation}
@@ -274,7 +274,7 @@ If $\underline{y}^\ast$ were in $\Phi_y$, then $\underline{y}^\ast - \Phi_y \alp
 \begin{figure}[htbp] 
     \centering  
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Output 1.pdf}} \label{fig:FIPO_output_1}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Output 1.pdf}} 
         \caption{}
         \label{fig:FIPO_output_1}
     \end{subfigure}
@@ -354,8 +354,8 @@ Figures~\ref{fig:FIPO_mass_1_position} through~\ref{fig:FIPO_shaped_output} show
 \end{figure}
 
 
-\FloatBarrier\paragraph{\ac{PIFO}}
-Obviously the next thing to check is what if $\underline{y}^\ast$ is fully defined in $\Phi_y$ but $\underline{u}^\ast$ is not in $\Phi_u$? It is incredibly easy to ensure our $\underline{y}^\ast$ is captured because, if you recall our ideal basis space condition, we can simply set one of our basis functions $\phi = \underline{y}^\ast$ at the same time that we set $\underline{y}^\ast$. 
+\FloatBarrier\paragraph{PIFO}
+Obviously the next thing to check is what if $\underline{y}^\ast$ is fully defined in $\Phi_y$ but $\underline{u}^\ast$ is not in $\Phi_u$? Or there is a set of \ac{PIFO} describing those spaces. It is incredibly easy to ensure our $\underline{y}^\ast$ is captured because, if you recall our ideal basis space condition, we can simply set one of our basis functions $\phi = \underline{y}^\ast$ at the same time that we set $\underline{y}^\ast$. 
 
 So now our $\underline{u}^\ast$ will only partially be described in $\Phi_u$, but $\underline{y}^\ast$ will be fully in $\Phi_y$.
 
@@ -487,8 +487,8 @@ If one were to repeat this example with a non-deadbeat controller, they would fi
 
 So our $\Phi_u$ matters, but $\Phi_y$ does not.\footnote{This is consistent with the findings of \myworries{Phan and Frueh}}. Given that, why not define $\Phi_y$ such that $\eta_y = 1$. Even if we then leave $\Phi_u$ as the identity matrix, then thinking ahead to our RL problem, we would have the ability to infinitely reduce our `state' dimensions down to $1$. Then input-decoupling could be employed such that each controller could be updated in just $4$ trials, and that would only then need to be done $r_{ILC}$ times. 
 
-\FloatBarrier\paragraph{\ac{FISO}}
-To test this theory, we will setup our problem very much like we did the FIPO example. $\beta^\ast$ will once again be defined as it is in Eq.~\ref{eq:beta_star_in_basis}, with our $\Phi_u$ similarly following Eq.~\ref{eq:Tu_in_cheby}. We will define $\underline{y}^\ast = P\underline{u}^\ast + \underline{d}$.
+\FloatBarrier\paragraph{FISO}
+To test this theory, we will setup our problem very much like we did the FIPO example. $\beta^\ast$ will once again be defined as it is in Eq.~\ref{eq:beta_star_in_basis}, with our $\Phi_u$ similarly following Eq.~\ref{eq:Tu_in_cheby}. We will define $\underline{y}^\ast = P\underline{u}^\ast + \underline{d}$. So we have a set of \ac{FISO} describing those spaces.
 
 We have already seen this input sequence in Figures~\ref{fig:FIPO_input_1} and~\ref{fig:FIPO_input_2}, and show the outputs in Figures~\ref{fig:FISO_output_1} and~\ref{fig:FISO_output_2}. 
 \begin{figure}[htbp] 
@@ -512,13 +512,13 @@ However, the learning history is quite different. Even though we appear to meet 
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf}} 
         \caption{}
-        \label{fig:PISO_alpha_error_progression}
+        \label{fig:FISO_alpha_error_progression}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf}} 
         \caption{}
-        \label{fig:PISO_beta_error_progression}
+        \label{fig:FISO_beta_error_progression}
     \end{subfigure}
     \caption{Progression of coefficient errors through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
 \end{figure}
@@ -529,14 +529,14 @@ However, the learning history is quite different. Even though we appear to meet 
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf}} 
         \caption{}
-        \label{fig:PISO_alpha_progression}
+        \label{fig:FISO_alpha_progression}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering  
         \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf}} 
         \caption{}
-        \label{fig:PISO_beta_progression}
+        \label{fig:FISO_beta_progression}
     \end{subfigure}
     \caption{Progression of coefficients through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
 \end{figure}
@@ -546,7 +546,7 @@ However, the learning history is quite different. Even though we appear to meet 
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Mass 1 Position.pdf}} 
         \caption{}
-        \label{fig:PISO_mass_1_position}
+        \label{fig:FISO_mass_1_position}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
@@ -557,14 +557,14 @@ However, the learning history is quite different. Even though we appear to meet 
     \begin{subfigure}[b]{0.8\textwidth}
         \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Shaped Output.pdf}} 
         \caption{}
-        \label{fig:PISO_shaped_output}
+        \label{fig:FISO_shaped_output}
     \end{subfigure}
     \caption{Progression of Outputs through ILC trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$. Even though $\underline{u}^\ast$ could in theory be fully described by $\Phi_u$, the controller is unable to capture $\underline{y}^\ast$}
 \end{figure}
 We see that we are still able to send $e_\alpha \to 0$, or $\alpha \to 1$, but the other components do not follow. Once again we are faced with this steady-state error on the beta.
 
-\FloatBarrier\paragraph{\ac{SIFO}}
-We now check the other scenario. We now setup similar to our POFI scenario, and set everything up the same. Except now when we extract $\underline{u}^\ast$ in Eq.~\ref{eq:u*_from_Py*}, we also use that to set our input basis space such that $\underline{u}^\ast = \Phi_u$. The goals can be seen in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}, and the inputs that get us there in Figures~\ref{fig:SIFO_input_1} and~\ref{fig:SIFO_input_2} -- nothing new here.
+\FloatBarrier\paragraph{SIFO}
+We now check the other scenario, where the spaces can be described with a set of \ac{SIFO}. We now setup similar to our POFI scenario, and set everything up the same. Except now when we extract $\underline{u}^\ast$ in Eq.~\ref{eq:u*_from_Py*}, we also use that to set our input basis space such that $\underline{u}^\ast = \Phi_u$. The goals can be seen in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}, and the inputs that get us there in Figures~\ref{fig:SIFO_input_1} and~\ref{fig:SIFO_input_2} -- nothing new here.
 \begin{figure}[htbp] 
     \centering 
     \begin{subfigure}[b]{0.49\textwidth}
