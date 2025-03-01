@@ -4,8 +4,7 @@
 
 \FloatBarrier\section{Basis Functions}
 ~\label{sec:basis_functions}
-\myworries{Add input histories?}
-While we have shown that the RL process still works for the ILC problem, the dimensional limits present a significant problem. Signal dimension reduction is not a new challenge, and can be seen from Fourier Transforms to Linear Regressions. The method which we will explore are Basis Functions.
+While we have shown that the RL process still works for the ILC problem, the dimensional limits present a significant problem. Signal dimension reduction is not a new challenge, and can be seen from Fourier Transforms to Linear Regressions. The method which we will explore are Basis Functions. \myworries{Phan and Frueh - Learning Control for Trajectory Tracking using Basis Functions} provides the logic from which we launch our approach. 
 
 \FloatBarrier\subsection{What are Basis Functions}
 ~\label{sub:what_are_basis}
@@ -215,10 +214,10 @@ We will use our perfect knowledge to ensure our controller works to control our 
 
 An important note moving forward is that some of the shaped outputs look like arbitrary nonsense. That is because they are. In examples where we define our $\underline{u}^\ast$ to set the $\underline{y}^\ast$ it is much harder to pick pleasant and recognizable images while still preserving the understandability of our theory. The presented goal `shapes' are no more arbitrary than the circle goal in Figure~\ref{fig:ilc_shaped_circle} or the word `Dartmouth' in Figure~\ref{fig:ilc_shaped_dartmouth}. 
 
-\FloatBarrier\paragraph{Full Input Basis, Partial Output Basis}
+\FloatBarrier\paragraph{\ac{FIPO}}
 ~\label{par:fipo}
 
-The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. This `Full Input, Partial Output' assumption will later be abbreviated as FIPO.%
+The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. 
 
 We can always construct a basis space to capture $\underline{y}^\ast$ by setting one of the functions of $\Phi_y$ equal to $\underline{y}^\ast$, so this is the first logical one to challenge. However we must ensure our input can be captured in our input basis space,so we construct our input basis space out of the first 10 chebyshev polynomials\footnote{Each function must be 200 points in resolution,  as our number of ILC inputs is 200 ($p \times r$)}, using the method shown in Eq.~\ref{eq:cheby_recurrence}.
 \begin{equation}
@@ -237,15 +236,18 @@ which produces the input signals shown in Figures~\ref{fig:FIPO_input_1} and~\re
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Input 1.pdf}} 
-    \caption{Input 1 - explicitly constructed from basis functions to be in $\Phi_u$}
-~\label{fig:FIPO_input_1}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Input 2.pdf}} 
-    \caption{Input 2 - explicitly constructed from basis functions to be in $\Phi_u$}
-~\label{fig:FIPO_input_2}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Input 1.pdf}} 
+        \caption{}
+        \label{fig:FIPO_input_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Input 2.pdf}} 
+        \caption{}
+        \label{fig:FIPO_input_2}
+    \end{subfigure}
+    \caption{Goal Inputs deconstructed from an $\underline{u}$ explicitly constructed from basis functions to be in $\Phi_u$}
 \end{figure}
 
 We apply this $\underline{u}^\ast$ to our system to create $\underline{y}^\ast$. For convenience, we will set $\Phi_y$ = $\Phi_u$. It can be demonstrated that our output basis space does not capture our $\underline{y}^\ast$ by computing our $\alpha^\ast$ and attempting to go back to $\underline{y}^\ast$. For our system and given input,
@@ -271,16 +273,20 @@ If $\underline{y}^\ast$ were in $\Phi_y$, then $\underline{y}^\ast - \Phi_y \alp
 \end{equation}
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Output 1.pdf}} 
-    \caption{Output 1 - True $\underline{y}^\ast$ and goal constructed from $\alpha^\ast$}
-~\label{fig:FIPO_output_1}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Output 1.pdf}} \label{fig:FIPO_output_1}
+        \caption{}
+        \label{fig:FIPO_output_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Output 2.pdf}} 
+        \caption{}
+        ~\label{fig:FIPO_output_2}
+    \end{subfigure}
+    \caption{Deconstructed $\underline{y}^\ast$s vs the goal constructed from $\alpha^\ast$. $\alpha^\ast$ is found by inverting the the $\underline{y}^\ast$ in the space $\Phi_y$. By then attempting to go back, this highlights the inability of $\Phi_y$ to perfectly capture $\underline{y}^\ast$.}
 \end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Goal Output 2.pdf}} 
-    \caption{Output 2 - True $\underline{y}^\ast$ and goal constructed from $\alpha^\ast$}
-~\label{fig:FIPO_output_2}
-\end{figure}
+
 
 Now we have a $\Phi_u$ that meets earlier assumptions (input is fully described in its space) and we are correctly violating the assumption that the output is fully defined, we now see how our system performs.
 
@@ -289,57 +295,69 @@ Having defined our goal and our controller -- the first steps for any ILC proble
 Armed with our first error, we now iteratively apply our controller. Using the previous trials error in the $\eta_y$ space and controller $\mathcal{L}_\beta$, we compute our change in betas $\delta_j \beta$. We use that to compute our new $\beta_{j}$, convert it from the $\Phi_u$ space to get $\underline{u}$. Applying our new sequence of inputs, our system will produce new outputs to calculate an error with and calculate our $e_{\alpha_j}$. Repeat this process as needed.
 
 Through these trials, an amazing property emerges. Even though we cannot capture $\underline{y}^\ast$ perfectly in $\Phi_y$, we are still able to inform our controller with error data that it enables it to send the error to zero. Figures~\ref{fig:FIPO_alpha_error_progression} and~\ref{fig:FIPO_beta_error_progression} show that through trials, the error on both $\alpha$ and $\beta$ are sent to zero.
+
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\alpha$ through trials when $\underline{u}^\ast$ is in $\Phi_u$ but $\underline{y}^\ast$ is not in $\Phi_y$}
-~\label{fig:FIPO_alpha_error_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\beta$ through trials when $\underline{u}^\ast$ is in $\Phi_u$ but $\underline{y}^\ast$ is not in $\Phi_y$}
-~\label{fig:FIPO_beta_error_progression}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:FIPO_alpha_error_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:FIPO_beta_error_progression}
+    \end{subfigure}
+    \caption{Progression of Errors on coefficients through perfect-knowledge controller trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$. Even though $\underline{y}^\ast \notin \Phi_y$, the associated coefficient errors can still go to zero.}
 \end{figure}
 
-We can additionally see the progression of the coefficients through trials in Figures~\ref{fig:FIPO_alpha_progression} and~\ref{fig:FIPO_beta_progression}. We intentionally only plot a few of the coefficients to prevent a cluttered plot.
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf}} 
-    \caption{Progression of $\alpha$ coefficients through trials when $\underline{u}^\ast$ is in $\Phi_u$ but $\underline{y}^\ast$ is not in $\Phi_y$}
-~\label{fig:FIPO_alpha_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf}} 
-    \caption{Progression of $\beta$ coefficients through trials when $\underline{u}^\ast$ is in $\Phi_u$ but $\underline{y}^\ast$ is not in $\Phi_y$}
-~\label{fig:FIPO_beta_progression}
+We can additionally see the progression of the coefficients through trials in 
+Figures~\ref{fig:FIPO_alpha_progression} and~\ref{fig:FIPO_beta_progression}. 
+We intentionally only plot a few of the coefficients to prevent a cluttered plot.
+\begin{figure}[htbp]
+    \centering 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:FIPO_alpha_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:FIPO_beta_progression}
+    \end{subfigure}
+    \caption{Progression of Coefficients through perfect-knowledge controller trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
 \end{figure}
 
 Figures~\ref{fig:FIPO_mass_1_position} through~\ref{fig:FIPO_shaped_output} show that the zero-error in the basis space translates to zero-error in the full-dimension space.
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Mass 1 Position.pdf}} 
-    \caption{Position of Mass 1 through ILC trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
-~\label{fig:FIPO_mass_1_position}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Partial output - Mass 2 Position.pdf}} 
-    \caption{Position of Mass 2 through ILC trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Shaped Output.pdf}} 
-    \caption{Shaped Output through ILC trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
-~\label{fig:FIPO_shaped_output}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width = \textwidth]{{Basis Functions/Full input Partial output - Mass 1 Position.pdf}} 
+        \caption{}
+        \label{fig:FIPO_mass_1_position}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width = \textwidth]{{Basis Functions/Full input Partial output - Mass 2 Position.pdf}} 
+        \caption{}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}[b]{0.8\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Partial Output - Shaped Output.pdf}} 
+        \caption{}
+        \label{fig:FIPO_shaped_output}
+    \end{subfigure}
+    \caption{Progression of outputs through ILC trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
 \end{figure}
 
 
-\FloatBarrier\paragraph{Partial Input Basis, Full Output Basis}
+\FloatBarrier\paragraph{\ac{PIFO}}
 Obviously the next thing to check is what if $\underline{y}^\ast$ is fully defined in $\Phi_y$ but $\underline{u}^\ast$ is not in $\Phi_u$? It is incredibly easy to ensure our $\underline{y}^\ast$ is captured because, if you recall our ideal basis space condition, we can simply set one of our basis functions $\phi = \underline{y}^\ast$ at the same time that we set $\underline{y}^\ast$. 
 
-So now our $\underline{u}^\ast$ will only partially be described in $\Phi_u$, but $\underline{y}^\ast$ will be fully in $\Phi_y$. This `Partial Input, Full Output' assumption will later be abbreviated as PIFO.% 
+So now our $\underline{u}^\ast$ will only partially be described in $\Phi_u$, but $\underline{y}^\ast$ will be fully in $\Phi_y$.
 
 Ensuring we capture $\underline{u}^\ast$ is understandably much harder without perfect system knowledge. With our current understanding, the only way to guarantee $\underline{u}^\ast$ is in $\Phi_u$ is to expand it to be $r_{ILC} \times r_{ILC}$ and full rank. Obviously this high dimension hurts us, So let us test if it is completely necessary for $\underline{u}^\ast \in \Phi_u$.
 
@@ -348,17 +366,20 @@ We will repeat a similar process as the above example, except now we define $\un
     \alpha^\ast = {\begin{bmatrix}1 & 0.2 & -0.3 & 4 & 0 & 0 & 0 & -1 & 0 & 0\end{bmatrix}}^T
 \end{equation}
 Remembering to split $\underline{y}^\ast$ and plotting the goal outputs separately, we see our goals in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}. It should be no surprise that they look exactly the same as the goal inputs in the previous example; they are defined the exact same.
-\begin{figure}[htbp] 
+\begin{figure}[htbp]        
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Output 1.pdf}} 
-    \caption{Output 1 - explicitly constructed from basis functions to be in $\Phi_y$}
-~\label{fig:PIFO_output_1}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Output 2.pdf}} 
-    \caption{Output 2 - explicitly constructed from basis functions to be in $\Phi_y$}
-~\label{fig:PIFO_output_2}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Output 1.pdf}} 
+        \caption{}
+        \label{fig:PIFO_output_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Output 2.pdf}} 
+        \caption{}
+        \label{fig:PIFO_output_2}
+    \end{subfigure}
+    \caption{Goal Outputs deconstructed from a $\underline{y}^\ast$ explicitly constructed from basis functions to be in $\Phi_y$}
 \end{figure}
 
 We can back out our input 
@@ -379,16 +400,20 @@ This can be numerically confirmed to not capture our input in Eq.~\ref{eq:u*_Tu_
     \label{eq:u*_Tu_b*_error}
 \end{equation}
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Input 1.pdf}} 
-    \caption{Input 1 - True $\underline{u}^\ast$ and goal constructed from $\beta^\ast$}
-~\label{fig:PIFO_input_1}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Input 2.pdf}} 
-    \caption{Input 2 - True $\underline{y}^\ast$ and goal constructed from $\beta^\ast$}
-~\label{fig:PIFO_input_2}
+    \centering 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Input 1.pdf}} 
+        \caption{}
+        \label{fig:PIFO_input_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering  
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial input Full output - Goal Input 2.pdf}} 
+        \caption{}
+        \label{fig:PIFO_input_2}
+    \end{subfigure}
+    \caption{Deconstructed Goal $\underline{u}^\ast$s from $\Phi_u\beta^\ast$, where $\beta^\ast$ was backed out of $\underline{y}^\ast$ with perfect knowledge.}
 \end{figure}
 
 Having confirmed we have a $\Phi_u$ that meets earlier assumptions (input is fully described in its space) and we are correctly violating the assumption that the output is fully defined, we now see how our assumptions perform.  
@@ -398,177 +423,216 @@ Once again, now that we have our goal and our controller we can proceed to gener
 Here we begin to see the limits of our basis functions. While figure~\ref{fig:PIFO_alpha_error_progression} shows that we can send $e_\alpha$ to zero, no other parameter does so. Figure~\ref{fig:PIFO_error_progression} shows that through trials, we reach a steady state error. Recall earlier from Eq.~\ref{eq:a_pinv_Ty_y} that multiple $\underline{y}$s can produce the same $\alpha$. Here, even though we can capture $\underline{y}^\ast$ fully in our basis, we cannot see the error that exists outside of it in the null space. So even though though our input is not producing our $\underline{y}^\ast$, since our $e_\alpha$ goes to zero, our betas stop learning. 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\alpha$ through trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:PIFO_alpha_error_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Error Progression.pdf}} 
-    \caption{Progression of $e$ through trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:PIFO_error_progression}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:PIFO_alpha_error_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Error Progression.pdf}} 
+        \caption{}
+        \label{fig:PIFO_error_progression}
+    \end{subfigure}
+    \caption{Progression of coefficient errors through trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$. Contrast this with the earlier example where $\underline{u}^\ast \in \Phi_u$, we see now that the error of $\alpha$ can still go to zero, but the error on $\beta$ reaches a non-zero steady state.}
 \end{figure}
 The progression of the coefficients through trials can be seen Figures~\ref{fig:PIFO_alpha_progression} and~\ref{fig:PIFO_beta_progression}. Once again, only select coefficients are plotted for cleanliness.
-\begin{figure}[htbp] 
+\begin{figure}[htbp]
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf}} 
-    \caption{Progression of $\alpha$ coefficients through trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:PIFO_alpha_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf}} 
-    \caption{Progression of $\beta$ coefficients through trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:PIFO_beta_progression}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:PIFO_alpha_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:PIFO_beta_progression}
+    \end{subfigure}
+    \caption{Progression of Coefficients through trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
 \end{figure}
 
 Just how drastically off we are can be seen in Figures~\ref{fig:PIFO_mass_1_position} through~\ref{fig:PIFO_shaped_output}
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Mass 1 Position.pdf}} 
-    \caption{Position of Mass 1 through ILC trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:PIFO_mass_1_position}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Mass 2 Position.pdf}} 
-    \caption{Position of Mass 2 through ILC trials when $\underline{u}^\ast \notin \Phi_u$ but $\underline{y}^\ast \in \Phi_y$}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Shaped Output.pdf}} 
-    \caption{Shaped Output through ILC trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
-~\label{fig:PIFO_shaped_output}
+    \centering 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Mass 1 Position.pdf}} 
+        \caption{}
+        \label{fig:PIFO_mass_1_position}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Mass 2 Position.pdf}} 
+        \caption{}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}[b]{0.8\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Partial Input Full Output - Shaped Output.pdf}} 
+        \caption{}
+        \label{fig:PIFO_shaped_output}
+    \end{subfigure}
+    \caption{Progression of Outputs through ILC trials when $\underline{u}^\ast \in \Phi_u$ but $\underline{y}^\ast \notin \Phi_y$}
 \end{figure}
 
-\FloatBarrier\paragraph{FIPO vs PIFO}
+\paragraph{FIPO vs PIFO}
 Even if the output is not fully captured in a basis space, you may recall that in the ILC problem that is not what we are concerned with. In ILC we deal with the error; more specifically sending the error to zero. No matter our basis space, $e_j = \Phi_y 0_{\eta_y \times 1} = 0_{\ell \times 1}$ due to the zero-matrix identity (just how multiplying by 0 always equals 0). So no matter our goal output, our goal error is always enclosed in the basis space. 
 
-It would be natural then to think the same applies for the input. After all, in a properly converged ILC problem $\delta_j \underline{u}$ should also be all zeros. However as shown in our PIFO example (`Partial Input Basis, Full Output Basis'), this hope is disproven. Remember that the ILC problem is trying to `learn' the $\underline{u}^\ast$ that produces $\underline{y}^\ast$ (Eq.~\ref{eq:y*_Pu*_d}), and does this by changing inputs between trials, so while to goal $\delta_j \underline{u}$ may be within $\Phi_u$, we need to be able to get there.
+It would be natural then to think the same applies for the input. After all, in a properly converged ILC problem $\delta_j \underline{u}$ should also be all zeros. However as shown in our PIFO example, this hope is disproven. Remember that the ILC problem is trying to `learn' the $\underline{u}^\ast$ that produces $\underline{y}^\ast$ (Eq.~\ref{eq:y*_Pu*_d}), and does this by changing inputs between trials, so while to goal $\delta_j \underline{u}$ may be within $\Phi_u$, we need to be able to get there.
 
 This can be readily seen by falling back to the logic of deadbeat controllers. Imagine a scenario where we have a deadbeat $\mathcal{L}_\beta$. We start with $\beta_0 = 0_{\eta_u \times 1}$, apply it to produce $\underline{y}_0 = \underline{d}$, and compute $e_{\alpha_0} = \Phi_y (\underline{y}^\ast - d)$. 
 We follow our control law of Eq.~\ref{eq:basis_ilc_control_law} to compute $\delta_1 \beta = \mathcal{L}_\beta e_{\alpha_0}$, such that $\beta_1 = \beta_0 + \delta_1 \beta$. Given that $\beta_0$ was a zero-vector, we can ignore it, and since we are saying that $\mathcal{L}_\beta$ is deadbeat, we can say that $\beta_1$ is our best attempt at $\beta^\ast$, meaning our best attempt at $\underline{u}^\ast$ must be in $\Phi_u$.
 
 If one were to repeat this example with a non-deadbeat controller, they would find that any $\beta$ found would always produce a $\underline{u}$ in the space $\Phi_u$. So while it is possible to always achieve a $\Phi_y$ that captures our goal of zero error, the space defining the inputs must be selected carefully to include $\underline{u}^\ast$. It is also important to note that the learned input is \textbf{not} the projection of $\underline{u}^\ast$ onto $\Phi_u$\footnote{Unless $\underline{u}^\ast \in \Phi_u$ of course}.
 
-So our $\Phi_u$ matters, but $\Phi_y$ does not. Given that, why not define $\Phi_y$ such that $\eta_y = 1$. Even if we then leave $\Phi_u$ as the identity matrix, then thinking ahead to our RL problem, we would have the ability to infinitely reduce our `state' dimensions down to $1$. Then input-decoupling could be employed such that each controller could be updated in just $4$ trials, and that would only then need to be done $r_{ILC}$ times. 
+So our $\Phi_u$ matters, but $\Phi_y$ does not.\footnote{This is consistent with the findings of \myworries{Phan and Frueh}}. Given that, why not define $\Phi_y$ such that $\eta_y = 1$. Even if we then leave $\Phi_u$ as the identity matrix, then thinking ahead to our RL problem, we would have the ability to infinitely reduce our `state' dimensions down to $1$. Then input-decoupling could be employed such that each controller could be updated in just $4$ trials, and that would only then need to be done $r_{ILC}$ times. 
 
-\FloatBarrier\paragraph{Full Input Basis, Single Output Basis}
+\FloatBarrier\paragraph{\ac{FISO}}
 To test this theory, we will setup our problem very much like we did the FIPO example. $\beta^\ast$ will once again be defined as it is in Eq.~\ref{eq:beta_star_in_basis}, with our $\Phi_u$ similarly following Eq.~\ref{eq:Tu_in_cheby}. We will define $\underline{y}^\ast = P\underline{u}^\ast + \underline{d}$.
 
 We have already seen this input sequence in Figures~\ref{fig:FIPO_input_1} and~\ref{fig:FIPO_input_2}, and show the outputs in Figures~\ref{fig:FISO_output_1} and~\ref{fig:FISO_output_2}. 
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Single output - Goal Output 1.pdf}} 
-    \caption{Output 1 - Goal for $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:FISO_output_1}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full input Single output - Goal Output 2.pdf}} 
-    \caption{Output 2 - Goal for $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:FISO_output_2}
+    \centering 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Single output - Goal Output 1.pdf}} 
+        \caption{}
+        \label{fig:FISO_output_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full input Single output - Goal Output 2.pdf}} 
+        \caption{}
+        \label{fig:FISO_output_2}
+    \end{subfigure}
+    \caption{Deconstructed Goal Outputs for $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
 \end{figure}
 However, the learning history is quite different. Even though we appear to meet all the criteria of capturing our signals in our basis space, we are unable to send the error to zero. It may look ok, but the average error on the output of each point\footnote{Computed as $\frac{\left|e\right|}{n_{ILC}}$} is 0.9823
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\alpha$ through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:PISO_alpha_error_progression}
+    \centering 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:PISO_alpha_error_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:PISO_beta_error_progression}
+    \end{subfigure}
+    \caption{Progression of coefficient errors through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
 \end{figure}
+
+
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\beta$ through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:PISO_beta_error_progression}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:PISO_alpha_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering  
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:PISO_beta_progression}
+    \end{subfigure}
+    \caption{Progression of coefficients through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
 \end{figure}
+
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf}} 
-    \caption{Progression of $\alpha$ coefficients through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:PISO_alpha_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf}} 
-    \caption{Progression of $\beta$ coefficients through trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:PISO_beta_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Mass 1 Position.pdf}} 
-    \caption{Position of Mass 1 through ILC trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:PISO_mass_1_position}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Mass 2 Position.pdf}} 
-    \caption{Position of Mass 2 through ILC trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Shaped Output.pdf}} 
-    \caption{Shaped Output through ILC trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$}
-~\label{fig:PISO_shaped_output}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Mass 1 Position.pdf}} 
+        \caption{}
+        \label{fig:PISO_mass_1_position}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Mass 2 Position.pdf}} 
+        \caption{}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}[b]{0.8\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Full Input Single Output - Shaped Output.pdf}} 
+        \caption{}
+        \label{fig:PISO_shaped_output}
+    \end{subfigure}
+    \caption{Progression of Outputs through ILC trials when $\underline{u}^\ast \in \Phi_u$ and $\underline{y}^\ast = \Phi_y$. Even though $\underline{u}^\ast$ could in theory be fully described by $\Phi_u$, the controller is unable to capture $\underline{y}^\ast$}
 \end{figure}
 We see that we are still able to send $e_\alpha \to 0$, or $\alpha \to 1$, but the other components do not follow. Once again we are faced with this steady-state error on the beta.
 
-\FloatBarrier\paragraph{Single Input Basis, Full Output Basis}
-For completeness, we check the other scenario. We now setup similar to our POFI scenario, and set everything up the same. Except now when we extract $\underline{u}^\ast$ in Eq.~\ref{eq:u*_from_Py*}, we also use that to set our input basis space such that $\underline{u}^\ast = \Phi_u$. The goals can be seen in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}, and the inputs that get us there in Figures~\ref{fig:SIFO_input_1} and~\ref{fig:SIFO_input_2} -- nothing new here.
+\FloatBarrier\paragraph{\ac{SIFO}}
+We now check the other scenario. We now setup similar to our POFI scenario, and set everything up the same. Except now when we extract $\underline{u}^\ast$ in Eq.~\ref{eq:u*_from_Py*}, we also use that to set our input basis space such that $\underline{u}^\ast = \Phi_u$. The goals can be seen in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}, and the inputs that get us there in Figures~\ref{fig:SIFO_input_1} and~\ref{fig:SIFO_input_2} -- nothing new here.
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single input Full output - Goal Input 1.pdf}} 
-    \caption{Input 1 - Goal for $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_input_1}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single input Full output - Goal Input 2.pdf}} 
-    \caption{Input 2 - Goal for $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_input_2}
+    \centering 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single input Full output - Goal Input 1.pdf}} 
+        \caption{}
+        \label{fig:SIFO_input_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}  
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single input Full output - Goal Input 2.pdf}} 
+        \caption{}
+        \label{fig:SIFO_input_2}
+    \end{subfigure}
+    \caption{Deconstructed Goal Inputs for $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
 \end{figure}
 
 What is new, however, is the learning process. We see we are able to actually find our output, with the average error on each point being $8.85 \times 10^{-5}$ - within our `zero' range.
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\alpha$ through trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_alpha_error_progression}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:SIFO_alpha_error_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf}} 
+        \caption{}
+        \label{fig:SIFO_beta_error_progression}
+    \end{subfigure}
+    \caption{Progression of coefficient errors through trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
 \end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:SIFO_alpha_progression}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth} 
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf}} 
+        \caption{}
+        \label{fig:SIFO_beta_progression}
+    \end{subfigure}
+    \caption{Progression of coefficients through trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
+\end{figure}
+
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf}} 
-    \caption{Progression of $e_\beta$ through trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_beta_error_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf}} 
-    \caption{Progression of $\alpha$ coefficients through trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_alpha_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf}} 
-    \caption{Progression of $\beta$ coefficients through trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_beta_progression}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Mass 1 Position.pdf}} 
-    \caption{Position of Mass 1 through ILC trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_mass_1_position}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Mass 2 Position.pdf}} 
-    \caption{Position of Mass 2 through ILC trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Shaped Output.pdf}} 
-    \caption{Shaped Output through ILC trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$}
-~\label{fig:SIFO_shaped_output}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Mass 1 Position.pdf}} 
+        \caption{}
+        \label{fig:SIFO_mass_1_position}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Mass 2 Position.pdf}} 
+        \caption{}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}[b]{0.8\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Single Input Full Output - Shaped Output.pdf}} 
+        \caption{}
+        \label{fig:SIFO_shaped_output}
+    \end{subfigure}
+    \caption{Progression of Positions through ILC trials when $\underline{u}^\ast = \Phi_u$ and $\underline{y}^\ast \in \Phi_y$. While the learned shape may appear arbitrary, the important take-away is that the error is zero, and the learned output matches that exactly of the goal.}
 \end{figure}
 
 \FloatBarrier\paragraph{FISO vs SIFO}
@@ -623,6 +687,7 @@ where $1 \leq j \leq \ell$, marking what basis function we draw from $\Phi_{full
 One would hope that after sufficient episodes, there would be a $\Phi^e$ found such that $\underline{u}^\ast$ is included.
 
 \FloatBarrier\subsubsection{Example}
+\myworries{Talk about the difference between if we change Ty or hold it constant. Check our numbers. We probably want to change this to show the dynamic Ty. WHat if I randomize it}
 First we set up the problem as done in the FIPO example, with $\underline{u}^\ast$ shown in Figures~\ref{fig:FIPO_input_1} and~\ref{fig:FIPO_input_2} and $\underline{y}^\ast$ in Figures~\ref{fig:FISO_output_1} and~\ref{fig:FISO_output_2}.
 
 Although we have a signal of length $\ell = 200$\footnote{$n_{ILC} = r_{ILC} = 200$}, we do not need $\ell$ basis functions to ensure we capture our $\underline{u}^\ast$. Recall for our FIPO example, we defined $\underline{u}^\ast$ in the space of Chebyshev Polynomials $T_0 \to T_9$, so we can define $\Phi_{full}$ as we define $\Phi_u$ in Eq.~\ref{eq:Tu_in_cheby} to ensure we capture $\underline{u}^\ast$.
@@ -656,7 +721,7 @@ and repeat the process. We do this enough times to try every every basis functio
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf}} 
+    \includegraphics[width=0.49\textwidth]{{Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf}} 
     \caption{Progression of $e_\alpha$ through rolling basis space episodes}
 ~\label{fig:rolling_basis_alpha_error}
 \end{figure}
@@ -665,38 +730,46 @@ It can be seen that this approach does come close to producing our goal output i
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Error Progression.pdf}} 
-    \caption{Progression of $e$ through rolling basis space episodes}
-~\label{fig:rolling_basis_error}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Error Progression.pdf}} 
+        \caption{Progression of $e$ through rolling basis space episodes}
+        \label{fig:rolling_basis_error}
+    \end{subfigure}
 \end{figure}
+
+
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Input 1.pdf}} 
-    \caption{Progression of $\underline{u}_1$ through rolling basis space episodes}
-~\label{fig:rolling_basis_input1}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Input 1.pdf}} 
+        \caption{}
+        \label{fig:rolling_basis_input1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Input 2.pdf}} 
+        \caption{}
+        \label{fig:rolling_basis_input2}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Shaped Output.pdf}} 
+        \caption{}
+        \label{fig:rolling_basis_shaped}
+    \end{subfigure}
+    \caption{Progression of deconstructed goal inputs and the generated shaped output through rolling basis space episodes. While the output can be seen to be close to our goal, even after working our way through the entirety of the input basis space, we still fail to properly capture our $\underline{y}^\ast$.}
 \end{figure}
+
 \begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Input 2.pdf}} 
-    \caption{Progression of $\underline{u}_2$ through rolling basis space episodes}
-~\label{fig:rolling_basis_input2}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Shaped Output.pdf}} 
-    \caption{Progression of shaped outputs through rolling basis space episodes}
-~\label{fig:rolling_basis_shaped}
-\end{figure}
-\begin{figure}[htbp] 
-    \centering  
-    \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf}} 
-    \caption{Progression of $\beta$ through rolling basis space episodes}
-~\label{fig:rolling_basis_betas}
+    \centering
+    \includegraphics[width=0.49\textwidth]{{Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf}} 
+    \caption{Progression of $\beta$ through rolling basis space episodes. After the first trial, it can be seen that $\beta \to 1$, and does not factor in the impact of additional basis functions.}
+    \label{fig:rolling_basis_betas}
 \end{figure}
 
 Figure~\ref{fig:rolling_basis_error} shows that after our first pass through all of the input basis we have a `petty good' input. This is logical, as it has now taken into consideration every possible basis function that makes up our $\underline{u}^\ast$. 
 
-\FloatBarrier\subsubsection{Summary}
+\FloatBarrier\subsubsection{Summary of Dyanmic Spaces}
 While it is possible to start with a finite number, $\eta$, of basis functions $\phi$ to create a dynamic basis space which better captures $\underline{u}$, there is no guarantee to create one that captures $\underline{u}^\ast$. 
 
 There are two main reasons for the failings of this approach. Recall that there are numerous $\underline{y}$s that can produce the same same $\alpha$ for a given $\Phi$. Additionally, while our basis functions may be independent of one another, as stated in Eq.~\ref{eq:orthogonal_basis}, they are not necessarily independent in the response they illicit from the system in the basis space. So in addition to the different $\underline{y}$s that can get us $\alpha^\ast$, there are also multiple $\underline{u}$s to get us to $\alpha^\ast$. Since different inputs can lead to the same `perceived' output through the lens of a basis space, defining our basis space and functions as such do not ensure that we are able to find the optimal $\underline{u}^\ast$

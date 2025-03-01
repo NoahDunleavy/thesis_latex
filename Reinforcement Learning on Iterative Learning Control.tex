@@ -101,71 +101,65 @@ Note that we only are showing a few select weights and inputs, as each of the tw
 
 \begin{figure}[htbp] %controller histories
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 1 through Policy Iteration Trials}%
+        \caption{}%
         \label{fig:policy_ilc_F1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 7 through Policy Iteration Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 13 through Policy Iteration Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 20 through Policy Iteration Trials}%
+        \caption{}%
         \label{fig:policy_ilc_F20}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Select Controller Weights on Select Inputs for an ILC problem through Policy Iteration Trials. 5 Controllers are learned, for an ILC system on the Dual-Spring-Mass system of trial length $p=10$ -- each controller update requires 1600 ILC trials}
 \end{figure}
 
 \begin{figure}[htbp] %error progression
     \centering  %center align
     \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration on ILC - Error Progression.pdf}}
-    \caption{Error Magnitude of Output through Policy Iteration Trials}
+    \caption{Error Magnitude of Output through Policy Iteration Trials, where $Q/R = 100$. Observe that after the first controller is learned and applied, there is a sharp reduction in error but due to the relatively high $R$ in its definition, subsequent reductions in error are much slower.}
 \end{figure}
 
 \begin{figure}[htbp] %IO history
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf}}
-        \caption{Mass 1 Positions through Policy Iteration Iterations}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf}}
-        \caption{Mass 2 Positions through Policy Iteration Iterations}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \vfill
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration on ILC - Input 1.pdf}}
-        \caption{Input 1 Magnitudes through Policy Iteration Iterations}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration on ILC - Input 2.pdf}}
-        \caption{Input 2 Magnitudes through Policy Iteration Iterations}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
+    \caption{Input-Output Progressions through Policy Iteration Trials of $Q/R=100$. Observe Trial 1 to be the open-loop response, and subsequent trials to be progressing towards the goal output.}
 \end{figure}
 
 \begin{figure}[htbp] %shaped
     \centering  %center align
     \includegraphics[width=\textwidth]{{RL on ILC/Policy Iteration on ILC - Shaped Output.pdf}}
-    \caption{Shaped Output through Policy Iteration Trials}
+    \caption{Shaped Output through Policy Iteration Trials of $Q/R=100$. Observe the progression towards the desired output, but also the extreme number of trials that would be needed to properly further the learning.}
 \end{figure}
 
 \FloatBarrier~It is clear here that even over our nearly 10,000 trials, we did not perfectly capture our output. This is since our R weighting was relatively large. Further reductions of $R$ does not remove the existence of an LQR controller but introduces issues when computing the pseudo-inverse of $X_j$. 
@@ -194,70 +188,64 @@ With an error magnitude of $8.55\times{10}^{-6}$, computed as in Eq.~\ref{eq:con
 
 \begin{figure}[htbp] %controller histories
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 1 through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 7 through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 13 through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 20 through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
+    \caption{Select Controller Weights on Select Inputs progression through Policy Iteration Trials when $Q/R = 1\times10^8$. Due to the necessary amplified exploration $v(k)$, observe the tendency for weights to converge much less smoothly than before, displaying behaviors of overshoot and lag.}
 \end{figure}
 
 \begin{figure}[htbp] %error progression
     \centering  %center align
     \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf}}
-    \caption{Error Magnitude of Output through Policy Iteration Trials with Reduced R}%
+    \caption{Error Magnitude of Output through Policy Iteration Trials with $Q/R = 1\times10^8$. Observe how initial errors creep up much further than the earlier shown $Q/R=100$ trial, but the application of the first trial drastically reduces error , such that it would be zero were it not for the extreme input exploration terms.}%
     \label{fig:reduced_R_ilc_error}
 \end{figure}
 
 \begin{figure}[htbp] %IO history
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf}}
-        \caption{Mass 1 Positions through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf}}
-        \caption{Mass 2 Positions through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \vfill
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf}}
-        \caption{Input 1 Magnitudes through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf}}
-        \caption{Input 2 Magnitudes through Policy Iteration Trials with Reduced R}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
+    \caption{Progression of Input-Output Data in a Dual-Spring-Mass system under ILC derived from RL when $Q/R = 1\times10^8$}
 \end{figure}
 
 \begin{figure}[htbp] %shaped
     \centering  %center align
     \includegraphics[width=\textwidth]{{RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf}}
-    \caption{Shaped Output through Policy Iteration Trials with Reduced R}%
+    \caption{Shaped Output through Policy Iteration Trials when $Q/R = 1\times10^8$}%
     \label{fig:shaped_rl_small_R}
 \end{figure}
 
@@ -307,29 +295,26 @@ Which has an error of $1.15\times{10}^{-4}$, as computed in Eq.~\ref{eq:controll
 
 \begin{figure}[htbp] %controller histories
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 1 through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 7 through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 13 through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf}}
-        \caption{Select Controller Weights on Input 20 through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
+    \caption{Select Controller Weights on Select Inputs through Input Decoupling Trials to learn the ILC Controller when $Q/R=100$. Notice how each controller update takes $441$ ILC trials, and each input controller is only updated at that rate.}
 \end{figure}
 
 \begin{figure}[htbp] %error progression
@@ -340,36 +325,33 @@ Which has an error of $1.15\times{10}^{-4}$, as computed in Eq.~\ref{eq:controll
 
 \begin{figure}[htbp] %IO history
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf}}
-        \caption{Mass 1 Positions through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf}}
-        \caption{Mass 2 Positions through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \vfill
     \centering  %center align
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling on ILC - Input 1.pdf}}
-        \caption{Input 1 Magnitudes through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling on ILC - Input 2.pdf}}
-        \caption{Input 2 Magnitudes through Input Decoupling Trials}
-    \end{minipage}
+        \caption{}
+    \end{subfigure}
+    \caption{Input-Output Data progression through Input Decoupled Learning trials when $Q/R = 100$}
 \end{figure}
 
 \begin{figure}[htbp] %shaped
     \centering  %center align
     \includegraphics[width=\textwidth]{{RL on ILC/Input Decoupling on ILC - Shaped Output.pdf}}
-    \caption{Shaped Output through Input Decoupling Trials}
+    \caption{Shaped Output through Input Decoupling Trials when $Q/R=100$.}
 \end{figure}
 
 \FloatBarrier~The input decoupling approach ends up suffering from the same issues as the policy iteration approach, and then some. We could solve the same R issue the same way (more exploration), but we face the issue of rotating controllers. 

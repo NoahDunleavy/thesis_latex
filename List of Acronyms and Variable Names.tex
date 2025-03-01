@@ -1,18 +1,23 @@
-%Warnings to suppress (manually decide for each file)
-% chktex-file 8 %suppress warning about dash lengths
-
-\chapter*{List of Acronyms and Variable Names}
-\addcontentsline{toc}{chapter}{List of Acronyms and Variable Names} 
+\chapter*{List of Acronyms}
 
 %Put in acronyms and the wordage used on variables (beta, y_bar, y_star, etc)
+%Make axronyms
+\begin{acronym}
+    \acro{FIPO}{Full Input, Partial Output Basis Functions}
+    \acro{FISO}{Full Input, Single Output Basis Functions}
+    \acro{ILC}{Iterative Learning Control}
+    \acro{LQR}{Linear Quadratic Regulator}
+    \acro{LQL}{Linear Quadratic Optimal Learning Control}
+    \acro{PIFO}{Partial Input, Full Output Basis Functions}
+    \acro{RL}{Reinforcement Learning}
+    \acro{SIFO}{Single Input, Full Output Basis Functions}
+    \acro{ZOH}{Zero-Order Hold}
+\end{acronym}
 
-FISO - Full Input, Single Output
-FIPO - Full Input, Partial Output
-SIFO - Single Input, Full Output
-PIFO - Partial Input, Full Output
-$\Phi_u$, $\Phi_y$, $\eta_u$, $\eta_y$, $n_{ILC}$, just do everything tbh
 
+% FISO - Full Input, Single Output
+% FIPO - Full Input, Partial Output
+% SIFO - Single Input, Full Output
+% PIFO - Partial Input, Full Output
+% $\Phi_u$, $\Phi_y$, $\eta_u$, $\eta_y$, $n_{ILC}$, just do everything tbh
 
-
-
-\printglossary[type=acronym]

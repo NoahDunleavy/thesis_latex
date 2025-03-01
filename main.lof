@@ -1,145 +1,77 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Dual Spring-Mass-Damper System}}{4}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Continuous Model Open-loop Simulation Mass 1 Position}}{8}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Continuous Model Open-loop Simulation Mass 2 Position}}{8}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Discrete Model Open-loop Simulation Mass 1 Position}}{11}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Discrete Model Open-loop Simulation Mass 2 Position}}{11}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Zoomed in Discrete over Continuous Model Open-loop Simulation of Mass 1 Position}}{11}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Zoomed in Discrete over Continuous Model Open-loop Simulation of Mass 2 Position}}{11}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Simple Pole Placement Locations}}{14}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Mass 1 Position with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Mass 2 Position with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Input 1 Magnitude with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Input 2 Magnitude with a Simple Pole Placement Feedback Controller}}{15}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Deadbeat Pole Placement Locations}}{16}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Mass 1 Position with a Deadbeat Controller}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Mass 2 Position with a Deadbeat Controller}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Input 1 Magnitude with a Deadbeat Controller}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Input 2 Magnitude with a Deadbeat Controller}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Illustration of Principle of Optimality}}{19}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Pole Locations of a Q/R = 100 LQR Controller on our Spring-Mass System}}{21}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Mass 1 Position with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Mass 2 Position with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Input 1 Magnitude with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Input 2 Magnitude with a Q/R = 100 LQR Feedback Controller}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Pole Locations of a Q/R = 10 LQR Controller on our Spring-Mass System}}{23}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.25}{\ignorespaces Mass 1 Position with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.26}{\ignorespaces Mass 2 Position with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.27}{\ignorespaces Input 1 Magnitude with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.28}{\ignorespaces Input 2 Magnitude with a Q/R = 10 LQR Feedback Controller}}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.29}{\ignorespaces Simple ILC Controller Error Progression}}{29}{figure.caption.19}%
-\contentsline {figure}{\numberline {1.30}{\ignorespaces Mass 1 Position Sequence over select Trials}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.31}{\ignorespaces Mass 2 Position Sequence over select Trials}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.32}{\ignorespaces Input 1 Magnitude Sequence over select Trials}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.33}{\ignorespaces Input 2 Magnitude Sequence over select Trials}}{29}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.34}{\ignorespaces Simple ILC Controller Progression to draw a Circle}}{30}{figure.caption.21}%
-\contentsline {figure}{\numberline {1.35}{\ignorespaces Simple ILC Controller learning `Dartmouth'}}{31}{figure.caption.22}%
-\contentsline {figure}{\numberline {1.36}{\ignorespaces Mass 1 Position Sequence over select Trials learning `Dartmouth'}}{32}{figure.caption.23}%
-\contentsline {figure}{\numberline {1.37}{\ignorespaces Mass 2 Position Sequence over select Trials learning `Dartmouth'}}{32}{figure.caption.23}%
-\contentsline {figure}{\numberline {1.38}{\ignorespaces Mass 1 Position through Policy Iteration Trials}}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.39}{\ignorespaces Mass 2 Position through Policy Iteration Trials}}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.40}{\ignorespaces Input 1 Magnitude through Policy Iteration Trials}}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.41}{\ignorespaces Input 2 Magnitude through Policy Iteration Trials}}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.42}{\ignorespaces Input 1 Controller Weights through Policy Iteration Trials}}{46}{figure.caption.29}%
-\contentsline {figure}{\numberline {1.43}{\ignorespaces Input 2 Controller Weights through Policy Iteration Trials}}{46}{figure.caption.29}%
-\contentsline {figure}{\numberline {1.44}{\ignorespaces Mass 1 Position through Input Decoupling Trials}}{51}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.45}{\ignorespaces Mass 2 Position through Input Decoupling Trials}}{51}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.46}{\ignorespaces Input 1 Magnitude through Input Decoupling Trials}}{51}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.47}{\ignorespaces Input 2 Magnitude through Input Decoupling Trials}}{51}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.48}{\ignorespaces Input 1 Controller Weights through Input Decoupling Trials}}{52}{figure.caption.34}%
-\contentsline {figure}{\numberline {1.49}{\ignorespaces Input 2 Controller Weights through Input Decoupling Trials}}{52}{figure.caption.34}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Dual Spring-Mass-Damper System}}{4}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Position data from a open-loop continuously-modelled Dual-Spring-Mass system}}{8}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Position data from an open-loop discretely-modelled Dual-Spring-Mass system, overlaid with the continuous model to show exactness of the relationship}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Zoomed-in view of the discrete-continuous model to show that at the discretely modelled $\Delta t$ time-step samples, the relationship is exact}}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Pole locations for a Dual-Spring-Mass system when manually placed them at locations $0.5 +- 0.5i$ and $-0.7 +- 0.1i$}}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Position of Mass 1 and Mass 2 for our Dual-Spring-Mass system under closed-loop, state-feedback controller $F$. $F$ is designed such that the poles of ($A+BF$) are at $0.5 +- 0.5i$ and $-0.7 +- 0.1i$. Inputs 1 and 2 are generated as $u(k) = Fx(k)$}}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Pole locations for a Dual-Spring-Mass system when manually placed them at the origin to produce a deadbeat controller}}{17}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Position of Mass 1 and Mass 2 for our Dual-Spring-Mass system under a deadbeat closed-loop, state-feedback controller $F$. $F$ is designed such that the poles of ($A+BF$) are at $0$. Inputs 1 and 2 are generated as $u(k) = Fx(k)$. Under deadbeat control, it can be seen that control is achieved under $n$ steps}}{18}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Illustration of Principle of Optimality, with nodes $A,\ B1,\ B2,\ B,\ $and $C$ with paths between labelled with their associated costs. Even though to go from $A \to B1$ is only a cost of $2$, $B1 \to C$ costs $12$ making the total path cost of $14$. Also see that the path of $A \to B2 \to C$ may have a final step of cost $1$, but the first step has a cost pf $15$. The central path through $B$ then could result in costs of $15,\ 14,\ 11,\ $or $10$. Clearly going through $B$ is the optimal way to proceed. It can then further be seen that the optimal way to go from $B \to C$ is a subset of the optimal path of $A \to C$.}}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Pole Locations of a Q/R = 100 LQR Controller on our Dual-Spring-Mass System}}{23}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=100. Control is achieved within 200 samples, and under maximum input amplitudes of 55N}}{24}{figure.caption.24}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Pole Locations of a Q/R = 10 LQR Controller on our Dual-Spring-Mass System}}{25}{figure.caption.25}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=10. Control is achieved within 800 samples, and under maximum input amplitudes of 9N}}{26}{figure.caption.26}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Error Progression of an ILC problem when using a perfect knowledge controller $\mathcal {L} = 0.8P^+$ such that the poles of the system under ($I-P\mathcal {L}$) are guaranteed to be within the unit circle and relatively close to the origin for rapid convergence.}}{31}{figure.caption.27}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces The progression of Input-Output trials under our controller of $\mathcal {L} = 0.8P^+$. Trial 1 can be seen to be the open-loop response, and by Trial 10 it can be seen that the output is captured with zero error}}{32}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Progression of shaped outputs (where Mass 1 Position is the x-coordinate and Mass 2 Position is the y-coordinate) under our ILC controller $\mathcal {L} = 0.8P^+$}}{33}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Application of ILC Controller $\mathcal {L} = 0.8P^+$ on our Dual-Spring-Mass system to learn the output `Dartmouth'. It can be seen that initial conditions and arbitrariness of different goals has no impact on the efficacy of ILC}}{34}{figure.caption.30}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Progression of Mass 1 and 2 Positions under controller $\mathcal {L} = 0.8P^+$, learning `Dartmouth'. It can be seen that Mass 1, the x-position, gradually increases throughout the each trial whereas Mass 2, the y-position, simply moves back-and-forth / up-and-down}}{35}{figure.caption.31}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Input-Output Data of our Dual-Spring-Mass system under 5 Policy Iteration Trials of 36 samples/steps each. Learning parameters of Q/R = 100 and $\gamma = 0.8$. After 5 controllers, the learning stops and exploration $v(k)$ is no longer applied to the input for the final 20 trials.}}{48}{figure.caption.36}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Progression of controller weights through Policy Iteration Trials. For two inputs, there are two rows of the controller $F$ to describe how to weight their respective inputs from the associated samples collected states.}}{49}{figure.caption.37}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Input-Output Data of Dual-Spring-Mass system under Input Decoupled Learning. 5 passes are made on each input, of which we have two, and requires 25 trials each. Learning is halted fir the final 20 trials which can be seen by both inputs being smooth at the same time.}}{54}{figure.caption.41}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Progression of Controller Weights through Input-Decoupled trials. Notice how for the dual-input system, the weights for a given input are only updated every other trial.}}{55}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Select Controller Weights on Input 1 through Policy Iteration Trials}}{58}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Select Controller Weights on Input 7 through Policy Iteration Trials}}{58}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Select Controller Weights on Input 13 through Policy Iteration Trials}}{58}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Select Controller Weights on Input 20 through Policy Iteration Trials}}{58}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Error Magnitude of Output through Policy Iteration Trials}}{58}{figure.caption.41}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Mass 1 Positions through Policy Iteration Iterations}}{59}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Mass 2 Positions through Policy Iteration Iterations}}{59}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Input 1 Magnitudes through Policy Iteration Iterations}}{59}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Input 2 Magnitudes through Policy Iteration Iterations}}{59}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Shaped Output through Policy Iteration Trials}}{60}{figure.caption.43}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Select Controller Weights on Input 1 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Select Controller Weights on Input 7 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Select Controller Weights on Input 13 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Select Controller Weights on Input 20 through Policy Iteration Trials with Reduced R}}{63}{figure.caption.44}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Error Magnitude of Output through Policy Iteration Trials with Reduced R}}{63}{figure.caption.45}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Mass 1 Positions through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Mass 2 Positions through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Input 1 Magnitudes through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Input 2 Magnitudes through Policy Iteration Trials with Reduced R}}{64}{figure.caption.46}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Shaped Output through Policy Iteration Trials with Reduced R}}{65}{figure.caption.47}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Select Controller Weights on Input 1 through Input Decoupling Trials}}{68}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Select Controller Weights on Input 7 through Input Decoupling Trials}}{68}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces Select Controller Weights on Input 13 through Input Decoupling Trials}}{68}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.24}{\ignorespaces Select Controller Weights on Input 20 through Input Decoupling Trials}}{68}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.25}{\ignorespaces Error Magnitude of Output through Input Decoupling Trials}}{69}{figure.caption.49}%
-\contentsline {figure}{\numberline {2.26}{\ignorespaces Mass 1 Positions through Input Decoupling Trials}}{69}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.27}{\ignorespaces Mass 2 Positions through Input Decoupling Trials}}{69}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.28}{\ignorespaces Input 1 Magnitudes through Input Decoupling Trials}}{69}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.29}{\ignorespaces Input 2 Magnitudes through Input Decoupling Trials}}{69}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.30}{\ignorespaces Shaped Output through Input Decoupling Trials}}{70}{figure.caption.51}%
-\contentsline {figure}{\numberline {2.31}{\ignorespaces Select Chebyshev Polynomials}}{75}{figure.caption.53}%
-\contentsline {figure}{\numberline {2.32}{\ignorespaces Example Signal constructed from Chebyshev Polynomials and Weights}}{76}{figure.caption.54}%
-\contentsline {figure}{\numberline {2.33}{\ignorespaces Example Chebyshev Weights to Generate Signal in Fig.~\ref {fig:example_cheby_signal}}}{77}{figure.caption.55}%
-\contentsline {figure}{\numberline {2.34}{\ignorespaces Input 1 - explicitly constructed from basis functions to be in $\Phi _u$}}{82}{figure.caption.60}%
-\contentsline {figure}{\numberline {2.35}{\ignorespaces Input 2 - explicitly constructed from basis functions to be in $\Phi _u$}}{83}{figure.caption.61}%
-\contentsline {figure}{\numberline {2.36}{\ignorespaces Output 1 - True $\underline {y}^\ast $ and goal constructed from $\alpha ^\ast $}}{84}{figure.caption.64}%
-\contentsline {figure}{\numberline {2.37}{\ignorespaces Output 2 - True $\underline {y}^\ast $ and goal constructed from $\alpha ^\ast $}}{85}{figure.caption.65}%
-\contentsline {figure}{\numberline {2.38}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{86}{figure.caption.66}%
-\contentsline {figure}{\numberline {2.39}{\ignorespaces Progression of $e_\beta $ through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{86}{figure.caption.67}%
-\contentsline {figure}{\numberline {2.40}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{87}{figure.caption.68}%
-\contentsline {figure}{\numberline {2.41}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast $ is in $\Phi _u$ but $\underline {y}^\ast $ is not in $\Phi _y$}}{87}{figure.caption.69}%
-\contentsline {figure}{\numberline {2.42}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{88}{figure.caption.70}%
-\contentsline {figure}{\numberline {2.43}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{88}{figure.caption.71}%
-\contentsline {figure}{\numberline {2.44}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{89}{figure.caption.72}%
-\contentsline {figure}{\numberline {2.45}{\ignorespaces Output 1 - explicitly constructed from basis functions to be in $\Phi _y$}}{91}{figure.caption.74}%
-\contentsline {figure}{\numberline {2.46}{\ignorespaces Output 2 - explicitly constructed from basis functions to be in $\Phi _y$}}{91}{figure.caption.75}%
-\contentsline {figure}{\numberline {2.47}{\ignorespaces Input 1 - True $\underline {u}^\ast $ and goal constructed from $\beta ^\ast $}}{93}{figure.caption.78}%
-\contentsline {figure}{\numberline {2.48}{\ignorespaces Input 2 - True $\underline {y}^\ast $ and goal constructed from $\beta ^\ast $}}{93}{figure.caption.79}%
-\contentsline {figure}{\numberline {2.49}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{94}{figure.caption.80}%
-\contentsline {figure}{\numberline {2.50}{\ignorespaces Progression of $e$ through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{95}{figure.caption.81}%
-\contentsline {figure}{\numberline {2.51}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{95}{figure.caption.82}%
-\contentsline {figure}{\numberline {2.52}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{96}{figure.caption.83}%
-\contentsline {figure}{\numberline {2.53}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{96}{figure.caption.84}%
-\contentsline {figure}{\numberline {2.54}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{97}{figure.caption.85}%
-\contentsline {figure}{\numberline {2.55}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{98}{figure.caption.86}%
-\contentsline {figure}{\numberline {2.56}{\ignorespaces Output 1 - Goal for $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{100}{figure.caption.89}%
-\contentsline {figure}{\numberline {2.57}{\ignorespaces Output 2 - Goal for $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{101}{figure.caption.90}%
-\contentsline {figure}{\numberline {2.58}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{101}{figure.caption.91}%
-\contentsline {figure}{\numberline {2.59}{\ignorespaces Progression of $e_\beta $ through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{102}{figure.caption.92}%
-\contentsline {figure}{\numberline {2.60}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{102}{figure.caption.93}%
-\contentsline {figure}{\numberline {2.61}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{103}{figure.caption.94}%
-\contentsline {figure}{\numberline {2.62}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{103}{figure.caption.95}%
-\contentsline {figure}{\numberline {2.63}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{104}{figure.caption.96}%
-\contentsline {figure}{\numberline {2.64}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{105}{figure.caption.97}%
-\contentsline {figure}{\numberline {2.65}{\ignorespaces Input 1 - Goal for $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{106}{figure.caption.99}%
-\contentsline {figure}{\numberline {2.66}{\ignorespaces Input 2 - Goal for $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{107}{figure.caption.100}%
-\contentsline {figure}{\numberline {2.67}{\ignorespaces Progression of $e_\alpha $ through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{107}{figure.caption.101}%
-\contentsline {figure}{\numberline {2.68}{\ignorespaces Progression of $e_\beta $ through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{108}{figure.caption.102}%
-\contentsline {figure}{\numberline {2.69}{\ignorespaces Progression of $\alpha $ coefficients through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{108}{figure.caption.103}%
-\contentsline {figure}{\numberline {2.70}{\ignorespaces Progression of $\beta $ coefficients through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{109}{figure.caption.104}%
-\contentsline {figure}{\numberline {2.71}{\ignorespaces Position of Mass 1 through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{109}{figure.caption.105}%
-\contentsline {figure}{\numberline {2.72}{\ignorespaces Position of Mass 2 through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{110}{figure.caption.106}%
-\contentsline {figure}{\numberline {2.73}{\ignorespaces Shaped Output through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{111}{figure.caption.107}%
-\contentsline {figure}{\numberline {2.74}{\ignorespaces Progression of $e_\alpha $ through rolling basis space episodes}}{115}{figure.caption.111}%
-\contentsline {figure}{\numberline {2.75}{\ignorespaces Progression of $e$ through rolling basis space episodes}}{116}{figure.caption.112}%
-\contentsline {figure}{\numberline {2.76}{\ignorespaces Progression of $\underline {u}_1$ through rolling basis space episodes}}{116}{figure.caption.113}%
-\contentsline {figure}{\numberline {2.77}{\ignorespaces Progression of $\underline {u}_2$ through rolling basis space episodes}}{117}{figure.caption.114}%
-\contentsline {figure}{\numberline {2.78}{\ignorespaces Progression of shaped outputs through rolling basis space episodes}}{118}{figure.caption.115}%
-\contentsline {figure}{\numberline {2.79}{\ignorespaces Progression of $\beta $ through rolling basis space episodes}}{119}{figure.caption.116}%
-\contentsline {figure}{\numberline {2.80}{\ignorespaces Output Generated from Batch Generated Basis Space $\Phi $ with weights $\beta ^\ast $ overlaid on the Goal Output}}{130}{figure.caption.121}%
-\contentsline {figure}{\numberline {2.81}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 1$ overlaid on the Goal Output}}{137}{figure.caption.124}%
-\contentsline {figure}{\numberline {2.82}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 3$ overlaid on the Goal Output}}{137}{figure.caption.125}%
-\contentsline {figure}{\numberline {2.83}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 10$ overlaid on the Goal Output}}{138}{figure.caption.126}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Select Controller Weights on Select Inputs for an ILC problem through Policy Iteration Trials. 5 Controllers are learned, for an ILC system on the Dual-Spring-Mass system of trial length $p=10$ -- each controller update requires 1600 ILC trials}}{61}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Error Magnitude of Output through Policy Iteration Trials, where $Q/R = 100$. Observe that after the first controller is learned and applied, there is a sharp reduction in error but due to the relatively high $R$ in its definition, subsequent reductions in error are much slower.}}{61}{figure.caption.49}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Input-Output Progressions through Policy Iteration Trials of $Q/R=100$. Observe Trial 1 to be the open-loop response, and subsequent trials to be progressing towards the goal output.}}{62}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Shaped Output through Policy Iteration Trials of $Q/R=100$. Observe the progression towards the desired output, but also the extreme number of trials that would be needed to properly further the learning.}}{63}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Select Controller Weights on Select Inputs progression through Policy Iteration Trials when $Q/R = 1\times 10^8$. Due to the necessary amplified exploration $v(k)$, observe the tendency for weights to converge much less smoothly than before, displaying behaviors of overshoot and lag.}}{66}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Error Magnitude of Output through Policy Iteration Trials with $Q/R = 1\times 10^8$. Observe how initial errors creep up much further than the earlier shown $Q/R=100$ trial, but the application of the first trial drastically reduces error , such that it would be zero were it not for the extreme input exploration terms.}}{66}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Progression of Input-Output Data in a Dual-Spring-Mass system under ILC derived from RL when $Q/R = 1\times 10^8$}}{67}{figure.caption.54}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Shaped Output through Policy Iteration Trials when $Q/R = 1\times 10^8$}}{68}{figure.caption.55}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Select Controller Weights on Select Inputs through Input Decoupling Trials to learn the ILC Controller when $Q/R=100$. Notice how each controller update takes $441$ ILC trials, and each input controller is only updated at that rate.}}{71}{figure.caption.56}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Error Magnitude of Output through Input Decoupling Trials}}{72}{figure.caption.57}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Input-Output Data progression through Input Decoupled Learning trials when $Q/R = 100$}}{73}{figure.caption.58}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Shaped Output through Input Decoupling Trials when $Q/R=100$.}}{74}{figure.caption.59}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Select Chebyshev Polynomials}}{80}{figure.caption.61}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Example Signal constructed from Chebyshev Polynomials and Weights}}{81}{figure.caption.62}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Example Chebyshev Weights to Generate Signal in Fig.~\ref {fig:example_cheby_signal}}}{82}{figure.caption.63}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Goal Inputs deconstructed from an $\underline {u}$ explicitly constructed from basis functions to be in $\Phi _u$}}{88}{figure.caption.68}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Deconstructed $\underline {y}^\ast $s vs the goal constructed from $\alpha ^\ast $. $\alpha ^\ast $ is found by inverting the the $\underline {y}^\ast $ in the space $\Phi _y$. By then attempting to go back, this highlights the inability of $\Phi _y$ to perfectly capture $\underline {y}^\ast $.}}{89}{figure.caption.71}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Progression of Errors on coefficients through perfect-knowledge controller trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$. Even though $\underline {y}^\ast \notin \Phi _y$, the associated coefficient errors can still go to zero.}}{90}{figure.caption.72}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Progression of Coefficients through perfect-knowledge controller trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{90}{figure.caption.73}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Progression of outputs through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{91}{figure.caption.74}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Goal Outputs deconstructed from a $\underline {y}^\ast $ explicitly constructed from basis functions to be in $\Phi _y$}}{92}{figure.caption.76}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Deconstructed Goal $\underline {u}^\ast $s from $\Phi _u\beta ^\ast $, where $\beta ^\ast $ was backed out of $\underline {y}^\ast $ with perfect knowledge.}}{93}{figure.caption.79}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Progression of coefficient errors through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$. Contrast this with the earlier example where $\underline {u}^\ast \in \Phi _u$, we see now that the error of $\alpha $ can still go to zero, but the error on $\beta $ reaches a non-zero steady state.}}{94}{figure.caption.80}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Progression of Coefficients through trials when $\underline {u}^\ast \notin \Phi _u$ but $\underline {y}^\ast \in \Phi _y$}}{95}{figure.caption.81}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Progression of Outputs through ILC trials when $\underline {u}^\ast \in \Phi _u$ but $\underline {y}^\ast \notin \Phi _y$}}{96}{figure.caption.82}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Deconstructed Goal Outputs for $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{97}{figure.caption.85}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Progression of coefficient errors through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{98}{figure.caption.86}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Progression of coefficients through trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$}}{98}{figure.caption.87}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Progression of Outputs through ILC trials when $\underline {u}^\ast \in \Phi _u$ and $\underline {y}^\ast = \Phi _y$. Even though $\underline {u}^\ast $ could in theory be fully described by $\Phi _u$, the controller is unable to capture $\underline {y}^\ast $}}{99}{figure.caption.88}%
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Deconstructed Goal Inputs for $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{100}{figure.caption.90}%
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Progression of coefficient errors through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{100}{figure.caption.91}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Progression of coefficients through trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$}}{101}{figure.caption.92}%
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Progression of Positions through ILC trials when $\underline {u}^\ast = \Phi _u$ and $\underline {y}^\ast \in \Phi _y$. While the learned shape may appear arbitrary, the important take-away is that the error is zero, and the learned output matches that exactly of the goal.}}{102}{figure.caption.93}%
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Progression of $e_\alpha $ through rolling basis space episodes}}{106}{figure.caption.97}%
+\contentsline {figure}{\numberline {2.36}{\ignorespaces Progression of deconstructed goal inputs and the generated shaped output through rolling basis space episodes. While the output can be seen to be close to our goal, even after working our way through the entirety of the input basis space, we still fail to properly capture our $\underline {y}^\ast $.}}{107}{figure.caption.99}%
+\contentsline {figure}{\numberline {2.37}{\ignorespaces Progression of $\beta $ through rolling basis space episodes. After the first trial, it can be seen that $\beta \to 1$, and does not factor in the impact of additional basis functions.}}{107}{figure.caption.100}%
+\contentsline {figure}{\numberline {2.38}{\ignorespaces Output Generated from Batch Generated Basis Space $\Phi $ with weights $\beta ^\ast $ overlaid on the Goal Output. As the $\underline {u}^\ast $ was generated within a space spanned by all of the $\underline {u}^e$s that constructed the basis space, the perfect output is captured.}}{119}{figure.caption.106}%
+\contentsline {figure}{\numberline {2.39}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 1$ overlaid on the Goal Output}}{125}{figure.caption.109}%
+\contentsline {figure}{\numberline {2.40}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 3$ overlaid on the Goal Output}}{126}{figure.caption.110}%
+\contentsline {figure}{\numberline {2.41}{\ignorespaces Output Generated from Iteratively Generated Basis Space $\Phi $ with weights $\beta ^\ast $ when $\eta = 8$ overlaid on the Goal Output. It is demonstrated that we do not to explore the full space, as done in the batch example, and can instead learn one basis at a time. By learning iteratively, we can stop once we have determined our space to be good enough for our desired output.}}{126}{figure.caption.111}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Error Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}}{144}{figure.caption.130}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Shaped Output Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}}{145}{figure.caption.131}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs}}{149}{figure.caption.135}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Shaped Output Progression through Application of a Final Controller Learned One Basis at a Time}}{150}{figure.caption.136}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Error Progression through Policy Learning ILC Trials with Scaled COnjugate Output Basis}}{153}{figure.caption.139}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs and $\Phi _y = \underline {y}^\ast $}}{154}{figure.caption.141}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs and outputs}}{157}{figure.caption.144}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Error Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}}{133}{figure.caption.115}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Shaped Output Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}}{134}{figure.caption.116}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs. For a fixed output basis $\Phi _y = I$, 20 $\phi $s are tried to capture the input, and the associated $F_{LQR}^\gamma $ is learned (but not applied).}}{138}{figure.caption.120}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Shaped Output Progression through Application of a Final Controller that was Learned One $\phi $ at a time. The resultant controller is then built out of the individually learned $F_{LQR}^\gamma $s for each $\phi $}}{139}{figure.caption.121}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Error Progression through Policy Learning ILC Trials with Scaled COnjugate Output Basis}}{142}{figure.caption.124}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs and $\Phi _y = \underline {y}^\ast $}}{144}{figure.caption.126}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Error Progression through Policy Learning ILC Trials with Rolling $\phi $ on inputs and outputs}}{148}{figure.caption.129}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

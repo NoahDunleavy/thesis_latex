@@ -7,15 +7,15 @@ This section is dedicated to providing the base information of Modern Control Th
 
 To those familiar with the Thayer School of Engineering's curriculum, it is very similar to the content of ENGS145 - Modern Control Theory.
 
-We begin with system formulation and representation in the matrix form, and how we resolve the difference between the continuous nature of the world, and the discrete ability of computers. Here, we use the `Zero-Order-Hold' approach. 
+We begin with system formulation and representation in the matrix form, and how we resolve the difference between the continuous nature of the world, and the discrete ability of computers. Here, we use the \ac{ZOH} approach. 
 
 Next the idea of pole placement is introduced, and it is demonstrated that the further from the origin the poles are, the longer control takes. A deadbeat controller is used to highlight this, which is the time-optimal solution for any system.
 
-One will note that the deadbeat controller, while time optimal, requires significant control effort that may not be realistic or safe for a real system. That leads us to our introduction of the Linear Quadratic Regulation (``LQR'') controller, which minimizes a cost function defined system inputs and states. 
+One will note that the deadbeat controller, while time optimal, requires significant control effort that may not be realistic or safe for a real system. That leads us to our introduction of the \ac{LQR} controller, which minimizes a cost function defined system inputs and states. 
 
-Next we introduce the Iterative Learning Control (``ILC'') problem and show that it can learn to generate any output (so long as permitted by the physical characteristics of the system). 
+Next we introduce the \ac{ILC} problem and show that it can learn to generate any output (so long as permitted by the physical characteristics of the system). 
 
-Finally, we address the assumption of perfect knowledge not typically possible in the real world. The process of Reinforcement Learning (``RL'') is shown via the Policy Iteration and Input Decoupling method. They can be shown to find the LQR controller as defined by its cost function. 
+Finally, we address the assumption of perfect knowledge not typically possible in the real world. The process of \ac{RL} is shown via the Policy Iteration and Input Decoupling method. They can be shown to find the \ac{LQR} controller as defined by its cost function. 
 
 \FloatBarrier\section{Introduction to Continuous State Space} %Intro to State Space
 A key step for Control Theory is construction of a system model, commonly represented as $A_c$, $B_c$, $C$ and $D$. $A_c$ captures the impact that the current state will have on the next state and $B_c$ captures how inputs will impact the next state. The matrix $C$ captures how states are translated to measured outputs and $D$ captures how inputs are directly measured on outputs. Any linear system, regardless of complexity and variations, can be modelled exactly as follows:
@@ -283,24 +283,23 @@ where we will once again explicitly note
 The resulting outputs from simulation out this system can be seen in Fig.~\ref{fig:continuous_open_mass_1} and Fig.~\ref{fig:continuous_open_mass_2}
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Continuous Open-Loop - Mass 1.pdf}}
-        \caption{Continuous Model Open-loop Simulation Mass 1 Position}%
+        \caption{}
         \label{fig:continuous_open_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Continuous Open-Loop - Mass 2.pdf}}
-        \caption{Continuous Model Open-loop Simulation Mass 2 Position}%
+        \caption{}
         \label{fig:continuous_open_mass_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Position data from a open-loop continuously-modelled Dual-Spring-Mass system}
 \end{figure}
 
 \FloatBarrier\section{Discretization of a Continuous Model} %Discretization
 So far, we have been dealing with the ideal scenario of continuous time. While the models we constructed are exact, it is infeasible to collect outputs and apply inputs to a system at an infinite rate implied by a continuous model. Even if we were able to, it would be inefficient and impractical to run an infinite amount of calculations in an infinitely small time span. 
-Digital systems fix this by discretizing their actions and outputs at a sampling rate denoted by $\Delta t$ (typically in units of seconds).  That is, every $\Delta t$ a new output is collected and input applied. To maintain the exact nature of the above model, matrices $A_c(t)$ and $B_c(t)$ must be `discretized' through the `Zero-Order-Hold' method. The process for doing so is shown in Eqs.~\ref{eq:Ac_to_A} and~\ref{eq:Bc_to_B}
+Digital systems fix this by discretizing their actions and outputs at a sampling rate denoted by $\Delta t$ (typically in units of seconds).  That is, every $\Delta t$ a new output is collected and input applied. To maintain the exact nature of the above model, matrices $A_c(t)$ and $B_c(t)$ must be `discretized' through the \ac{ZOH} method. The process for doing so is shown in Eqs.~\ref{eq:Ac_to_A} and~\ref{eq:Bc_to_B}
 \begin{equation}
     A = e^{A_c \Delta t}
     \label{eq:Ac_to_A}
@@ -347,38 +346,36 @@ Now our system is captured in discrete form, as outlined in Eq.~\ref{eq:discrete
 
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Open-Loop Mass 1 Position.pdf}}
-        \caption{Discrete Model Open-loop Simulation Mass 1 Position}%
+        \caption{}%
         \label{fig:discrete_open_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Open-Loop Mass 2 Position.pdf}}
-        \caption{Discrete Model Open-loop Simulation Mass 2 Position}%
+        \caption{}%
         \label{fig:discrete_open_mass_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Position data from an open-loop discretely-modelled Dual-Spring-Mass system, overlaid with the continuous model to show exactness of the relationship}
 \end{figure}
 
 From this zoomed out view, it can be difficult to believe that the exact relationship does exist. Figures~\ref{fig:zoomed_discrete_open_mass_1} and~\ref{fig:zoomed_discrete_open_mass_2} step in to show that at every sampling interval of 0.01 seconds, the discrete model (outputs and states) match exactly that of the continuous one.
 
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Zoomed-in Open-Loop Mass 1 Position.pdf}}
-        \caption{Zoomed in Discrete over Continuous Model Open-loop Simulation of Mass 1 Position}%
+        \caption{}%
         \label{fig:zoomed_discrete_open_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Zoomed-in Open-Loop Mass 2 Position.pdf}}
-        \caption{Zoomed in Discrete over Continuous Model Open-loop Simulation of Mass 2 Position}%
+        \caption{}%
         \label{fig:zoomed_discrete_open_mass_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Zoomed-in view of the discrete-continuous model to show that at the discretely modelled $\Delta t$ time-step samples, the relationship is exact}
 \end{figure}
 
 One thing to note -- moving forward, the discrete system model's x-axis will be expressed in terms of sample number $k$. For example, Figure~\ref{fig:zoomed_discrete_open_mass_1} axis will be marked with $k$ intervals 0 through 10, as opposed to time 0 through 0.1 seconds.
@@ -413,7 +410,7 @@ There are practically an infinite number of controllers $F$ that could send our 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Simple Pole Placement}}
-    \caption{Simple Pole Placement Locations}%
+    \caption{Pole locations for a Dual-Spring-Mass system when manually placed them at locations $0.5 +- 0.5i$ and $-0.7 +- 0.1i$}%
     \label{fig:simple_poles}
 \end{figure}
 
@@ -438,39 +435,36 @@ When the controller in Eq.~\ref{eq:simple_pole_controller} is applied to our dua
 
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Pole Placement - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position with a Simple Pole Placement Feedback Controller}%
+        \caption{}%
        \label{fig:simple_pole_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Pole Placement - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position with a Simple Pole Placement Feedback Controller}%
+        \caption{}%
         \label{fig:simple_pole_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Pole Placement - Input 1 Magnitude.pdf}}
-        \caption{Input 1 Magnitude with a Simple Pole Placement Feedback Controller}%
+        \caption{}%
         \label{fig:simple_pole_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Pole Placement - Input 2 Magnitude.pdf}}
-        \caption{Input 2 Magnitude with a Simple Pole Placement Feedback Controller}%
+        \caption{}%
         \label{fig:simple_pole_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Position of Mass 1 and Mass 2 for our Dual-Spring-Mass system under closed-loop, state-feedback controller $F$. $F$ is designed such that the poles of ($A+BF$) are at $0.5 +- 0.5i$ and $-0.7 +- 0.1i$. Inputs 1 and 2 are generated as $u(k) = Fx(k)$}
 \end{figure}
 \FloatBarrier~One will note that the system is stabilized after about twenty samples, or .2 seconds. The cost, however, is reflected in the inputs. What's known as the `control effort' applied is magnitudes more than the given state. This can be taken even further with a special type of controller known as a `deadbeat' controller. This is a controller which places the poles of a closed-loop system at the origin\footnote{MATLAB's \textit{place} function does not allow for multiple poles to be placed at the same location. Either use \textit{acker} or place poles very close to 0 ($\le 1\times 10^{-6}$)} and produces the time-optimal solution. Once again, the system poles are shown in Figure~\ref{fig:deadbeat_poles}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Deadbeat Pole Placement}}
-    \caption{Deadbeat Pole Placement Locations}%
+    \caption{Pole locations for a Dual-Spring-Mass system when manually placed them at the origin to produce a deadbeat controller}%
     \label{fig:deadbeat_poles}
 \end{figure}
 and produces controller $F_{deadbeat}$
@@ -484,39 +478,36 @@ and produces controller $F_{deadbeat}$
 Its application results in the outputs and inputs denoted in Figures~\ref{fig:deadbeat_mass_1} -~\ref{fig:deadbeat_input_2}
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Deadbeat Controller - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position with a Deadbeat Controller}%
+        \caption{}%
        \label{fig:deadbeat_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Deadbeat Controller - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position with a Deadbeat Controller}%
+        \caption{}%
         \label{fig:deadbeat_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Deadbeat Controller - Input 1 Magnitude.pdf}}
-        \caption{Input 1 Magnitude with a Deadbeat Controller}%
+        \caption{}%
         \label{fig:deadbeat_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Deadbeat Controller - Input 2 Magnitude.pdf}}
-        \caption{Input 2 Magnitude with a Deadbeat Controller}%
+        \caption{}%
         \label{fig:deadbeat_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Position of Mass 1 and Mass 2 for our Dual-Spring-Mass system under a deadbeat closed-loop, state-feedback controller $F$. $F$ is designed such that the poles of ($A+BF$) are at $0$. Inputs 1 and 2 are generated as $u(k) = Fx(k)$. Under deadbeat control, it can be seen that control is achieved under $n$ steps}
 \end{figure}
 
 This pole placement method, while useful to demonstrate the requirements of a linear-feedback controller, is crude and often results in extreme states or inputs -- if not both. It would be useful then to be able to design a controller which can be tweaked more precisely to adhere to certain system limits.
 
-\FloatBarrier\section{Linear Quadratic Regulator Controller} %LQR
-The Linear Quadratic Regulator (LQR) Controller allows for the `weighting' of system states and inputs. What this means is that a controller can be designed that shies away from extreme inputs, at the cost of uncontrolled states, or conversely will take extreme steps to keep a system under control.
+\FloatBarrier\section{Linear Quadratic Regulator Controller} %\ac{LQR}
+The \ac{LQR} Controller allows for the `weighting' of system states and inputs. What this means is that a controller can be designed that shies away from extreme inputs, at the cost of uncontrolled states, or conversely will take extreme steps to keep a system under control.
 This is done by introducing three new variables: $Q$, $R$, and $\gamma$. $Q$ is an $n\times n$ matrix which applies relative `costs' (or rewards as desired) to states of the system. Similarly, $R$ is a $r\times r$ matrix which weighs the inputs. $\gamma$ is a scalar value between 0 and 1 which informs the cost function how much to discount the future versus the now (hence it is sometimes referred to as the `discount factor'). 
 $Q$ and $R$ are then used to define the cost function we wish to minimize. It is most common to define them as identity matrices with some associated weight, but they truly can be set as whatever so long as they are symmetric ($Q=Q^T$ and $R=R^T$). We will only use the identity approach. What each component of the cost matrices $Q$ and $R$ tells us is how much cost to attribute to a component of the state or input, respectively, being away from zero. It is also important to note that weights are relative: a controller defined by $Q=100\cdot I_{n\times n}$ and $R=1\cdot I_{r\times r}$ will be the exact same as one defined by $Q=200\cdot I_{n\times n}$ and $R=2\cdot I_{r\times r}$.
 
@@ -537,11 +528,11 @@ Bringing back the aforementioned discount factor $\gamma$, we modify the cost fu
     \label{eq:discounted_cost_function}
 \end{equation}
 In the LQR process, we are looking for a controller that minimizes the cost function, $J$.
-The next important idea is the Principle of Optimality. Put simply, if the optimal path from Point A to point C goes through Point B, then the optimal path from Point B to Point C is a sub-set of the path from Point A to Point C. Figure~\ref{fig:principle_optimality} shows a two-step process: The red path from A to C through B is optimal (with minimum cost = 4 + 6 = 10). The principle of optimality states that if one starts from B then the optimal path to C must be the red path B-C. All other paths from B to C must cost more than 6, for example, the purple path that costs 10. The paths A-B1 and A-B2 cost less than the red path A-B, but the higher costs associated with their subsequent paths B1-C and B2-C result in higher total cost than the minimum cost. In addition, we can reason that all other paths from A to B such as the green path must cost more than 4. Otherwise, the statement that the red path A-B-C being the optimal path is contradicted.\footnote{Image from (Phan \textbf{book-in-progress} Chp8)}
+The next important idea is the Principle of Optimality. Put simply, if the optimal path from Point A to point C goes through Point B, then the optimal path from Point B to Point C is a sub-set of the path from Point A to Point C. Figure~\ref{fig:principle_optimality} shows a two-step process: The red path from A to C through B is optimal (with minimum cost = 4 + 6 = 10). The principle of optimality states that if one starts from B then the optimal path to C must be the red path B-C. All other paths from B to C must cost more than 6, for example, the purple path that costs 10. The paths A-B1 and A-B2 cost less than the red path A-B, but the higher costs associated with their subsequent paths B1-C and B2-C result in higher total cost than the minimum cost. In addition, we can reason that all other paths from A to B such as the green path must cost more than 4. Otherwise, the statement that the red path A-B-C being the optimal path is contradicted.\footnote{Image from (Phan \textbf{Optimal State-Space System Identification and Control (in progress)} - Chp8)}\myworries{cite properly}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Principal of Optimality - PhanChp8.png}}
-    \caption{Illustration of Principle of Optimality}%
+    \caption{Illustration of Principle of Optimality, with nodes $A,\ B1,\ B2,\ B,\ $and $C$ with paths between labelled with their associated costs. Even though to go from $A \to B1$ is only a cost of $2$, $B1 \to C$ costs $12$ making the total path cost of $14$. Also see that the path of $A \to B2 \to C$ may have a final step of cost $1$, but the first step has a cost pf $15$. The central path through $B$ then could result in costs of $15,\ 14,\ 11,\ $or $10$. Clearly going through $B$ is the optimal way to proceed. It can then further be seen that the optimal way to go from $B \to C$ is a subset of the optimal path of $A \to C$.}
     \label{fig:principle_optimality}
 \end{figure}
 
@@ -574,46 +565,40 @@ Examining where that places the poles (Figure~\ref{fig:big_Q_poles}) and the inp
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Big Q LQR Pole Locations}}
-    \caption{Pole Locations of a Q/R = 100 LQR Controller on our Spring-Mass System}%
+    \caption{Pole Locations of a Q/R = 100 LQR Controller on our Dual-Spring-Mass System}%
     \label{fig:big_Q_poles}
 \end{figure}
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big Q LQR Controller - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position with a Q/R = 100 LQR Feedback Controller}%
+        \caption{}%
        \label{fig:big_Q_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big Q LQR Controller - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position with a Q/R = 100 LQR Feedback Controller}%
+        \caption{}%
         \label{fig:big_Q_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf}}
-        \caption{Input 1 Magnitude with a Q/R = 100 LQR Feedback Controller}%
+        \caption{}%
         \label{fig:big_Q_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf}}
-        \caption{Input 2 Magnitude with a Q/R = 100 LQR Feedback Controller}%
+        \caption{}%
         \label{fig:big_Q_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=100. Control is achieved within 200 samples, and under maximum input amplitudes of 55N}
 \end{figure}
 
-\myworries{Make figures all one thing, with abcd labels}
-\myworries{Optimal State-Space System Identifcation and Control (in progress)}
 \myworries{Frueh and Phan, Phan and Frueh - two papers}
 \myworries{Lip service to other pepers doing ILC and such - lit review}
 \myworries{Fix basis graphs - mass 1 and mass 2}
-\myworries{Summary section}
 
 \FloatBarrier~If we were inclined to tweak the parameters, perhaps the inputs were beyond the capabilities of our actual system, we could easily do so. If one were to scale $R$ by a factor of ten (or $Q$ by a factor of 0.1), then the following controller $F_{big R}$,  poles (Figure~\ref{fig:big_R_poles}), and IO data (Figures~\ref{fig:big_R_mass_1} -~\ref{fig:big_R_input_2}) would result:
 
@@ -628,45 +613,42 @@ Examining where that places the poles (Figure~\ref{fig:big_Q_poles}) and the inp
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Big R Pole Placement}}
-    \caption{Pole Locations of a Q/R = 10 LQR Controller on our Spring-Mass System}%
+    \caption{Pole Locations of a Q/R = 10 LQR Controller on our Dual-Spring-Mass System}%
     \label{fig:big_R_poles}
 \end{figure}
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big R LQR Controller - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position with a Q/R = 10 LQR Feedback Controller}%
+        \caption{}%
        \label{fig:big_R_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big R LQR Controller - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position with a Q/R = 10 LQR Feedback Controller}%
+        \caption{}%
         \label{fig:big_R_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big R LQR Controller - Input 1 Magnitude.pdf}}
-        \caption{Input 1 Magnitude with a Q/R = 10 LQR Feedback Controller}%
+        \caption{}%
         \label{fig:big_R_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Big R LQR Controller - Input 2 Magnitude.pdf}}
-        \caption{Input 2 Magnitude with a Q/R = 10 LQR Feedback Controller}%
+        \caption{}%
         \label{fig:big_R_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=10. Control is achieved within 800 samples, and under maximum input amplitudes of 9N}
 \end{figure}
 
 It can be noted that stabilization takes much longer (around eight seconds), and the poles are much closer to the border of the unit circle. Setting $R=0_{2\times 2}$ logically does place poles at the unit circle, but it also places two at the unit circle border. This is because a deadbeat controller leads to extreme velocities -- a state we do not capture in the output but is factored into the cost. Without the presence of input weights, the controller solely focuses on states - all equally weighted in our case.
 
 \FloatBarrier\section{Iterative Learning Control} %ILC
 ~\label{sec:ILC}
-Switching gears, we will introduce now another form of system. The previous models have all been iterative in time (i.e.\ adjust next input based on last samples state), but there is a form of control that focuses on trials. This is logical for and applied in the manufacturing process, where the desired output is not a `zero' state, but rather zero error. Iterative Learning Control (``ILC'') is particularly useful for its ability to factor out repeated noise and function to produce machined outputs regardless of initial condition or repeated disturbances.
+Switching gears, we will introduce now another form of system. The previous models have all been iterative in time (i.e.\ adjust next input based on last samples state), but there is a form of control that focuses on trials. This is logical for and applied in the manufacturing process, where the desired output is not a `zero' state, but rather zero error. \ac{ILC} is particularly useful for its ability to factor out repeated noise and function to produce machined outputs regardless of initial condition or repeated disturbances.
 
 Iterative Learning Control employs a system representation that is expanded to factor in the temporal element of control steps. Instead of each step ($k$) trying to send the states to zero, we now want each trial ($j$) to send the error on our outputs to zero. 
 The first step is to define our output, denoted as $\underline{y}$, occurring over p time steps. That is, y is a $pm\times 1$. Similarly, there is then a sequence of inputs, denoted as $\underline{u}$ that when applied, will get us here -- it will be $pr\times 1$. 
@@ -772,7 +754,7 @@ Plotting the normalization of the error term for each trial, scaled down by the 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Error Progression}}
-    \caption{Simple ILC Controller Error Progression}%
+    \caption{Error Progression of an ILC problem when using a perfect knowledge controller $\mathcal{L} = 0.8P^+$ such that the poles of the system under ($I-P\mathcal{L}$) are guaranteed to be within the unit circle and relatively close to the origin for rapid convergence.}%
     \label{fig:ilc_error}
 \end{figure}
 
@@ -780,38 +762,35 @@ Further showing the progression of the individual outputs and inputs (Figures~\r
 
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position Sequence over select Trials}%
+        \caption{}%
        \label{fig:ilc_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position Sequence over select Trials}%
+        \caption{}%
         \label{fig:ilc_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Input 1.pdf}}
-        \caption{Input 1 Magnitude Sequence over select Trials}%
+        \caption{}%
         \label{fig:ilc_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Input 2.pdf}}
-        \caption{Input 2 Magnitude Sequence over select Trials}%
+        \caption{}%
         \label{fig:ilc_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{The progression of Input-Output trials under our controller of $\mathcal{L} = 0.8P^+$. Trial 1 can be seen to be the open-loop response, and by Trial 10 it can be seen that the output is captured with zero error}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Shaped Output.pdf}}
-    \caption{Simple ILC Controller Progression to draw a Circle}%
+    \caption{Progression of shaped outputs (where Mass 1 Position is the x-coordinate and Mass 2 Position is the y-coordinate) under our ILC controller $\mathcal{L} = 0.8P^+$}%
     \label{fig:ilc_shaped_circle}
 \end{figure}
 
@@ -819,24 +798,23 @@ Further showing the progression of the individual outputs and inputs (Figures~\r
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Dartmouth ILC - Shaped Output.pdf}}
-    \caption{Simple ILC Controller learning `Dartmouth'}%
+    \caption{Application of ILC Controller $\mathcal{L} = 0.8P^+$ on our Dual-Spring-Mass system to learn the output `Dartmouth'. It can be seen that initial conditions and arbitrariness of different goals has no impact on the efficacy of ILC}%
     \label{fig:ilc_shaped_dartmouth}
 \end{figure}
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Dartmouth ILC - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position Sequence over select Trials learning `Dartmouth'}%
+        \caption{}%
         \label{fig:dartmouth_ilc_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Dartmouth ILC - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position Sequence over select Trials learning `Dartmouth'}%
+        \caption{}%
         \label{fig:dartmouth_ilc_mass_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Progression of Mass 1 and 2 Positions under controller $\mathcal{L} = 0.8P^+$, learning `Dartmouth'. It can be seen that Mass 1, the x-position, gradually increases throughout the each trial whereas Mass 2, the y-position, simply moves back-and-forth / up-and-down}
 \end{figure}
 
 \FloatBarrier\section{Reinforcement Learning} %RL
@@ -1139,50 +1117,46 @@ In this case, after five controllers (of 36 trials each) we produce the controll
 which matches our $F_{LQR}^\gamma$ exactly to at least 4 decimal places. Its application can be seen in Figures~\ref{fig:policy_mass_1} -~\ref{fig:policy_input_2}
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Policy Iteration IO - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position through Policy Iteration Trials}%
+        \caption{}%
        \label{fig:policy_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Policy Iteration IO - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position through Policy Iteration Trials}%
+        \caption{}%
         \label{fig:policy_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Policy Iteration IO - Input 1 Magnitude.pdf}}
-        \caption{Input 1 Magnitude through Policy Iteration Trials}%
+        \caption{}%
         \label{fig:policy_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Policy Iteration IO - Input 2 Magnitude.pdf}}
-        \caption{Input 2 Magnitude through Policy Iteration Trials}%
+        \caption{}%
         \label{fig:policy_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Input-Output Data of our Dual-Spring-Mass system under 5 Policy Iteration Trials of 36 samples/steps each. Learning parameters of Q/R = 100 and $\gamma = 0.8$. After 5 controllers, the learning stops and exploration $v(k)$ is no longer applied to the input for the final 20 trials.}
 \end{figure}
 Notice how even for the first 36 trials there is variation on the input due to the exploration term, and the final 20 trials are much smoother as they follow a strict control law without exploration. In Figures~\ref{fig:policy_F1_history} and~\ref{fig:policy_F2_history} we can see how the various parameters converged through the learning process. Each figure corresponds to a different input / controller row, and different lines are the impact that each state has on the input.
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf}}
-        \caption{Input 1 Controller Weights through Policy Iteration Trials}%
+        \caption{}%
        \label{fig:policy_F1_history}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf}}
-        \caption{Input 2 Controller Weights through Policy Iteration Trials}%
+        \caption{}%
         \label{fig:policy_F2_history}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Progression of controller weights through Policy Iteration Trials. For two inputs, there are two rows of the controller $F$ to describe how to weight their respective inputs from the associated samples collected states.}
 \end{figure}
 
 
@@ -1305,33 +1279,30 @@ Which once again matches our LQR controller exactly. The learning process and ap
 
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Input Decoupling IO - Mass 1 Position.pdf}}
-        \caption{Mass 1 Position through Input Decoupling Trials}%
+        \caption{}%
        \label{fig:id_mass_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Input Decoupling IO - Mass 2 Position.pdf}}
-        \caption{Mass 2 Position through Input Decoupling Trials}%
+        \caption{}%
         \label{fig:id_mass_2}
-    \end{minipage}
+    \end{subfigure}
     \vfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Input Decoupling IO - Input 1 Magnitude.pdf}}
-        \caption{Input 1 Magnitude through Input Decoupling Trials}%
+        \caption{}%
         \label{fig:id_input_1}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Input Decoupling IO - Input 2 Magnitude.pdf}}
-        \caption{Input 2 Magnitude through Input Decoupling Trials}%
+        \caption{}%
         \label{fig:id_input_2}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Input-Output Data of Dual-Spring-Mass system under Input Decoupled Learning. 5 passes are made on each input, of which we have two, and requires 25 trials each. Learning is halted fir the final 20 trials which can be seen by both inputs being smooth at the same time.}
 \end{figure}
 
 
@@ -1340,19 +1311,18 @@ It can be seen how the control processes take longer than the policy iteration a
 
 \begin{figure}[htbp]
     \centering  %center align
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf}}
-        \caption{Input 1 Controller Weights through Input Decoupling Trials}%
+        \caption{}%
        \label{fig:id_F1_history}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{{General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf}}
-        \caption{Input 2 Controller Weights through Input Decoupling Trials}%
+        \caption{}%
         \label{fig:id_F2_history}
-    \end{minipage}
+    \end{subfigure}
+    \caption{Progression of Controller Weights through Input-Decoupled trials. Notice how for the dual-input system, the weights for a given input are only updated every other trial.}
 \end{figure}
 
 \FloatBarrier\section{Summary}

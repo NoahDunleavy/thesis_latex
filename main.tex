@@ -16,8 +16,7 @@
 \captionsetup{justification=centering}
 \usepackage{placeins} %for floatbarrier - forces images before next section starts
 \usepackage{matlab-prettifier}  %matlab code coloring
-\usepackage[acronym]{glossaries}
-\makeglossaries%
+\usepackage{acronym}
 \usepackage{xcolor} %todo flag text
 \usepackage[dvipsnames]{xcolor} %more colors
 \newcommand\myworries[1]{\textcolor{red}{#1}}
@@ -52,14 +51,9 @@
 
 \setcounter{tocdepth}{4}  %subsubsections + paragraphs
 
-%Make axronyms
-\newacronym{rl}{RL}{Reinforcement Learning}
-\newacronym{lqr}{LQR}{Linear Quadratic Regulator}
-\newacronym{zoh}{ZOH}{Zero-Order Hold}
-
+%\loadglsentries{List of Acronyms and Variable Names.tex}
 
 \begin{document}
-
 \pagenumbering{roman}        %% roman page numbers for front matter
 
 \renewcommand\thepage{}
@@ -81,15 +75,15 @@
 \singlespacing%
 \tableofcontents             %% include TOC
 \listoffigures               %% include list of figures
-\addcontentsline{toc}{chapter}{List of Figures} 
+\addcontentsline{toc}{chapter}{List of Figures}
 \include{List of Acronyms and Variable Names}
+
+
 \cleardoublepage%             %% start new page
 
 \pagenumbering{arabic}       %% arabic page numbers for body of text starting with page 1
 
 \doublespacing%
-%\include{Introduction}
-
 
 \chapter{Introduction}
 \include{Background}
@@ -105,14 +99,15 @@
 \include{Future Work}
 
 \appendix
-\chapter{Matlab Code}
-\section{Simulations and Examples}
+\chapter{Derivations}
+\include{LQL Derivation}
+\chapter{Matlab Simulations and Examples}
 \include{Matlab Code/Background Code}
 \include{Matlab Code/Basis Functions Code}
 \include{Matlab Code/Background Code}
 \include{Matlab Code/Derive and Demo Conjugates}
 \include{Matlab Code/RL on ILC Code}
-\section{Functions}
+\chapter{Matlab Functions}
 \include{Matlab Code/Controllability Check}
 \include{Matlab Code/Decoupled Learning for Iterative Learning Control}
 \include{Matlab Code/Default Figure Properties}
@@ -134,17 +129,6 @@
 
 \singlespacing%
 
-% \chapter{Methods and Experimentation}
-% \include{Reinforcement Learning on Iterative Learning Control}
-% \include{Basis Functions}
-% \include{Linear Quadratic Learning and Conjugate Basis Functions}
-% \include{Reinforcement Learning in the Conjugate Basis Space}
-% \chapter{Results}
-% \chapter{Discussion}
-% \chapter{Conclusion}
-% 
-% \chapter{Appendices}
-% 
 % \chapter{References}
 
 \end{document}

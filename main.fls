@@ -140,65 +140,13 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/base/glossaries.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/base/glossaries.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-INPUT c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-INPUT c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-INPUT c:/texlive/2024/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/xfor/xfor.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/xfor/xfor.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/supertabular/supertabular.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/supertabular/supertabular.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-base.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-base.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/substr/substr.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/substr/substr.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-fp.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-fp.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/defpattern.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/defpattern.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-basic.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-basic.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-addons.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-addons.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-snap.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-snap.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-exp.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-exp.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-trigo.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-trigo.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-pas.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-pas.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-random.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-random.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eqn.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eqn.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-upn.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-upn.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eval.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eval.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/supertabular/supertabular.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
-OUTPUT main.glo
-OUTPUT main.acn
+INPUT c:/texlive/2024/texmf-dist/tex/latex/acronym/acronym.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/acronym/acronym.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bigfoot/suffix.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bigfoot/suffix.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
 INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
 INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
 INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
@@ -245,6 +193,9 @@ INPUT Summary Results.aux
 INPUT ./Future Work.aux
 INPUT ./Future Work.aux
 INPUT Future Work.aux
+INPUT ./LQL Derivation.aux
+INPUT ./LQL Derivation.aux
+INPUT LQL Derivation.aux
 INPUT ./Matlab Code/Background Code.aux
 INPUT ./Matlab Code/Background Code.aux
 INPUT Matlab Code/Background Code.aux
@@ -321,8 +272,6 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
-INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT ./main.out
 INPUT ./main.out
 INPUT main.out
@@ -331,9 +280,6 @@ OUTPUT main.pdf
 INPUT ./main.out
 INPUT ./main.out
 OUTPUT main.out
-INPUT ./main.glsdefs
-INPUT ./main.glsdefs
-INPUT main.glsdefs
 INPUT ./TitlePage.tex
 INPUT ./TitlePage.tex
 OUTPUT TitlePage.aux
@@ -341,7 +287,1047 @@ INPUT ./TitlePage.tex
 INPUT ./TitlePage.tex
 INPUT TitlePage.tex
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
-OUTPUT main.ist
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT ./Abstract.tex
+INPUT ./Abstract.tex
+OUTPUT Abstract.aux
+INPUT ./Abstract.tex
+INPUT ./Abstract.tex
+INPUT Abstract.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT ./Acknowledgements.tex
+INPUT ./Acknowledgements.tex
+OUTPUT Acknowledgements.aux
+INPUT ./Acknowledgements.tex
+INPUT ./Acknowledgements.tex
+INPUT Acknowledgements.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+OUTPUT main.toc
+INPUT ./main.lof
+INPUT ./main.lof
+INPUT main.lof
+OUTPUT main.lof
+INPUT ./List of Acronyms and Variable Names.tex
+INPUT ./List of Acronyms and Variable Names.tex
+OUTPUT List of Acronyms and Variable Names.aux
+INPUT ./List of Acronyms and Variable Names.tex
+INPUT ./List of Acronyms and Variable Names.tex
+INPUT List of Acronyms and Variable Names.tex
+INPUT ./Background.tex
+INPUT ./Background.tex
+OUTPUT Background.aux
+INPUT ./Background.tex
+INPUT ./Background.tex
+INPUT Background.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 2 Position.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf
+INPUT ./Reinforcement Learning on Iterative Learning Control.tex
+INPUT ./Reinforcement Learning on Iterative Learning Control.tex
+OUTPUT Reinforcement Learning on Iterative Learning Control.aux
+INPUT ./Reinforcement Learning on Iterative Learning Control.tex
+INPUT ./Reinforcement Learning on Iterative Learning Control.tex
+INPUT Reinforcement Learning on Iterative Learning Control.tex
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf
+INPUT ./Basis Functions.tex
+INPUT ./Basis Functions.tex
+OUTPUT Basis Functions.aux
+INPUT ./Basis Functions.tex
+INPUT ./Basis Functions.tex
+INPUT Basis Functions.tex
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT ./Conjugate Basis.tex
+INPUT ./Conjugate Basis.tex
+OUTPUT Conjugate Basis.aux
+INPUT ./Conjugate Basis.tex
+INPUT ./Conjugate Basis.tex
+INPUT Conjugate Basis.tex
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf
+INPUT ./Conjugate Basis on RL.tex
+INPUT ./Conjugate Basis on RL.tex
+OUTPUT Conjugate Basis on RL.aux
+INPUT ./Conjugate Basis on RL.tex
+INPUT ./Conjugate Basis on RL.tex
+INPUT Conjugate Basis on RL.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf
+INPUT c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf
+INPUT ./Summary Results.tex
+INPUT ./Summary Results.tex
+OUTPUT Summary Results.aux
+INPUT ./Summary Results.tex
+INPUT ./Summary Results.tex
+INPUT Summary Results.tex
+INPUT ./Future Work.tex
+INPUT ./Future Work.tex
+OUTPUT Future Work.aux
+INPUT ./Future Work.tex
+INPUT ./Future Work.tex
+INPUT Future Work.tex
+INPUT ./LQL Derivation.tex
+INPUT ./LQL Derivation.tex
+OUTPUT LQL Derivation.aux
+INPUT ./LQL Derivation.tex
+INPUT ./LQL Derivation.tex
+INPUT LQL Derivation.tex
+INPUT ./Matlab Code/Background Code.tex
+INPUT ./Matlab Code/Background Code.tex
+OUTPUT Matlab Code/Background Code.aux
+INPUT ./Matlab Code/Background Code.tex
+INPUT ./Matlab Code/Background Code.tex
+INPUT Matlab Code/Background Code.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT ./Matlab Code/Basis Functions Code.tex
+INPUT ./Matlab Code/Basis Functions Code.tex
+OUTPUT Matlab Code/Basis Functions Code.aux
+INPUT ./Matlab Code/Basis Functions Code.tex
+INPUT ./Matlab Code/Basis Functions Code.tex
+INPUT Matlab Code/Basis Functions Code.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/basis_functions.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/basis_functions.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/basis_functions.m
+OUTPUT Matlab Code/Background Code.aux
+INPUT Matlab Code/Background Code.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+INPUT ./Matlab Code/Derive and Demo Conjugates.tex
+INPUT ./Matlab Code/Derive and Demo Conjugates.tex
+OUTPUT Matlab Code/Derive and Demo Conjugates.aux
+INPUT ./Matlab Code/Derive and Demo Conjugates.tex
+INPUT ./Matlab Code/Derive and Demo Conjugates.tex
+INPUT Matlab Code/Derive and Demo Conjugates.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/derive_and_demo_conjugate_basis.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/derive_and_demo_conjugate_basis.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/derive_and_demo_conjugate_basis.m
+INPUT ./Matlab Code/RL on ILC Code.tex
+INPUT ./Matlab Code/RL on ILC Code.tex
+OUTPUT Matlab Code/RL on ILC Code.aux
+INPUT ./Matlab Code/RL on ILC Code.tex
+INPUT ./Matlab Code/RL on ILC Code.tex
+INPUT Matlab Code/RL on ILC Code.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/rl_on_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/rl_on_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/rl_on_ilc.m
+INPUT ./Matlab Code/Controllability Check.tex
+INPUT ./Matlab Code/Controllability Check.tex
+OUTPUT Matlab Code/Controllability Check.aux
+INPUT ./Matlab Code/Controllability Check.tex
+INPUT ./Matlab Code/Controllability Check.tex
+INPUT Matlab Code/Controllability Check.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/is_controllable.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/is_controllable.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/is_controllable.m
+INPUT ./Matlab Code/Decoupled Learning for Iterative Learning Control.tex
+INPUT ./Matlab Code/Decoupled Learning for Iterative Learning Control.tex
+OUTPUT Matlab Code/Decoupled Learning for Iterative Learning Control.aux
+INPUT ./Matlab Code/Decoupled Learning for Iterative Learning Control.tex
+INPUT ./Matlab Code/Decoupled Learning for Iterative Learning Control.tex
+INPUT Matlab Code/Decoupled Learning for Iterative Learning Control.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/decoupled_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/decoupled_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/decoupled_ilc.m
+INPUT ./Matlab Code/Default Figure Properties.tex
+INPUT ./Matlab Code/Default Figure Properties.tex
+OUTPUT Matlab Code/Default Figure Properties.aux
+INPUT ./Matlab Code/Default Figure Properties.tex
+INPUT ./Matlab Code/Default Figure Properties.tex
+INPUT Matlab Code/Default Figure Properties.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/setDefaultFigProp.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/setDefaultFigProp.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/setDefaultFigProp.m
+INPUT ./Matlab Code/Discounted LQR Solution.tex
+INPUT ./Matlab Code/Discounted LQR Solution.tex
+OUTPUT Matlab Code/Discounted LQR Solution.aux
+INPUT ./Matlab Code/Discounted LQR Solution.tex
+INPUT ./Matlab Code/Discounted LQR Solution.tex
+INPUT Matlab Code/Discounted LQR Solution.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/discounted_LQR.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/discounted_LQR.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/discounted_LQR.m
+INPUT ./Matlab Code/Draw a Goal.tex
+INPUT ./Matlab Code/Draw a Goal.tex
+OUTPUT Matlab Code/Draw a Goal.aux
+INPUT ./Matlab Code/Draw a Goal.tex
+INPUT ./Matlab Code/Draw a Goal.tex
+INPUT Matlab Code/Draw a Goal.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/draw_to_XY.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/draw_to_XY.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/draw_to_XY.m
+INPUT ./Matlab Code/Figure Saving.tex
+INPUT ./Matlab Code/Figure Saving.tex
+OUTPUT Matlab Code/Figure Saving.aux
+INPUT ./Matlab Code/Figure Saving.tex
+INPUT ./Matlab Code/Figure Saving.tex
+INPUT Matlab Code/Figure Saving.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/save_figure.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/save_figure.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/save_figure.m
+INPUT ./Matlab Code/Generate Chebyshev Polynomials.tex
+INPUT ./Matlab Code/Generate Chebyshev Polynomials.tex
+OUTPUT Matlab Code/Generate Chebyshev Polynomials.aux
+INPUT ./Matlab Code/Generate Chebyshev Polynomials.tex
+INPUT ./Matlab Code/Generate Chebyshev Polynomials.tex
+INPUT Matlab Code/Generate Chebyshev Polynomials.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_chebyshev.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_chebyshev.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_chebyshev.m
+INPUT ./Matlab Code/Generate Conjugate Basis Functions.tex
+INPUT ./Matlab Code/Generate Conjugate Basis Functions.tex
+OUTPUT Matlab Code/Generate Conjugate Basis Functions.aux
+INPUT ./Matlab Code/Generate Conjugate Basis Functions.tex
+INPUT ./Matlab Code/Generate Conjugate Basis Functions.tex
+INPUT Matlab Code/Generate Conjugate Basis Functions.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_conjugate.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_conjugate.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_conjugate.m
+INPUT ./Matlab Code/Generate Iterative Conjugates.tex
+INPUT ./Matlab Code/Generate Iterative Conjugates.tex
+OUTPUT Matlab Code/Generate Iterative Conjugates.aux
+INPUT ./Matlab Code/Generate Iterative Conjugates.tex
+INPUT ./Matlab Code/Generate Iterative Conjugates.tex
+INPUT Matlab Code/Generate Iterative Conjugates.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_iterative_conjugate.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_iterative_conjugate.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_iterative_conjugate.m
+INPUT ./Matlab Code/ILC Simulation.tex
+INPUT ./Matlab Code/ILC Simulation.tex
+OUTPUT Matlab Code/ILC Simulation.aux
+INPUT ./Matlab Code/ILC Simulation.tex
+INPUT ./Matlab Code/ILC Simulation.tex
+INPUT Matlab Code/ILC Simulation.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/basis_ilc_sim.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/basis_ilc_sim.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/basis_ilc_sim.m
+INPUT ./Matlab Code/P Matrix from ABCD.tex
+INPUT ./Matlab Code/P Matrix from ABCD.tex
+OUTPUT Matlab Code/P Matrix from ABCD.aux
+INPUT ./Matlab Code/P Matrix from ABCD.tex
+INPUT ./Matlab Code/P Matrix from ABCD.tex
+INPUT Matlab Code/P Matrix from ABCD.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/P_from_ABCD.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/P_from_ABCD.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/P_from_ABCD.m
+INPUT ./Matlab Code/Plot Basis Coefficients.tex
+INPUT ./Matlab Code/Plot Basis Coefficients.tex
+OUTPUT Matlab Code/Plot Basis Coefficients.aux
+INPUT ./Matlab Code/Plot Basis Coefficients.tex
+INPUT ./Matlab Code/Plot Basis Coefficients.tex
+INPUT Matlab Code/Plot Basis Coefficients.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_ilc_coeffecients.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_ilc_coeffecients.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_ilc_coeffecients.m
+INPUT ./Matlab Code/Plot Controller History.tex
+INPUT ./Matlab Code/Plot Controller History.tex
+OUTPUT Matlab Code/Plot Controller History.aux
+INPUT ./Matlab Code/Plot Controller History.tex
+INPUT ./Matlab Code/Plot Controller History.tex
+INPUT Matlab Code/Plot Controller History.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_controller_history.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_controller_history.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_controller_history.m
+INPUT ./Matlab Code/Plot Dual Mass.tex
+INPUT ./Matlab Code/Plot Dual Mass.tex
+OUTPUT Matlab Code/Plot Dual Mass.aux
+INPUT ./Matlab Code/Plot Dual Mass.tex
+INPUT ./Matlab Code/Plot Dual Mass.tex
+INPUT Matlab Code/Plot Dual Mass.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_two_mass.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_two_mass.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_two_mass.m
+INPUT ./Matlab Code/Plot ILC.tex
+INPUT ./Matlab Code/Plot ILC.tex
+OUTPUT Matlab Code/Plot ILC.aux
+INPUT ./Matlab Code/Plot ILC.tex
+INPUT ./Matlab Code/Plot ILC.tex
+INPUT Matlab Code/Plot ILC.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_dual_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_dual_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_dual_ilc.m
+INPUT ./Matlab Code/Policy Learning for Iterative Learning Control.tex
+INPUT ./Matlab Code/Policy Learning for Iterative Learning Control.tex
+OUTPUT Matlab Code/Policy Learning for Iterative Learning Control.aux
+INPUT ./Matlab Code/Policy Learning for Iterative Learning Control.tex
+INPUT ./Matlab Code/Policy Learning for Iterative Learning Control.tex
+INPUT Matlab Code/Policy Learning for Iterative Learning Control.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/policy_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/policy_ilc.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/policy_ilc.m
+INPUT ./Matlab Code/Random Range.tex
+INPUT ./Matlab Code/Random Range.tex
+OUTPUT Matlab Code/Random Range.aux
+INPUT ./Matlab Code/Random Range.tex
+INPUT ./Matlab Code/Random Range.tex
+INPUT Matlab Code/Random Range.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/rand_range.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/rand_range.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/rand_range.m
+INPUT ./Matlab Code/Render Poles.tex
+INPUT ./Matlab Code/Render Poles.tex
+OUTPUT Matlab Code/Render Poles.aux
+INPUT ./Matlab Code/Render Poles.tex
+INPUT ./Matlab Code/Render Poles.tex
+INPUT Matlab Code/Render Poles.tex
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_pole_placement.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_pole_placement.m
+INPUT c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_pole_placement.m
+INPUT main.aux
+INPUT ./TitlePage.aux
+INPUT ./TitlePage.aux
+INPUT TitlePage.aux
+INPUT ./Abstract.aux
+INPUT ./Abstract.aux
+INPUT Abstract.aux
+INPUT ./Acknowledgements.aux
+INPUT ./Acknowledgements.aux
+INPUT Acknowledgements.aux
+INPUT ./List of Acronyms and Variable Names.aux
+INPUT ./List of Acronyms and Variable Names.aux
+INPUT List of Acronyms and Variable Names.aux
+INPUT ./Background.aux
+INPUT ./Background.aux
+INPUT Background.aux
+INPUT ./Reinforcement Learning on Iterative Learning Control.aux
+INPUT ./Reinforcement Learning on Iterative Learning Control.aux
+INPUT Reinforcement Learning on Iterative Learning Control.aux
+INPUT ./Basis Functions.aux
+INPUT ./Basis Functions.aux
+INPUT Basis Functions.aux
+INPUT ./Conjugate Basis.aux
+INPUT ./Conjugate Basis.aux
+INPUT Conjugate Basis.aux
+INPUT ./Conjugate Basis on RL.aux
+INPUT ./Conjugate Basis on RL.aux
+INPUT Conjugate Basis on RL.aux
+INPUT ./Summary Results.aux
+INPUT ./Summary Results.aux
+INPUT Summary Results.aux
+INPUT ./Future Work.aux
+INPUT ./Future Work.aux
+INPUT Future Work.aux
+INPUT ./LQL Derivation.aux
+INPUT ./LQL Derivation.aux
+INPUT LQL Derivation.aux
+INPUT ./Matlab Code/Background Code.aux
+INPUT ./Matlab Code/Background Code.aux
+INPUT Matlab Code/Background Code.aux
+INPUT ./Matlab Code/Basis Functions Code.aux
+INPUT ./Matlab Code/Basis Functions Code.aux
+INPUT Matlab Code/Basis Functions Code.aux
+INPUT Matlab Code/Background Code.aux
+INPUT ./Matlab Code/Derive and Demo Conjugates.aux
+INPUT ./Matlab Code/Derive and Demo Conjugates.aux
+INPUT Matlab Code/Derive and Demo Conjugates.aux
+INPUT ./Matlab Code/RL on ILC Code.aux
+INPUT ./Matlab Code/RL on ILC Code.aux
+INPUT Matlab Code/RL on ILC Code.aux
+INPUT ./Matlab Code/Controllability Check.aux
+INPUT ./Matlab Code/Controllability Check.aux
+INPUT Matlab Code/Controllability Check.aux
+INPUT ./Matlab Code/Decoupled Learning for Iterative Learning Control.aux
+INPUT ./Matlab Code/Decoupled Learning for Iterative Learning Control.aux
+INPUT Matlab Code/Decoupled Learning for Iterative Learning Control.aux
+INPUT ./Matlab Code/Default Figure Properties.aux
+INPUT ./Matlab Code/Default Figure Properties.aux
+INPUT Matlab Code/Default Figure Properties.aux
+INPUT ./Matlab Code/Discounted LQR Solution.aux
+INPUT ./Matlab Code/Discounted LQR Solution.aux
+INPUT Matlab Code/Discounted LQR Solution.aux
+INPUT ./Matlab Code/Draw a Goal.aux
+INPUT ./Matlab Code/Draw a Goal.aux
+INPUT Matlab Code/Draw a Goal.aux
+INPUT ./Matlab Code/Figure Saving.aux
+INPUT ./Matlab Code/Figure Saving.aux
+INPUT Matlab Code/Figure Saving.aux
+INPUT ./Matlab Code/Generate Chebyshev Polynomials.aux
+INPUT ./Matlab Code/Generate Chebyshev Polynomials.aux
+INPUT Matlab Code/Generate Chebyshev Polynomials.aux
+INPUT ./Matlab Code/Generate Conjugate Basis Functions.aux
+INPUT ./Matlab Code/Generate Conjugate Basis Functions.aux
+INPUT Matlab Code/Generate Conjugate Basis Functions.aux
+INPUT ./Matlab Code/Generate Iterative Conjugates.aux
+INPUT ./Matlab Code/Generate Iterative Conjugates.aux
+INPUT Matlab Code/Generate Iterative Conjugates.aux
+INPUT ./Matlab Code/ILC Simulation.aux
+INPUT ./Matlab Code/ILC Simulation.aux
+INPUT Matlab Code/ILC Simulation.aux
+INPUT ./Matlab Code/P Matrix from ABCD.aux
+INPUT ./Matlab Code/P Matrix from ABCD.aux
+INPUT Matlab Code/P Matrix from ABCD.aux
+INPUT ./Matlab Code/Plot Basis Coefficients.aux
+INPUT ./Matlab Code/Plot Basis Coefficients.aux
+INPUT Matlab Code/Plot Basis Coefficients.aux
+INPUT ./Matlab Code/Plot Controller History.aux
+INPUT ./Matlab Code/Plot Controller History.aux
+INPUT Matlab Code/Plot Controller History.aux
+INPUT ./Matlab Code/Plot Dual Mass.aux
+INPUT ./Matlab Code/Plot Dual Mass.aux
+INPUT Matlab Code/Plot Dual Mass.aux
+INPUT ./Matlab Code/Plot ILC.aux
+INPUT ./Matlab Code/Plot ILC.aux
+INPUT Matlab Code/Plot ILC.aux
+INPUT ./Matlab Code/Policy Learning for Iterative Learning Control.aux
+INPUT ./Matlab Code/Policy Learning for Iterative Learning Control.aux
+INPUT Matlab Code/Policy Learning for Iterative Learning Control.aux
+INPUT ./Matlab Code/Random Range.aux
+INPUT ./Matlab Code/Random Range.aux
+INPUT Matlab Code/Random Range.aux
+INPUT ./Matlab Code/Render Poles.aux
+INPUT ./Matlab Code/Render Poles.aux
+INPUT Matlab Code/Render Poles.aux
+INPUT ./main.out
+INPUT ./main.out
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb

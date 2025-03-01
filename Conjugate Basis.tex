@@ -4,13 +4,13 @@
 
 \FloatBarrier\section{Conjugate Basis Functions}
 ~\label{sec:conjugate_basis_functions}
-\myworries{Check the derivation where we use $e_{j-1}$ as opposed to y-w like in paper}
 Since the major challenge to being able to dynamically select our input basis functions is their ability to produce similar outputs, we then want to find a set of inputs which produce independent (or orthogonal) outputs on a system. The framework for this exists in \myworries{Frueh and Phan 2000: LQL}
+\myworries{Condition is just diagnonal. Change the definition, say we just need it diagnoal but for our ease we will make it I}
 
 \FloatBarrier\subsection{What are Conjugate Basis Functions}
 Conjugate Basis Functions are a special case of Basis Functions, defined for a system and cost. Whereas before we had functions that only had to be independent of each other, now the functions must be independent in the output the produce and the cost they incur. 
 
-Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions}~\ref{sub:what_are_basis}, and then some. As \myworries{Frueh and Phan} describe in their paper on `Linear Quadratic Optimal Learning Control' (LQL), the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
+Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions}~\ref{sub:what_are_basis}, and then some. As \myworries{Frueh and Phan} describe in their paper on \ac{LQL}, the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
 
 Suppose we have $e$ episodes worth of data, and we run one more episode to improve our $\Phi$ and $\beta$. The properties of LQL dictate that
 \begin{equation}
@@ -37,7 +37,7 @@ To derive our Conjugate Basis Functions, we must first define a cost function. R
 \end{equation}
 where $R$ is some $r_{ILC} \times r_{ILC}$ cost matrix, and $Q$ a $n_{ILC} \times n_{ILC}$ one.
 
-We want to find a $\delta_j \beta$ then to minimize this cost function, as with all our previous controls. We begin with the following relationships \myworries{Show the whole process in an appendix}
+We want to find a $\delta_j \beta$ then to minimize this cost function, as with all our previous controls. We begin with the following relationships
 \begin{equation}
     \begin{split}
         \delta_j \underline{u} &= \Phi(\beta_{j-1} + \delta_j \beta) \\
@@ -78,7 +78,7 @@ We will make one final step to simplify future logic, and that is assume every a
     \beta = {\mathcal{C}}^{-1}\Phi^T P^T Q (\underline{y}^\ast - \underline{d})
     \label{eq:beta_j_with_conjunct_e_0}
 \end{equation}
-where $\underline{d}$ can be collected from an open-loop response ($\underline{u} = 0$.)
+where $\underline{d}$ can be collected from an open-loop response ($\underline{u} = 0$). The complete derivation can be seen in Appendix~\ref{sec:lql_derivation}.
 
 
 Suppose we set $\eta = 2$. Our basis space $\Phi$ would then have 2 functions $\phi$ and we would have 2 $\beta$s:
@@ -98,7 +98,7 @@ Suppose we set $\eta = 2$. Our basis space $\Phi$ would then have 2 functions $\
 \end{equation}
 where $\mathcal{C}_1$ and $\mathcal{C}_2$ are rows 1 and 2 of $\mathcal{C}$
 
-We would like it that if we expanded $\Phi$ to include $\phi_3$, that $\beta_3$ would be generated without impacting $\beta_1$ and $\beta_2$ -- as by the goal property of conjugate basis functions shown in Eq.~\ref{eq:conjugate_subspace}. Yet $\mathcal{C}$ is a function of $\Phi$ so we run the risk of our previous $\beta$s changing when $\Phi$ changes - that is unless $\mathcal{C}$ is somehow defined to behave as a constant.
+We would like it that if we expanded $\Phi$ to include $\phi_3$, that $\beta_3$ would be generated without impacting $\beta_1$ and $\beta_2$ -- as by the goal property of conjugate basis functions shown in Eq.~\ref{eq:conjugate_subspace}. Yet $\mathcal{C}$ is a function of $\Phi$ so we run the risk of our previous $\beta$s changing when $\Phi$ changes - that is unless $\mathcal{C}$ is somehow defined to behave as a constant. In the world of matrix math, that is any diagonal matrix. For our purposes, we will use th identity matrix for simplicity.
 
 This brings us to our `conjunctionality condition':
 \begin{equation}
@@ -221,7 +221,6 @@ We then define our sequence of inputs as the basis functions chosen. It is not n
         \end{bmatrix}
     \end{split}
 \end{equation}
-so that
 \begin{equation}
     {\left[\underline{y}^e\right]}_b  = 
     \begin{bmatrix}
@@ -303,8 +302,8 @@ One will note that after 8 basis functions, the coefficients drop to 0. This is 
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Batched Learned Input}} 
-    \caption{Output Generated from Batch Generated Basis Space $\Phi$ with weights $\beta^\ast$ overlaid on the Goal Output}
+    \includegraphics[width=0.8\textwidth]{{Derive and Demo Conjugate Basis/Batched Learned Input}} 
+    \caption{Output Generated from Batch Generated Basis Space $\Phi$ with weights $\beta^\ast$ overlaid on the Goal Output. As the $\underline{u}^\ast$ was generated within a space spanned by all of the $\underline{u}^e$s that constructed the basis space, the perfect output is captured.}
 ~\label{fig:batch_learned}
 \end{figure}
 
@@ -494,31 +493,28 @@ After 10 trials (plus the one open-loop response), we find
 \end{equation}
 which we can see completely matches our batched approach.
 
-With each additional basis function, the output we are able to capture gets closer to that of our goal $\underline{y}^\ast$. Figure~\ref{fig:iterative_1_basis} shows that with just one basis function, we do not capture much. By Figure~\ref{fig:iterative_3_basis} where we have three basis functions, things are looking better. And as we saw in the batched example, once we have tried enough inputs to span that space that contains $\underline{u}^\ast$, we can perfectly capture $\underline{y}^\ast$, as in Figure~\ref{fig:iterative_10_basis}.
+With each additional basis function, the output we are able to capture gets closer to that of our goal $\underline{y}^\ast$. Figure~\ref{fig:iterative_1_basis} shows that with just one basis function, we do not capture much. By Figure~\ref{fig:iterative_3_basis} where we have three basis functions, things are looking better. And as we saw in the batched example, once we have tried enough inputs to span that space that contains $\underline{u}^\ast$, we can perfectly capture $\underline{y}^\ast$. Except now through the iterative approach, we can stop once we have enough, as in Figure~\ref{fig:iterative_8_basis} where we stop after $8$ basis functions are generated.
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis}} 
+    \includegraphics[width=0.8\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis}} 
     \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 1$ overlaid on the Goal Output}
 ~\label{fig:iterative_1_basis}
 \end{figure}
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis}} 
+    \includegraphics[width=0.8\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis}} 
     \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 3$ overlaid on the Goal Output}
 ~\label{fig:iterative_3_basis}
 \end{figure}
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 10 Basis}} 
-    \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 10$ overlaid on the Goal Output}
-~\label{fig:iterative_10_basis}
+    \includegraphics[width=0.8\textwidth]{{Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis}} 
+    \caption{Output Generated from Iteratively Generated Basis Space $\Phi$ with weights $\beta^\ast$ when $\eta = 8$ overlaid on the Goal Output. It is demonstrated that we do not to explore the full space, as done in the batch example, and can instead learn one basis at a time. By learning iteratively, we can stop once we have determined our space to be good enough for our desired output.}
+~\label{fig:iterative_8_basis}
 \end{figure}
 
 We have now shown a methodology to efficiently calculate conjugate basis functions on the fly, without compromising the optimality of pre-existing inputs.
 
 \FloatBarrier\subsubsection{Properties}
 We see that both the batch and the iterative approach yield the same conjugate basis space $\Phi$ and optimal weights $\beta$. By definition, these basis functions are created such that their application as inputs are optimal, and independent of any other basis functions in the output they produce on a system. The addition of one new basis function does not impact the learned portion of any prior one on the system.
-
-\myworries{Show how it works when the input is outside of the space}
-

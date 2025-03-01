@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.26)  28 FEB 2025 06:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.26)  1 MAR 2025 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -320,145 +320,18 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 \jayDepth@mlpr=\skip56
 \sectionRuleOffset@mlpr=\skip57
 \toks@mlpr=\toks27
-) (c:/texlive/2024/texmf-dist/tex/latex/glossaries/base/glossaries.sty
-Package: glossaries 2024/11/01 v4.55 (NLCT)
- (c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (c:/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks28
-\XKV@tempa@toks=\toks29
+) (c:/texlive/2024/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
+ (c:/texlive/2024/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+) (c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count313
+\xs_countb=\count314
 )
-\XKV@depth=\count313
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (c:/texlive/2024/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
-Package: mfirstuc 2022/10/14 v2.08 (NLCT)
-\@glsmfirst=\toks30
-\@glsmrest=\toks31
-) (c:/texlive/2024/texmf-dist/tex/latex/xfor/xfor.sty
-Package: xfor 2009/02/05 v1.05 (NLCT)
-) (c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-base.sty
-Package: datatool-base 2019/09/27 v2.32 (NLCT)
- (c:/texlive/2024/texmf-dist/tex/latex/substr/substr.sty
-Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count314
-) (c:/texlive/2024/texmf-dist/tex/latex/datatool/datatool-fp.sty
-Package: datatool-fp 2019/09/27 v2.32 (NLCT)
- (c:/texlive/2024/texmf-dist/tex/latex/fp/fp.sty
-Package: fp 1995/04/02
- `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (c:/texlive/2024/texmf-dist/tex/latex/fp/defpattern.sty
-Package: defpattern 1994/10/12
-\actioncount=\count315
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-basic.sty
-Package: fp-basic 1996/05/13
-\FP@xs=\count316
-\FP@xia=\count317
-\FP@xib=\count318
-\FP@xfa=\count319
-\FP@xfb=\count320
-\FP@rega=\count321
-\FP@regb=\count322
-\FP@regs=\count323
-\FP@times=\count324
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-addons.sty
-Package: fp-addons 1995/03/15
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-snap.sty
-Package: fp-snap 1995/04/05
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-exp.sty
-Package: fp-exp 1995/04/03
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-trigo.sty
-Package: fp-trigo 1995/04/14
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-pas.sty
-Package: fp-pas 1994/08/29
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-random.sty
-Package: fp-random 1995/02/23
-\FPseed=\count325
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eqn.sty
-Package: fp-eqn 1995/04/03
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-upn.sty
-Package: fp-upn 1996/10/21
-) (c:/texlive/2024/texmf-dist/tex/latex/fp/fp-eval.sty
-Package: fp-eval 1995/04/03
-)))
-\@dtl@toks=\toks32
-\@dtl@tmpcount=\count326
-\dtl@tmplength=\skip58
-\dtl@sortresult=\count327
-\@dtl@numgrpsepcount=\count328
-\@dtl@datatype=\count329
-\dtl@codeA=\count330
-\dtl@codeB=\count331
-\@dtl@foreach@level=\count332
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
-\gls@level=\count333
-\@gls@tmpb=\toks33
-\gls@tmplen=\skip59
-\glskeylisttok=\toks34
-\glslabeltok=\toks35
-\glsshorttok=\toks36
-\glslongtok=\toks37
- (c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
-Package: glossary-hypernav 2024/11/01 v4.55 (NLCT)
-) (c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
-Package: glossary-list 2024/11/01 v4.55 (NLCT)
-\glslistdottedwidth=\skip60
-) (c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
-Package: glossary-long 2024/11/01 v4.55 (NLCT)
- (c:/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
-\LTleft=\skip61
-\LTright=\skip62
-\LTpre=\skip63
-\LTpost=\skip64
-\LTchunksize=\count334
-\LTcapwidth=\dimen177
-\LT@head=\box56
-\LT@firsthead=\box57
-\LT@foot=\box58
-\LT@lastfoot=\box59
-\LT@gbox=\box60
-\LT@cols=\count335
-\LT@rows=\count336
-\c@LT@tables=\count337
-\c@LT@chunks=\count338
-\LT@p@ftn=\toks38
-)
-\glsdescwidth=\skip65
-\glspagelistwidth=\skip66
-) (c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
-Package: glossary-super 2024/11/01 v4.55 (NLCT)
- (c:/texlive/2024/texmf-dist/tex/latex/supertabular/supertabular.sty
-Package: supertabular 2024/07/20 v4.2c the supertabular environment
-\c@tracingst=\count339
-\ST@wd=\dimen178
-\ST@rightskip=\skip67
-\ST@leftskip=\skip68
-\ST@parfillskip=\skip69
-\ST@pageleft=\dimen179
-\ST@headht=\dimen180
-\ST@tailht=\dimen181
-\ST@pagesofar=\dimen182
-\ST@pboxht=\dimen183
-\ST@rowht=\dimen184
-\ST@prevht=\dimen185
-\ST@toadd=\dimen186
-\ST@dimen=\dimen187
-\ST@pbox=\box61
-)) (c:/texlive/2024/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
-Package: glossary-tree 2024/11/01 v4.55 (NLCT)
-\glstreeindent=\skip70
-))
-\glswrite=\write3
-\glo@main@file=\write4
-\openout4 = `main.glo'.
-
-Package glossaries Info: Writing glossary file main.glo on input line 20.
-\glo@acronym@file=\write5
-\openout5 = `main.acn'.
-
-Package glossaries Info: Writing glossary file main.acn on input line 20.
- (c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+\AC@clearlist=\toks28
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ) (c:/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -466,42 +339,49 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count340
-\l__pdf_internal_box=\box62
-) (./main.aux (./TitlePage.aux) (./Abstract.aux) (./Acknowledgements.aux) (./List of Acronyms and Variable Names.aux) (./Background.aux) (./Reinforcement Learning on Iterative Learning Control.aux) (./Basis Functions.aux) (./Conjugate Basis.aux) (./Conjugate Basis on RL.aux) (./Summary Results.aux) (./Future Work.aux) (./Matlab Code/Background Code.aux) (./Matlab Code/Basis Functions Code.aux) (./Matlab Code/Background Code.aux) (./Matlab Code/Derive and Demo Conjugates.aux) (./Matlab Code/RL on ILC Code.aux) (./Matlab Code/Controllability Check.aux) (./Matlab Code/Decoupled Learning for Iterative Learning Control.aux) (./Matlab Code/Default Figure Properties.aux) (./Matlab Code/Discounted LQR Solution.aux) (./Matlab Code/Draw a Goal.aux) (./Matlab Code/Figure Saving.aux) (./Matlab Code/Generate Chebyshev Polynomials.aux) (./Matlab Code/Generate Conjugate Basis Functions.aux) (./Matlab Code/Generate Iterative Conjugates.aux) (./Matlab Code/ILC Simulation.aux) (./Matlab Code/P Matrix from ABCD.aux) (./Matlab Code/Plot Basis Coefficients.aux) (./Matlab Code/Plot Controller History.aux) (./Matlab Code/Plot Dual Mass.aux) (./Matlab Code/Plot ILC.aux) (./Matlab Code/Policy Learning for Iterative Learning Control.aux) (./Matlab Code/Random Range.aux) (./Matlab Code/Render Poles.aux))
+\l__color_backend_stack_int=\count315
+\l__pdf_internal_box=\box56
+) (./main.aux (./TitlePage.aux) (./Abstract.aux) (./Acknowledgements.aux) (./List of Acronyms and Variable Names.aux) (./Background.aux) (./Reinforcement Learning on Iterative Learning Control.aux) (./Basis Functions.aux
+
+LaTeX Warning: Label `fig:FIPO_output_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:FIPO_output_1' multiply defined.
+
+) (./Conjugate Basis.aux) (./Conjugate Basis on RL.aux) (./Summary Results.aux) (./Future Work.aux) (./LQL Derivation.aux) (./Matlab Code/Background Code.aux) (./Matlab Code/Basis Functions Code.aux) (./Matlab Code/Background Code.aux) (./Matlab Code/Derive and Demo Conjugates.aux) (./Matlab Code/RL on ILC Code.aux) (./Matlab Code/Controllability Check.aux) (./Matlab Code/Decoupled Learning for Iterative Learning Control.aux) (./Matlab Code/Default Figure Properties.aux) (./Matlab Code/Discounted LQR Solution.aux) (./Matlab Code/Draw a Goal.aux) (./Matlab Code/Figure Saving.aux) (./Matlab Code/Generate Chebyshev Polynomials.aux) (./Matlab Code/Generate Conjugate Basis Functions.aux) (./Matlab Code/Generate Iterative Conjugates.aux) (./Matlab Code/ILC Simulation.aux) (./Matlab Code/P Matrix from ABCD.aux) (./Matlab Code/Plot Basis Coefficients.aux) (./Matlab Code/Plot Controller History.aux) (./Matlab Code/Plot Dual Mass.aux) (./Matlab Code/Plot ILC.aux) (./Matlab Code/Policy Learning for Iterative Learning Control.aux) (./Matlab Code/Random Range.aux) (./Matlab Code/Render Poles.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
-\scratchdimen=\dimen188
-\scratchbox=\box63
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count344
-\MPscratchDim=\dimen189
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count316
+\scratchdimen=\dimen177
+\scratchbox=\box57
+\nofMPsegments=\count317
+\nofMParguments=\count318
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count319
+\MPscratchDim=\dimen178
+\MPnumerator=\count320
+\makeMPintoPDFobject=\count321
+\everyMPtoPDFconversion=\toks30
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -545,38 +425,1991 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
-Package caption Info: longtable package is loaded.
-(c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
-Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 61.
- (./main.out) (./main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
+Package hyperref Info: Link coloring OFF on input line 56.
+(./main.out) (./main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
 
-\c@lstlisting=\count347
- (./main.glsdefs
-
-Package glossaries Warning: entry `rl' has already been defined in the preamble (if you have moved the definition there from the document environment, delete main.glsdefs) on input line 27.
-
-
-Package glossaries Warning: entry `lqr' has already been defined in the preamble (if you have moved the definition there from the document environment, delete main.glsdefs) on input line 55.
-
-
-Package glossaries Warning: entry `zoh' has already been defined in the preamble (if you have moved the definition there from the document environment, delete main.glsdefs) on input line 83.
-
-)
+\c@lstlisting=\count322
 \openout2 = `TitlePage.aux'.
 
  (./TitlePage.tex)
 
 [1
 
-\openout3 = `main.ist'.
+
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-!pdfTeX error: pdflatex.exe (file c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fflush() failed (Invalid argument)
- ==> Fatal error occurred, no output PDF file produced!
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.64 \newpage
+              [2
+
+
+]
+\openout2 = `Abstract.aux'.
+
+ (./Abstract.tex
+Package acronym Info: Label `acro:ILC' newly defined as it shall be overridden
+although it is yet undefined on input line 10.
+Package acronym Info: Label `acro:RL' newly defined as it shall be overridden
+although it is yet undefined on input line 12.
+
+
+[2
+
+])
+\openout2 = `Acknowledgements.aux'.
+
+ (./Acknowledgements.tex
+
+[3
+
+
+
+
+]
+
+[4]) (./main.toc
+
+[5
+
+
+
+
+]
+Package acronym Info: Label `acro:FIPO' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:PIFO' newly defined as it shall be overridden
+although it is yet undefined on input line 34.
+Package acronym Info: Label `acro:FISO' newly defined as it shall be overridden
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:SIFO' newly defined as it shall be overridden
+although it is yet undefined on input line 37.
+
+
+[6])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+
+
+[7] (./main.lof
+
+[8
+
+]
+
+[9]
+Overfull \hbox (6.53651pt too wide) in paragraph at lines 43--43
+ [][] [][]\T1/ptm/m/n/12 Progression of Co-ef-fi-cients through perfect-knowledge con-troller tri-als when 
+ []
+
+
+
+[10]
+
+[11])
+\tf@lof=\write5
+\openout5 = `main.lof'.
+
+
+
+[12]
+\openout2 = `"List of Acronyms and Variable Names.aux"'.
+
+ (./List of Acronyms and Variable Names.tex)
+
+[13
+
+
+]
+Chapter 1.
+
+
+[1
+
+
+
+
+]
+\openout2 = `Background.aux'.
+
+ (./Background.tex
+Package acronym Info: Label `acro:ZOH' newly defined as it shall be overridden
+although it is yet undefined on input line 10.
+Package acronym Info: Label `acro:LQR' newly defined as it shall be overridden
+although it is yet undefined on input line 14.
+
+
+[2
+
+]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf, id=849, 325.55829pt x 132.07945pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf  used on input line 40.
+(pdftex.def)             Requested size: 433.62001pt x 175.9335pt.
+
+
+[3]
+
+[4 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/latex_SMD.pdf>]
+
+[5]
+
+[6]
+
+[7]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf, id=924, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf  used on input line 287.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf, id=925, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf  used on input line 293.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[8 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Continuous Open-Loop - Mass 2.pdf>]
+
+[9]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 1 Position.pdf, id=986, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 1 Position.pdf  used on input line 350.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 2 Position.pdf, id=987, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-Loop Mass 2 Position.pdf  used on input line 356.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 1 Position.pdf, id=990, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 1 Position.pdf  used on input line 368.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 2 Position.pdf, id=991, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-Loop Mass 2 Position.pdf  used on input line 374.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[10]
+
+[11 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Open-loop Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Zoomed-in Open-loop Mass 2 Position.pdf>]
+
+[12]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf, id=1090, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf  used on input line 412.
+(pdftex.def)             Requested size: 433.62001pt x 433.61894pt.
+
+
+[13]
+
+[14 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Simple Pole Placement.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf, id=1127, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf  used on input line 439.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf, id=1128, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf  used on input line 445.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf, id=1129, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf  used on input line 451.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf, id=1130, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf  used on input line 457.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[15]
+
+[16 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 1 Magnitude.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Pole Placement - Input 2 Magnitude.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf, id=1219, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf  used on input line 466.
+(pdftex.def)             Requested size: 433.62001pt x 433.61894pt.
+
+
+[17 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Pole Placement.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf, id=1250, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf  used on input line 482.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf, id=1251, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf  used on input line 488.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf, id=1252, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf  used on input line 494.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf, id=1253, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf  used on input line 500.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[18 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 1 Magnitude.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Deadbeat Controller - Input 2 Magnitude.pdf>]
+
+[19]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png, id=1344, 624.53325pt x 383.63326pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png Graphic file (type png)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png  used on input line 534.
+(pdftex.def)             Requested size: 433.62001pt x 266.35799pt.
+
+
+[20]
+
+[21 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Principal of Optimality - PhanChp8.png>]
+Overfull \hbox (3.95633pt too wide) in paragraph at lines 562--564
+\T1/ptm/m/n/12 Examining where that places the poles (Fig-ure []1.10[]) and the input-output data (Fig-ures []1.11a[]
+ []
+
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf, id=1364, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf  used on input line 567.
+(pdftex.def)             Requested size: 433.62001pt x 433.61894pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf, id=1365, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf  used on input line 574.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf, id=1366, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf  used on input line 580.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf, id=1367, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf  used on input line 586.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf, id=1368, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf  used on input line 592.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[22]
+
+[23 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Pole Locations.pdf>]
+
+[24 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 1 Magnitude.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big Q LQR Controller - Input 2 Magnitude.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf, id=1474, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf  used on input line 615.
+(pdftex.def)             Requested size: 433.62001pt x 433.61894pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf, id=1475, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf  used on input line 622.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf, id=1476, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf  used on input line 628.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf, id=1477, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf  used on input line 634.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf, id=1478, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf  used on input line 640.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[25 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R Pole Placement.pdf>]
+
+[26 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 1 Magnitude.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Big R LQR Controller - Input 2 Magnitude.pdf>]
+
+[27]
+
+[28]
+
+[29]
+
+[30]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf, id=1613, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf  used on input line 756.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+
+
+[31 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Error Progression.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf, id=1640, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf  used on input line 766.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf, id=1641, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf  used on input line 772.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf, id=1642, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf  used on input line 778.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf, id=1643, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf  used on input line 784.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf, id=1644, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf  used on input line 792.
+(pdftex.def)             Requested size: 433.62001pt x 433.61894pt.
+
+
+[32 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Input 2.pdf>]
+
+[33 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Placed Controller ILC - Shaped Output.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf, id=1744, 650.43pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf  used on input line 800.
+(pdftex.def)             Requested size: 433.62001pt x 433.63216pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf, id=1745, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf  used on input line 807.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf, id=1746, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf  used on input line 813.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+
+
+[34 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Shaped Output.pdf>]
+
+[35 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Dartmouth ILC - Mass 2 Position.pdf>]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]
+
+[43]
+
+[44]
+
+[45]
+
+[46
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.109}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1100 \end{equation}
+                     ]
+
+[47]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf, id=1959, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf  used on input line 1121.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf, id=1960, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf  used on input line 1127.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf, id=1961, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf  used on input line 1133.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf, id=1962, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf  used on input line 1139.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf, id=1965, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf  used on input line 1149.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf, id=1966, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf  used on input line 1155.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[48 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 1 Magnitude.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration IO - Input 2 Magnitude.pdf>]
+
+[49
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.113}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1178 \end{equation}
+                      <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 1 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Policy Iteration Controller - Input 2 Controller Weights.pdf>]
+
+[50]
+
+[51]
+
+[52]
+
+[53
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.128}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1277 \end{equation}
+                     ]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf, id=2140, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf  used on input line 1283.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf, id=2141, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf  used on input line 1289.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf, id=2142, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf  used on input line 1295.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf, id=2143, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf  used on input line 1301.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf, id=2146, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf  used on input line 1315.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf, id=2147, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf  used on input line 1321.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[54 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 1 Magnitude.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling IO - Input 2 Magnitude.pdf>])
+
+[55 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 1 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/General Intro/Input Decoupling Controller - Input 2 Controller Weights.pdf>]
+Chapter 2.
+
+
+[56
+
+
+
+]
+\openout2 = `"Reinforcement Learning on Iterative Learning Control.aux"'.
+
+ (./Reinforcement Learning on Iterative Learning Control.tex
+
+[57
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \end{equation}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \end{equation}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \end{equation}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \end{equation}
+                   ]
+
+[58
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.64 
+     ]
+
+[59]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf, id=2305, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf  used on input line 105.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf, id=2306, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf  used on input line 111.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf, id=2307, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf  used on input line 116.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf, id=2308, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf  used on input line 121.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf, id=2309, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf  used on input line 130.
+(pdftex.def)             Requested size: 433.62001pt x 243.91064pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf, id=2310, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf  used on input line 137.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf, id=2311, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf  used on input line 142.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf, id=2312, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf  used on input line 148.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf, id=2313, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf  used on input line 153.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf, id=2314, 650.43pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf  used on input line 161.
+(pdftex.def)             Requested size: 433.62001pt x 433.63216pt.
+
+
+[60]
+
+[61 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 1 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 7 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 13 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration ILC Controller - Input 20 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Error Progression.pdf>]
+
+[62 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Input 2.pdf>]
+
+[63 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Policy Iteration on ILC - Shaped Output.pdf>]
+
+[64
+
+]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf, id=2522, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf  used on input line 192.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf, id=2523, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf  used on input line 197.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf, id=2524, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf  used on input line 202.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf, id=2525, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf  used on input line 207.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf, id=2526, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf  used on input line 215.
+(pdftex.def)             Requested size: 433.62001pt x 243.91064pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf, id=2527, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf  used on input line 223.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf, id=2528, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf  used on input line 228.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf, id=2529, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf  used on input line 234.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf, id=2530, 1156.32pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf  used on input line 239.
+(pdftex.def)             Requested size: 212.47618pt x 119.51382pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf, id=2531, 650.43pt x 650.43pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf  used on input line 247.
+(pdftex.def)             Requested size: 433.62001pt x 433.63216pt.
+
+
+[65]
+
+[66 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 1 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 7 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 13 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration ILC Controller - Input 20 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Error Progression.pdf>]
+
+[67 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Input 2.pdf>]
+
+[68 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Small R Policy Iteration on ILC - Shaped Output.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 256.
+ (c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+[69
+
+]
+
+[70]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf, id=2750, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf  used on input line 299.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf, id=2751, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf  used on input line 304.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf, id=2752, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf  used on input line 309.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf, id=2753, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf  used on input line 314.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf, id=2754, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf  used on input line 322.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf, id=2755, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf  used on input line 329.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf, id=2756, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf  used on input line 334.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf, id=2757, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf  used on input line 340.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf, id=2758, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf  used on input line 345.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf, id=2759, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf  used on input line 353.
+(pdftex.def)             Requested size: 433.62001pt x 433.61894pt.
+
+
+[71 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 1 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 7 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 13 Controller Weights.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling ILC Controller - Input 20 Controller Weights.pdf>]
+
+[72 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Error Progression.pdf>]
+
+[73 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Input 2.pdf>]
+
+[74 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on ILC/Input Decoupling on ILC - Shaped Output.pdf>])
+
+[75]
+\openout2 = `"Basis Functions.aux"'.
+
+ (./Basis Functions.tex
+
+[76
+
+
+
+]
+
+[77]
+
+[78]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf, id=3005, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf  used on input line 101.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf, id=3008, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf  used on input line 109.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf, id=3009, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf  used on input line 116.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+
+
+[79]
+
+[80 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Functions.pdf>]
+
+[81 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Example Cheby Signal.pdf>]
+
+[82 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Cheby Weights.pdf>]
+
+[83
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.35}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+      ]
+
+[84]
+
+[85
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.47}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.193 \end{equation}
+                    ]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 218.
+
+
+
+[86]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf, id=3156, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf  used on input line 240.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf, id=3157, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf  used on input line 246.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[87]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf, id=3171, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf  used on input line 277.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf, id=3172, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf  used on input line 283.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[88 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Input 2.pdf>]
+
+[89 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Goal Output 2.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf, id=3334, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf  used on input line 302.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf, id=3335, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf  used on input line 308.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf, id=3338, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf  used on input line 321.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf, id=3339, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf  used on input line 327.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+Overfull \hbox (1.98476pt too wide) in paragraph at lines 315--333
+[]\T1/ptm/m/n/12 We can ad-di-tion-ally see the pro-gres-sion of the co-ef-fi-cients through tri-als in Fig-ures []2.19a[]
+ []
+
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 1 Position.pdf, id=3342, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 1 Position.pdf  used on input line 338.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 2 Position.pdf, id=3343, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Partial output - Mass 2 Position.pdf  used on input line 344.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf, id=3344, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf  used on input line 349.
+(pdftex.def)             Requested size: 346.89732pt x 346.90309pt.
+
+
+[90 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Alpha Coeffecient Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Beta Coeffecient Progression.pdf>]
+
+[91 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Partial Output - Shaped Output.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 358.
+
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf, id=3489, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf  used on input line 372.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf, id=3490, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf  used on input line 378.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[92 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Output 2.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf, id=3536, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf  used on input line 405.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf, id=3537, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf  used on input line 412.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[93 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial input Full output - Goal Input 2.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf, id=3657, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf  used on input line 427.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf, id=3658, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf  used on input line 433.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf, id=3661, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf  used on input line 443.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf, id=3662, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf  used on input line 449.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf, id=3665, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf  used on input line 460.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf, id=3666, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf  used on input line 466.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf, id=3667, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf  used on input line 471.
+(pdftex.def)             Requested size: 346.89732pt x 346.90309pt.
+
+
+[94 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Error Progression.pdf>]
+
+[95 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Alpha Coeffecient Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Beta Coeffecient Progression.pdf>]
+
+[96 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Partial Input Full Output - Shaped Output.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 491.
+
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf, id=3818, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf  used on input line 497.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf, id=3819, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf  used on input line 503.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf, id=3821, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf  used on input line 513.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf, id=3822, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf  used on input line 519.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf, id=3823, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf  used on input line 530.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf, id=3824, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf  used on input line 537.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf, id=3825, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf  used on input line 547.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf, id=3826, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf  used on input line 553.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf, id=3827, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf  used on input line 558.
+(pdftex.def)             Requested size: 346.89732pt x 346.90309pt.
+
+
+[97 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full input Single output - Goal Output 2.pdf>]
+
+[98 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Alpha Coeffecient Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Beta Coeffecient Progression.pdf>]
+
+[99 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Full Input Single Output - Shaped Output.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 567.
+
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf, id=4008, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf  used on input line 571.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf, id=4009, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf  used on input line 577.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf, id=4010, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf  used on input line 588.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf, id=4011, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf  used on input line 594.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf, id=4012, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf  used on input line 604.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf, id=4013, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf  used on input line 610.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf, id=4014, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf  used on input line 620.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf, id=4015, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf  used on input line 626.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf, id=4016, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf  used on input line 631.
+(pdftex.def)             Requested size: 346.89732pt x 346.90309pt.
+
+
+[100 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single input Full output - Goal Input 2.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Error Norm Progression.pdf>]
+
+[101 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Alpha Coeffecient Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Beta Coeffecient Progression.pdf>]
+
+[102 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 1 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Mass 2 Position.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Single Input Full Output - Shaped Output.pdf>]
+
+[103
+
+]
+
+[104]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf, id=4232, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf  used on input line 724.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[105]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf, id=4245, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf  used on input line 734.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf, id=4246, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf  used on input line 744.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf, id=4247, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf  used on input line 750.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf, id=4248, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf  used on input line 756.
+(pdftex.def)             Requested size: 212.47618pt x 212.46904pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf, id=4249, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf  used on input line 765.
+(pdftex.def)             Requested size: 212.47618pt x 159.35178pt.
+
+
+[106 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Alpha Error Norm Progression.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Error Progression.pdf>]
+
+[107 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 1.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Input 2.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Shaped Output.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf>])
+
+[108]
+\openout2 = `"Conjugate Basis.aux"'.
+
+ (./Conjugate Basis.tex
+Package acronym Info: Label `acro:LQL' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+
+
+[109
+
+
+
+]
+
+[110]
+
+[111]
+
+[112]
+
+[113]
+
+[114]
+
+[115]
+
+[116
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.95}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.259 \end{equation}
+                    ]
+
+[117]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf, id=4482, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf  used on input line 305.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+
+
+[118]
+
+[119 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Batched Learned Input.pdf>]
+
+[120]
+
+[121]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 404.
+ (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+[122]
+
+[123]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf, id=4613, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf  used on input line 500.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+
+
+[124]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf, id=4621, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf  used on input line 506.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf, id=4622, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf  used on input line 512.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+
+
+[125 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 1 Basis.pdf>]
+
+[126 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 3 Basis.pdf> <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/Derive and Demo Conjugate Basis/Iterative Learned Input - 8 Basis.pdf>])
+
+[127]
+Chapter 3.
+
+
+[128
+
+
+
+]
+\openout2 = `"Conjugate Basis on RL.aux"'.
+
+ (./Conjugate Basis on RL.tex
+
+[129
+
+]
+
+[130]
+
+[131]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf, id=4725, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf  used on input line 107.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf, id=4726, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf  used on input line 113.
+(pdftex.def)             Requested size: 346.89732pt x 346.90309pt.
+
+
+[132]
+
+[133 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Error Progression.pdf>]
+
+[134 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/FIFO Conjugate Basis - Shaped Output.pdf>]
+
+[135
+
+]
+
+[136]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf, id=4800, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf  used on input line 217.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf, id=4801, 867.24pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf  used on input line 223.
+(pdftex.def)             Requested size: 346.89732pt x 346.90309pt.
+
+
+[137]
+
+[138 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression.pdf>]
+
+[139 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output.pdf>]
+
+[140]
+
+[141]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf, id=4878, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf  used on input line 308.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+
+
+[142 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Scaled Conjugate Basis Application - Error Progression.pdf>]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf, id=4901, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf  used on input line 340.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+
+
+[143]
+
+[144 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Controller Application of Conjugate Input Basis with y star Output Basis - Error Progression.pdf>]
+
+[145]
+
+[146]
+<C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf, id=4952, 1156.32pt x 867.24pt>
+File: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf Graphic file (type pdf)
+<use C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf>
+Package pdftex.def Info: C:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf  used on input line 443.
+(pdftex.def)             Requested size: 433.62001pt x 325.2142pt.
+)
+
+[147]
+
+[148 <c:/Users/noahd/OneDrive/Desktop/Thesis/Thesis Images/RL on Conjugate/Growing Basis on IO - Error Progression.pdf>]
+Chapter 4.
+
+
+[149
+
+
+
+]
+\openout2 = `"Summary Results.aux"'.
+
+ (./Summary Results.tex
+Overfull \hbox (9.58066pt too wide) in paragraph at lines 4--5
+[]\T1/ptm/m/n/12 Reinforcement Learn-ing of-fers a pow-er-ful way to de-ter-mine the Op-ti-mal Lin-ear Quadratic
+ []
+
+
+
+[150
+
+])
+
+[151]
+Chapter 5.
+
+
+[152
+
+
+
+]
+\openout2 = `"Future Work.aux"'.
+
+ (./Future Work.tex
+
+[153
+
+])
+
+[154]
+Appendix A.
+
+
+[155
+
+
+
+]
+\openout2 = `"LQL Derivation.aux"'.
+
+ (./LQL Derivation.tex
+
+[156
+
+]
+
+[157]
+
+[158]
+
+[159])
+
+[160]
+Appendix B.
+
+
+[161
+
+
+
+]
+\openout2 = `"Matlab Code/Background Code.aux"'.
+
+ (./Matlab Code/Background Code.tex
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1.
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2.
+(c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+
+[162
+
+]
+
+[163]
+
+[164]
+
+[165]
+
+[166]
+
+[167]
+
+[168]
+
+[169]
+
+[170]
+
+[171]
+
+[172]
+
+[173]
+
+[174]
+
+[175]
+
+[176]
+
+[177]
+
+[178]
+
+[179]
+
+[180]
+
+[181]
+
+[182]
+
+[183]
+
+[184]
+
+[185]
+
+[186]
+
+[187]
+
+[188]
+
+[189])
+
+[190])
+
+[191]
+\openout2 = `"Matlab Code/Basis Functions Code.aux"'.
+
+ (./Matlab Code/Basis Functions Code.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/basis_functions.m
+
+[192
+
+
+
+]
+
+[193]
+
+[194]
+
+[195]
+
+[196]
+
+[197]
+
+[198]
+
+[199]
+
+[200]
+
+[201]
+
+[202]
+
+[203]
+
+[204]
+
+[205]))
+
+[206]
+\openout2 = `"Matlab Code/Background Code.aux"'.
+
+ (./Matlab Code/Background Code.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/general_intro.m
+
+[207
+
+
+
+]
+
+[208]
+
+[209]
+
+[210]
+
+[211]
+
+[212]
+
+[213]
+
+[214]
+
+[215]
+
+[216]
+
+[217]
+
+[218]
+
+[219]
+
+[220]
+
+[221]
+
+[222]
+
+[223]
+
+[224]
+
+[225]
+
+[226]
+
+[227]
+
+[228]
+
+[229]
+
+[230]
+
+[231]
+
+[232]
+
+[233]
+
+[234])
+
+[235])
+
+[236]
+\openout2 = `"Matlab Code/Derive and Demo Conjugates.aux"'.
+
+ (./Matlab Code/Derive and Demo Conjugates.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/derive_and_demo_conjugate_basis.m
+
+[237
+
+
+
+]
+
+[238]
+
+[239]
+
+[240]
+
+[241]
+
+[242]
+
+[243]
+
+[244]
+
+[245]))
+
+[246]
+\openout2 = `"Matlab Code/RL on ILC Code.aux"'.
+
+ (./Matlab Code/RL on ILC Code.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/rl_on_ilc.m
+
+[247
+
+
+
+]
+
+[248]
+
+[249]
+
+[250]
+
+[251]
+
+[252]
+
+[253]
+
+[254]
+
+[255]
+
+[256]
+
+[257]
+
+[258]
+
+[259]
+
+[260]
+
+[261]
+
+[262]
+
+[263]))
+
+[264]
+Appendix C.
+
+
+[265
+
+
+
+]
+\openout2 = `"Matlab Code/Controllability Check.aux"'.
+
+ (./Matlab Code/Controllability Check.tex
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1.
+
+(c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/is_controllable.m))
+
+[266
+
+]
+\openout2 = `"Matlab Code/Decoupled Learning for Iterative Learning Control.aux"'.
+
+ (./Matlab Code/Decoupled Learning for Iterative Learning Control.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/decoupled_ilc.m
+
+[267
+
+
+
+]
+
+[268]
+
+[269]
+
+[270]
+
+[271]
+
+[272]
+
+[273]))
+
+[274]
+\openout2 = `"Matlab Code/Default Figure Properties.aux"'.
+
+ (./Matlab Code/Default Figure Properties.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/setDefaultFigProp.m
+
+[275
+
+
+
+]))
+
+[276]
+\openout2 = `"Matlab Code/Discounted LQR Solution.aux"'.
+
+ (./Matlab Code/Discounted LQR Solution.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/discounted_LQR.m
+
+[277
+
+
+
+]))
+
+[278]
+\openout2 = `"Matlab Code/Draw a Goal.aux"'.
+
+ (./Matlab Code/Draw a Goal.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/draw_to_XY.m
+
+[279
+
+
+
+]
+
+[280]))
+
+[281]
+\openout2 = `"Matlab Code/Figure Saving.aux"'.
+
+ (./Matlab Code/Figure Saving.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/save_figure.m
+
+[282
+
+
+
+]
+
+[283]
+
+[284]
+
+[285]))
+
+[286]
+\openout2 = `"Matlab Code/Generate Chebyshev Polynomials.aux"'.
+
+ (./Matlab Code/Generate Chebyshev Polynomials.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_chebyshev.m))
+
+[287
+
+
+
+]
+\openout2 = `"Matlab Code/Generate Conjugate Basis Functions.aux"'.
+
+ (./Matlab Code/Generate Conjugate Basis Functions.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_conjugate.m
+
+[288
+
+
+
+]
+
+[289]))
+
+[290]
+\openout2 = `"Matlab Code/Generate Iterative Conjugates.aux"'.
+
+ (./Matlab Code/Generate Iterative Conjugates.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/generate_iterative_conjugate.m
+
+[291
+
+
+
+]
+
+[292]
+
+[293]))
+
+[294]
+\openout2 = `"Matlab Code/ILC Simulation.aux"'.
+
+ (./Matlab Code/ILC Simulation.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/basis_ilc_sim.m
+
+[295
+
+
+
+]
+
+[296]
+
+[297]))
+
+[298]
+\openout2 = `"Matlab Code/P Matrix from ABCD.aux"'.
+
+ (./Matlab Code/P Matrix from ABCD.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/P_from_ABCD.m
+
+[299
+
+
+
+]
+
+[300]))
+
+[301]
+\openout2 = `"Matlab Code/Plot Basis Coefficients.aux"'.
+
+ (./Matlab Code/Plot Basis Coefficients.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_ilc_coeffecients.m
+
+[302
+
+
+
+]
+
+[303]
+
+[304]
+
+[305]
+
+[306]
+
+[307]))
+
+[308]
+\openout2 = `"Matlab Code/Plot Controller History.aux"'.
+
+ (./Matlab Code/Plot Controller History.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_controller_history.m
+
+[309
+
+
+
+]
+
+[310]
+
+[311]))
+
+[312]
+\openout2 = `"Matlab Code/Plot Dual Mass.aux"'.
+
+ (./Matlab Code/Plot Dual Mass.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_two_mass.m
+
+[313
+
+
+
+]
+
+[314])
+
+[315])
+
+[316]
+\openout2 = `"Matlab Code/Plot ILC.aux"'.
+
+ (./Matlab Code/Plot ILC.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_dual_ilc.m
+
+[317
+
+
+
+]
+
+[318]
+
+[319]
+
+[320]
+
+[321]
+
+[322]
+
+[323]))
+
+[324]
+\openout2 = `"Matlab Code/Policy Learning for Iterative Learning Control.aux"'.
+
+ (./Matlab Code/Policy Learning for Iterative Learning Control.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/policy_ilc.m
+
+[325
+
+
+
+]
+
+[326]
+
+[327]
+
+[328]
+
+[329]
+
+[330])
+
+[331])
+
+[332]
+\openout2 = `"Matlab Code/Random Range.aux"'.
+
+ (./Matlab Code/Random Range.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/rand_range.m))
+
+[333
+
+
+
+]
+\openout2 = `"Matlab Code/Render Poles.aux"'.
+
+ (./Matlab Code/Render Poles.tex (c:/Users/noahd/OneDrive/Documents/MATLAB/Thesis/Submission Code/Functions/plot_pole_placement.m
+
+[334
+
+
+
+]
+
+[335]))
+
+[336] (./main.aux (./TitlePage.aux) (./Abstract.aux) (./Acknowledgements.aux) (./List of Acronyms and Variable Names.aux) (./Background.aux) (./Reinforcement Learning on Iterative Learning Control.aux) (./Basis Functions.aux) (./Conjugate Basis.aux) (./Conjugate Basis on RL.aux) (./Summary Results.aux) (./Future Work.aux) (./LQL Derivation.aux) (./Matlab Code/Background Code.aux) (./Matlab Code/Basis Functions Code.aux) (./Matlab Code/Background Code.aux) (./Matlab Code/Derive and Demo Conjugates.aux) (./Matlab Code/RL on ILC Code.aux) (./Matlab Code/Controllability Check.aux) (./Matlab Code/Decoupled Learning for Iterative Learning Control.aux) (./Matlab Code/Default Figure Properties.aux) (./Matlab Code/Discounted LQR Solution.aux) (./Matlab Code/Draw a Goal.aux) (./Matlab Code/Figure Saving.aux) (./Matlab Code/Generate Chebyshev Polynomials.aux) (./Matlab Code/Generate Conjugate Basis Functions.aux) (./Matlab Code/Generate Iterative Conjugates.aux) (./Matlab Code/ILC Simulation.aux) (./Matlab Code/P Matrix from ABCD.aux) (./Matlab Code/Plot Basis Coefficients.aux) (./Matlab Code/Plot Controller History.aux) (./Matlab Code/Plot Dual Mass.aux) (./Matlab Code/Plot ILC.aux) (./Matlab Code/Policy Learning for Iterative Learning Control.aux) (./Matlab Code/Random Range.aux) (./Matlab Code/Render Poles.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 39024D3A977CB52954B30BAF52E8B69B;16794.
+ ) 
+Here is how much of TeX's memory you used:
+ 23159 strings out of 473201
+ 518608 string characters out of 5720299
+ 975103 words of memory out of 5000000
+ 41351 multiletter control sequences out of 15000+600000
+ 613314 words of font info for 96 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,23n,79p,1212b,2633s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.27} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (350 pages, 5516279 bytes).
+PDF statistics:
+ 10503 PDF objects out of 10688 (max. 8388607)
+ 8936 compressed objects within 90 object streams
+ 4532 named destinations out of 5155 (max. 500000)
+ 1448 words of extra memory for PDF output out of 10000 (max. 10000000)
+

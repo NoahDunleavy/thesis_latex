@@ -7,7 +7,7 @@
 We have explored\myworries{Intro here}
 
 \FloatBarrier\subsection{Tying it all together}
-Recall the original problem of in the Iterative Control Problem, the dimensions on states and inputs scale by the number of steps $p$. This translates exponentially to the number of trials needed to update a controller in the Reinforcement Learning framework, and given that $p$ is typically large this can result in millions of failed trials before learning is even attempted.
+Recall the original problem of in the Iterative Control Problem, the dimensions on states and inputs scale by the number of steps $p$. This translates exponentially to the number of trials needed to update a controller in the \ac{RL} framework, and given that $p$ is typically large this can result in millions of failed trials before learning is even attempted.
 
 We showed that with basis functions, the dimensions of a problem can be infinitely reduced. We discovered that $\underline{u}^\ast \in \Phi$ and $\eta_y \geq \eta_u$ were the only requirements in order to capture $\underline{y}^\ast$. In a best-case scenario, one would be able to infinitely reduce their input and output to a single dimension, meaning RL controllers could be updated in as few as $4$ trials. This ideal scenario may seem pointless at first, as we can only do so if $\Phi = \underline{u}^\ast$. However, in the RL framework we introduce exploration noise, so it would be possible to have a $\Phi \approx \underline{u}^\ast$ with the same learning results.
 
@@ -27,7 +27,7 @@ and the addition of one additional basis function would have it such that
 \end{equation}
 
 \FloatBarrier\subsubsection{The Conjugate LQR Controller}
-We know the conditions to ensure a found controller captures $\underline{y}^\ast$ in the basis space, so that is not what we will be testing here. We are now interested the scenario where we do \underline{not} capture $\underline{u}^\ast$ in our $\Phi$, but we still find a controller to work in this space. It should be that if we find $F_{\phi_1}$ and $F_{\phi_2}$ separately, they would have the exact same parameters as controller $F^{\Phi_2}$, so long as they all use the same basis space on the output\footnote{The output basis space should also be conjugate.}\myworries{Test this more}.
+We know the conditions to ensure a found controller captures $\underline{y}^\ast$ in the basis space, so that is not what we will be testing here. We are now interested the scenario where we do \underline{not} capture $\underline{u}^\ast$ in our $\Phi$, but we still find a controller in this space. It should be that if we find $F_{\phi_1}$ and $F_{\phi_2}$ separately, they would have the exact same parameters as controller $F^{\Phi_2}$\footnote{So long as they all use the same basis space on the output.}.
 
 \FloatBarrier\paragraph{Example \myworries{name}}
 We know our RL techniques are capable of extracting the discount LQR controller, so we will cut through the noise in our example and simply use \textit{manualLQR}. 
@@ -104,13 +104,13 @@ For completeness, we will run an ILC Trial as we did when exploring the requirem
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{RL on Conjugate/FIFO Conjugate Basis - Error Progression}} 
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/FIFO Conjugate Basis - Error Progression}} 
     \caption{Error Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}
 ~\label{fig:conj_ilc_error}
 \end{figure}
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{RL on Conjugate/FIFO Conjugate Basis - Shaped Output}} 
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/FIFO Conjugate Basis - Shaped Output}} 
     \caption{Shaped Output Progression through ILC Trials with a Perfect Knowledge Controller in a Full Conjugate Basis Space}
 ~\label{fig:conj_ilc_shape}
 \end{figure}
@@ -210,20 +210,23 @@ If we do the exact same process, except now $R = I_{20 \times 20}$ (bigger cost 
     \end{bmatrix}
 \end{equation}
 
-As mentioned above, we do not apply the previously learned controllers through the learning process. This is why our error progression in Figure~\ref{fig:policy_ilc_rolling_error} appears so poor. However after a single trail of the complete controller, we have near zero error, as shown in Figure~\ref{fig:policy_ilc_rolling_final_shaped}.
+As mentioned above, we do not apply the previously learned controllers through the learning process. This is why our error progression in Figure~\ref{fig:policy_ilc_rolling_error} appears so poor. However after a single trial of the complete controller, we have near zero error, as shown in Figure~\ref{fig:policy_ilc_rolling_final_shaped}.
 
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression}} 
-    \caption{Error Progression through Policy Learning ILC Trials with Rolling $\phi$ on inputs}
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/Conjugate phi with Fixed I Output Basis - Error Progression}} 
+    \caption{Error Progression through Policy Learning ILC Trials with Rolling $\phi$ on inputs. For a fixed output basis $\Phi_y = I$, 20 $\phi$s are tried to capture the input, and the associated $F_{LQR}^\gamma$ is learned (but not applied).}
 ~\label{fig:policy_ilc_rolling_error}
 \end{figure}
 \begin{figure}[htbp] 
     \centering  
-    \includegraphics[width=1\textwidth]{{RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output}} 
-    \caption{Shaped Output Progression through Application of a Final Controller Learned One Basis at a Time}
+    \includegraphics[width=0.8\textwidth]{{RL on Conjugate/Controller Application of Conjugate Input Basis with Fixed I Output Basis - Shaped Output}} 
+    \caption{Shaped Output Progression through Application of a Final Controller that was Learned One $\phi$ at a time. The resultant controller is then built out of the individually learned $F_{LQR}^\gamma$s for each $\phi$}
 ~\label{fig:policy_ilc_rolling_final_shaped}
 \end{figure}
+
+
+\myworries{Some note about the first input causing the most drastic reduction in error? Talk about how conjugate basis fucntions don't impact eachother once place in, but the order they are created in matters}
 
 It can be easy to confuse this approach with input decoupling. While they are very similar, this approach has the benefit of where it will not need to loop back through to update certain controllers after determining subsequent ones. Once a controller is determined for its space, it is known to be optimal and independent of any other controllers.
 
