@@ -4,7 +4,7 @@
 
 \FloatBarrier\section{Basis Functions}
 ~\label{sec:basis_functions}
-While we have shown that the RL process still works for the ILC problem, the dimensional limits present a significant problem. Signal dimension reduction is not a new challenge, and can be seen from Fourier Transforms to Linear Regressions. The method which we will explore are Basis Functions. \myworries{Phan and Frueh - Learning Control for Trajectory Tracking using Basis Functions} provides the logic from which we launch our approach. 
+While we have shown that the RL process still works for the ILC problem, the dimensional limits present a significant problem. Signal dimension reduction is not a new challenge, and can be seen from Fourier Transforms to Linear Regressions. The method which we will explore are Basis Functions. \cite{PhanFrueh1996} - Learning Control for Trajectory Tracking using Basis Functions - provides the logic from which we launch our approach. 
 
 \FloatBarrier\subsection{What are Basis Functions}
 ~\label{sub:what_are_basis}
@@ -217,7 +217,7 @@ An important note moving forward is that some of the shaped outputs look like ar
 \FloatBarrier\paragraph{{FIPO}}
 ~\label{par:fipo}
 
-The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. In other words, we will have a \ac{FIPO} describing their respective spaces.
+The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. In other words, we will have \ac{FIPO} describing their respective spaces.
 
 We can always construct a basis space to capture $\underline{y}^\ast$ by setting one of the functions of $\Phi_y$ equal to $\underline{y}^\ast$, so this is the first logical one to challenge. However we must ensure our input can be captured in our input basis space,so we construct our input basis space out of the first 10 chebyshev polynomials\footnote{Each function must be 200 points in resolution,  as our number of ILC inputs is 200 ($p \times r$)}, using the method shown in Eq.~\ref{eq:cheby_recurrence}.
 \begin{equation}
@@ -355,7 +355,7 @@ Figures~\ref{fig:FIPO_mass_1_position} through~\ref{fig:FIPO_shaped_output} show
 
 
 \FloatBarrier\paragraph{PIFO}
-Obviously the next thing to check is what if $\underline{y}^\ast$ is fully defined in $\Phi_y$ but $\underline{u}^\ast$ is not in $\Phi_u$? Or there is a set of \ac{PIFO} describing those spaces. It is incredibly easy to ensure our $\underline{y}^\ast$ is captured because, if you recall our ideal basis space condition, we can simply set one of our basis functions $\phi = \underline{y}^\ast$ at the same time that we set $\underline{y}^\ast$. 
+Obviously the next thing to check is what if $\underline{y}^\ast$ is fully defined in $\Phi_y$ but $\underline{u}^\ast$ is not in $\Phi_u$? Or in our terminology, there is a set of \ac{PIFO} describing those spaces. It is incredibly easy to ensure our $\underline{y}^\ast$ is captured because, if you recall our ideal basis space condition, we can simply set one of our basis functions $\phi = \underline{y}^\ast$ at the same time that we set $\underline{y}^\ast$. 
 
 So now our $\underline{u}^\ast$ will only partially be described in $\Phi_u$, but $\underline{y}^\ast$ will be fully in $\Phi_y$.
 
@@ -485,7 +485,7 @@ We follow our control law of Eq.~\ref{eq:basis_ilc_control_law} to compute $\del
 
 If one were to repeat this example with a non-deadbeat controller, they would find that any $\beta$ found would always produce a $\underline{u}$ in the space $\Phi_u$. So while it is possible to always achieve a $\Phi_y$ that captures our goal of zero error, the space defining the inputs must be selected carefully to include $\underline{u}^\ast$. It is also important to note that the learned input is \textbf{not} the projection of $\underline{u}^\ast$ onto $\Phi_u$\footnote{Unless $\underline{u}^\ast \in \Phi_u$ of course}.
 
-So our $\Phi_u$ matters, but $\Phi_y$ does not.\footnote{This is consistent with the findings of \myworries{Phan and Frueh}}. Given that, why not define $\Phi_y$ such that $\eta_y = 1$. Even if we then leave $\Phi_u$ as the identity matrix, then thinking ahead to our RL problem, we would have the ability to infinitely reduce our `state' dimensions down to $1$. Then input-decoupling could be employed such that each controller could be updated in just $4$ trials, and that would only then need to be done $r_{ILC}$ times. 
+So our $\Phi_u$ matters, but $\Phi_y$ does not.\footnote{This is consistent with the findings of \cite{PhanFrueh1996}}. Given that, why not define $\Phi_y$ such that $\eta_y = 1$. Even if we then leave $\Phi_u$ as the identity matrix, then thinking ahead to our RL problem, we would have the ability to infinitely reduce our `state' dimensions down to $1$. Then input-decoupling could be employed such that each controller could be updated in just $4$ trials, and that would only then need to be done $r_{ILC}$ times. 
 
 \FloatBarrier\paragraph{FISO}
 To test this theory, we will setup our problem very much like we did the FIPO example. $\beta^\ast$ will once again be defined as it is in Eq.~\ref{eq:beta_star_in_basis}, with our $\Phi_u$ similarly following Eq.~\ref{eq:Tu_in_cheby}. We will define $\underline{y}^\ast = P\underline{u}^\ast + \underline{d}$. So we have a set of \ac{FISO} describing those spaces.
@@ -687,10 +687,9 @@ where $1 \leq j \leq \ell$, marking what basis function we draw from $\Phi_{full
 One would hope that after sufficient episodes, there would be a $\Phi^e$ found such that $\underline{u}^\ast$ is included.
 
 \FloatBarrier\subsubsection{Example}
-\myworries{Talk about the difference between if we change Ty or hold it constant. Check our numbers. We probably want to change this to show the dynamic Ty. WHat if I randomize it}
 First we set up the problem as done in the FIPO example, with $\underline{u}^\ast$ shown in Figures~\ref{fig:FIPO_input_1} and~\ref{fig:FIPO_input_2} and $\underline{y}^\ast$ in Figures~\ref{fig:FISO_output_1} and~\ref{fig:FISO_output_2}.
 
-Although we have a signal of length $\ell = 200$\footnote{$n_{ILC} = r_{ILC} = 200$}, we do not need $\ell$ basis functions to ensure we capture our $\underline{u}^\ast$. Recall for our FIPO example, we defined $\underline{u}^\ast$ in the space of Chebyshev Polynomials $T_0 \to T_9$, so we can define $\Phi_{full}$ as we define $\Phi_u$ in Eq.~\ref{eq:Tu_in_cheby} to ensure we capture $\underline{u}^\ast$.
+Although we have a signal of length $\ell = 200$\footnote{$n_{ILC} = r_{ILC} = 200$}, we do not need $\ell$ basis functions to ensure we capture our $\underline{u}^\ast$. Recall for our FIPO example, we defined $\underline{u}^\ast$ in the space of Chebyshev Polynomials $T_0 \to T_9$, so we can define $\Phi_{full}$ as we define $\Phi_u$ in Eq.~\ref{eq:Tu_in_cheby} to ensure we capture $\underline{u}^\ast$. If we did not know this to be the case, we would have to define $\Phi_{full}$ to be a full rank $200 \times 200$ matrix to ensure we spanned the whole input space.
 \begin{equation}
     \Phi_{full} =
     \begin{bmatrix}
@@ -717,7 +716,9 @@ We now construct a new $\Phi$ with the learned input as one of the basis functio
         \underline{u}^0 & T_4 & T_5 & T_6
     \end{bmatrix}
 \end{equation}
-and repeat the process. We do this enough times to try every every basis function in $\Phi_{full}$ multiple times and see that each time while we are able to send $e_\alpha \to 0$, we never find $\underline{u}^\ast$ nor send $e \to 0$. 
+and repeat the process. Since we are using $\Phi = \Phi_u = \Phi_y$, make sure to update both basis spaces. If $\Phi_y$ is left fixed, although it does not matter, learning will be sub-optimal. This is because our first pass finds the $\underline{u}$ that sends $e_{\alpha_0}$, and so if we do not update $\Phi_y$, then that same learned input will be applied again with the same results - the system will see no added benefit from including new inputs.
+
+We do this enough times to try every every basis function in $\Phi_{full}$ multiple times and see that each time while we are able to send $e_\alpha \to 0$, we never find $\underline{u}^\ast$ nor send $e \to 0$. 
 
 \begin{figure}[htbp] 
     \centering  
@@ -726,15 +727,13 @@ and repeat the process. We do this enough times to try every every basis functio
 ~\label{fig:rolling_basis_alpha_error}
 \end{figure}
 
-It can be seen that this approach does come close to producing our goal output in Figure~\ref{fig:rolling_basis_shaped}, and can be tempting to say it works. While it may be acceptable in some processes, it is not the exact model we are seeking. This is most evident by inspecting the learned inputs in Figures~\ref{fig:rolling_basis_input1} and~\ref{fig:rolling_basis_input2}, and seeing they do not match $\underline{u}^\ast$. Additionally, we have a final error magnitude $\left|e\right| = 0.11$\footnote{Recall that Matlab `zero' $\leq 1\times10^{-6}$}.
+It can be seen that this approach does come close to producing our goal output in Figure~\ref{fig:rolling_basis_shaped}, and can be tempting to say it works. While it may be acceptable in some processes, it is not the exact model we are seeking. This is most evident by inspecting the learned inputs in Figures~\ref{fig:rolling_basis_input1} and~\ref{fig:rolling_basis_input2}, and seeing they do not match $\underline{u}^\ast$. Additionally, we have a final error magnitude $\left|e\right| = 0.0132$\footnote{Recall that Matlab `zero' $\leq 1\times10^{-6}$}.
 
 \begin{figure}[htbp] 
     \centering  
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=1\textwidth]{{Basis Functions/Rolling Input Basis - Error Progression.pdf}} 
-        \caption{Progression of $e$ through rolling basis space episodes}
-        \label{fig:rolling_basis_error}
-    \end{subfigure}
+    \includegraphics[width=0.8\textwidth]{{Basis Functions/Rolling Input Basis - Error Progression.pdf}} 
+    \caption{Progression of $e$ through rolling basis space episodes}
+    \label{fig:rolling_basis_error}
 \end{figure}
 
 
@@ -757,17 +756,26 @@ It can be seen that this approach does come close to producing our goal output i
         \caption{}
         \label{fig:rolling_basis_shaped}
     \end{subfigure}
-    \caption{Progression of deconstructed goal inputs and the generated shaped output through rolling basis space episodes. While the output can be seen to be close to our goal, even after working our way through the entirety of the input basis space, we still fail to properly capture our $\underline{y}^\ast$.}
+    \caption{Progression of deconstructed goal inputs and the generated shaped output through rolling basis space episodes. While the output can be seen to be close to our goal, even after working our way through the entirety of the input basis space, we still fail to properly capture our $\underline{y}^\ast$. Failure to capture $\underline{u}^\ast$ can best be seen on the fringes of the input signals.}
 \end{figure}
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.49\textwidth]{{Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf}} 
-    \caption{Progression of $\beta$ through rolling basis space episodes. After the first trial, it can be seen that $\beta \to 1$, and does not factor in the impact of additional basis functions.}
+    \includegraphics[width=0.8\textwidth]{{Basis Functions/Rolling Input Basis - Beta Coeffecient Progression.pdf}} 
+    \caption{Progression of $\beta$ through rolling basis space episodes. After sufficient trials have been made to cover all of $\Phi_{full}$, it can be seen that $\beta_1$ sits around a value of 1 - meaning that the learned input is predominately that of the previously learned pass. However, there are still tiny additions from other components, evident by the non-zero $\beta_{2-4}$.}
     \label{fig:rolling_basis_betas}
 \end{figure}
 
-Figure~\ref{fig:rolling_basis_error} shows that after our first pass through all of the input basis we have a `petty good' input. This is logical, as it has now taken into consideration every possible basis function that makes up our $\underline{u}^\ast$. 
+Figure~\ref{fig:rolling_basis_error} shows that after our first pass through all of the input basis we have a `petty good' input. This is logical, as it has now taken into consideration every possible basis function that makes up our $\underline{u}^\ast$. However, Figure~\ref{fig:rolling_basis_betas} highlights the fact that while after the controller has been exposed to all the necessary information to span the space, it still attempts to make slight modifications to the learned input of the previous trial -- it fails to find the $\underline{u}^\ast$. 
+
+In Figure~\ref{fig:rolling_basis_betas_forced} we `force' the learned input that goes on to make up the next $\Phi$ to be exactly $\underline{u}^\ast$. It can be seen that the system, if it finds the proper $\underline{u}^\ast$ in its cycle will properly stay converged on that solution, so the prior example clearly did not find our goal input.
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\textwidth]{{Basis Functions/Forced Rolling Input Basis - Beta Coeffecient Progression.pdf}} 
+    \caption{Progression of $\beta$ through rolling basis space episodes. After 7 iterations, $\Phi$ is forced to have $\underline{u}^\ast$ in it. It is demonstrated that the controller the continues to properly identify that as the correct input. It can be seen, given this, that the earlier example never actually finds $\underline{u}^\ast$ before being moved away -- once $\underline{u}^\ast$ is found, it is not lost.}
+    \label{fig:rolling_basis_betas_forced}
+\end{figure}
 
 \FloatBarrier\subsubsection{Summary of Dyanmic Spaces}
 While it is possible to start with a finite number, $\eta$, of basis functions $\phi$ to create a dynamic basis space which better captures $\underline{u}$, there is no guarantee to create one that captures $\underline{u}^\ast$. 
