@@ -1,5 +1,3 @@
-%Warnings to suppress
-
 %This is the header page table of contents, etc
 \documentclass[12pt,american]{report}
 \usepackage{times}
@@ -16,8 +14,9 @@
 \captionsetup{justification=centering}
 \usepackage{placeins} %for floatbarrier - forces images before next section starts
 \usepackage{matlab-prettifier}  %matlab code coloring
-\usepackage{natbib} %bilbio formatting
 \usepackage{acronym} %to set up acronym referencing
+\usepackage[style=authoryear]{biblatex}  % 
+\addbibresource{references.bib}
 \usepackage{xcolor} %todo flag text
 \usepackage[dvipsnames]{xcolor} %more colors
 \newcommand\myworries[1]{\textcolor{red}{#1}}
@@ -52,11 +51,8 @@
 
 \setcounter{tocdepth}{4}  %subsubsections + paragraphs
 
-%\loadglsentries{List of Acronyms and Variable Names.tex}
-
 \begin{document}
 \pagenumbering{roman}        %% roman page numbers for front matter
-
 \renewcommand\thepage{}
 \include{TitlePage}
 \newpage
@@ -69,7 +65,6 @@
 \setcounter{page}{2}
 
 \doublespacing%              %% set spacing to double
-
 \include{Abstract}
 \include{Acknowledgements}
 
@@ -126,9 +121,8 @@
 \include{Matlab Code/Policy Learning for Iterative Learning Control}
 \include{Matlab Code/Random Range}
 \include{Matlab Code/Render Poles}
-\chapter{References}
-\bibliographystyle{plain}
-\bibliography{references}
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
 \singlespacing%
 
 
