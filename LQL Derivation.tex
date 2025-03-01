@@ -1,0 +1,150 @@
+\section{LQL Derivation}
+\label{sec:lql_derivation}
+Recall we are starting with the cost function $J$:
+\begin{equation}
+    J = {\delta_j \underline{u}}^T R {\delta_j \underline{u}} + {e_j}^T Q {e_j}
+    \label{eq:ap_conjugate_cost}
+\end{equation}
+where $R$ is some $r_{ILC} \times r_{ILC}$ cost matrix, and $Q$ a $n_{ILC} \times n_{ILC}$ one.
+
+We need a $\delta_j \beta$ that minimizes the cost function, so we must express all relevant items in term of $\delta_j \beta$.
+\begin{equation}
+    \begin{split}
+        \delta_j \underline{u} &= \Phi(\beta_{j-1} + \delta_j \beta) \\
+        e_j &= e_{j-1} - P \delta_j \underline{u}
+    \end{split}
+\end{equation}
+Plugging those into Eq.~\ref{eq:ap_conjugate_cost}
+\begin{equation}
+    J = {\left(\Phi(\beta_{j-1} + \delta_j \beta)\right)}^T R {\left(\Phi(\beta_{j-1} + \delta_j \beta)\right)} + {\left(e_{j-1} - P \delta_j \underline{u}\right)}^T Q {\left(e_{j-1} - P \delta_j \underline{u}\right)}
+    %\label{eq:conjugate_cost_in_beta}
+\end{equation}
+
+We first re-arrange items under their transpose operators. We utilize the fact that $(AB)^T = B^TA^T$ to expand our cost function to
+\begin{equation}
+    \begin{split}
+        J &= {\beta_{j-1}^T}\Phi^T R \Phi \beta_{j-1} + {\beta_{j-1}^T}\Phi^T R \Phi \delta_j \beta \\
+        &+ {\delta_j \beta}^T \Phi^T R \Phi \beta_{j-1} + {\delta_j \beta}^T \Phi^T R \Phi \delta_j \beta \\
+        &+ {e_{j-1}}^T Q e_{j-1} - {e_{j-1}}^T Q P \delta_j u \\
+        &- {\delta_j u}^T P^T Q e_{j-1} + {\delta_j u}^T P^T Q P \delta_j u
+    \end{split}
+~\label{eq:ap_expanded_cost}
+\end{equation}
+
+
+It can be helpful here to remind ourselves of the dimensions of each component. Sticking to our convention of number of states $= n$, number of inputs $= r$, number of steps in the ILC process $= p$, and number of basis functions $= b$\footnote{We are only describing our input in the basis space here}, our components follow as
+\begin{center}
+    \begin{tabular}{ c|c }
+        Variable & Dimensions \\
+        \hline
+        $P$ & $pn \times pr$ \\
+        $Q$ & $pn \times pn$ \\
+        $R$ & $pr \times pr$ \\
+        $\Phi$ & $pr \times b$ \\
+        $\beta_j$ & $b \times 1$ \\
+        $\delta_j u$ & $pr \times 1$ \\
+        $e_j$ & $pn \times 1$
+    \end{tabular}
+\end{center}
+
+As expected, each component in Eq.~\ref{eq:ap_expanded_cost} is a scalar. It is then important to remember that the transpose of a scalar is merely itself, and our $R$ and $Q$ matrices are symmetric such that $R = R^T$ and $Q = Q^T$. This leads to use being able to recognize certain components in Eq.~\ref{eq:ap_expanded_cost} are equal to each other as
+\begin{equation}
+    \begin{split}
+        {\beta_{j-1}^T}\Phi^T R \Phi \delta_j \beta = {\delta_j \beta}^T \Phi^T R \Phi \beta_{j-1} \\
+        - {e_{j-1}}^T Q P \delta_j u = - {\delta_j u}^T P^T Q e_{j-1}
+    \end{split}
+\end{equation}
+
+So that we may now write our cost function as
+\begin{equation}
+    \begin{split}
+        J &= {\beta_{j-1}^T}\Phi^T R \Phi \beta_{j-1} + 2{\beta_{j-1}^T}\Phi^T R \Phi \delta_j \beta \\
+        &+ {\delta_j \beta}^T \Phi^T R \Phi \delta_j \beta \\
+        &+ {e_{j-1}}^T Q e_{j-1} - 2{e_{j-1}}^T Q P \delta_j u \\
+        &+ {\delta_j u}^T P^T Q P \delta_j u
+    \end{split}
+\end{equation}
+
+Before we can take our derivative with respect to $\delta_j \beta$, we must make one final substitution. Recognize that
+\begin{equation}
+    \delta_j u = \Phi \left( \beta_{j-1} + \delta_j \beta \right)
+\end{equation}
+and expand our cost function to
+\begin{equation}
+    \begin{split}
+        J &= {\beta_{j-1}^T}\Phi^T R \Phi \beta_{j-1} + 2{\beta_{j-1}^T}\Phi^T R \Phi \delta_j \beta \\
+        &+ {\delta_j \beta}^T \Phi^T R \Phi \delta_j \beta \\
+        &+ {e_{j-1}}^T Q e_{j-1} \\
+        &- 2{e_{j-1}}^T Q P \Phi \beta_{j-1} - 2{e_{j-1}}^T Q P \Phi \delta_j \beta \\
+        &+ {\beta_{j-1}}^T \Phi^T P^T Q P \Phi \beta_{j-1} + {\beta_{j-1}}^T \Phi^T P^T Q P \Phi \delta_j \beta \\
+        &+ {\delta_j \beta}^T \Phi^T P^T Q P \Phi \beta_{j-1} + {\delta_j \beta}^T \Phi^T P^T Q P \Phi \delta_j \beta
+    \end{split}
+\end{equation}
+
+It should be evident now why this was included in the appendix, and not the main report. Now we may safely take the derivative of $J$ with respect to $\delta_j \beta$, and to do so it is helpful to remember the following identifies of matrix calculus
+
+\begin{align}
+    \frac{\partial}{\partial x}\left(x^T A x\right) &= 2Ax \\
+    \frac{\partial}{\partial x}\left(y^T A x\right) &= A^Ty \\
+    \frac{\partial}{\partial x}\left(x^T A y\right) &= Ay 
+\end{align}
+
+Then, 
+\begin{equation}
+    \begin{split}
+        \frac{\partial J}{\partial \left[\delta_j \beta \right]} &= 0 + 2{(\Phi^T R \Phi)}^T \beta_{j-1} \\
+        &+ 2 \Phi^T R \Phi \delta_j \beta \\
+        &+ 0 \\
+        &- 0 - 2\Phi^T P^T Q e_{j-1} \\
+        &+ 0 + \Phi^T P^T Q P \Phi \beta \\
+        &+ \Phi^T P^T Q P \Phi \beta_{j-1} + 2 \Phi^T P^T Q P \Phi \delta_j \beta
+    \end{split}
+~\label{eq:cost_deriv_del_beta}
+\end{equation}
+
+Recognizing the common pattern of $\Phi^T R \Phi$ and $\Phi^T P^T Q P \Phi$, we introduce the shorthand
+\begin{align}
+    R_b &= \Phi^T R \Phi \\
+    Q_b &= \Phi^T P^T Q P \Phi
+\end{align}
+where can see that $R_b^T = R_b$ and $Q_b^T = Q_b^T$
+
+We re-write the above Eq.~\ref{eq:cost_deriv_del_beta} as
+\begin{equation}
+    \begin{split}
+        \frac{\partial J}{\partial \left[\delta_j \beta \right]} &= 2 R_b \beta_{j-1} + 2 R_b \delta_j \beta \\
+        &- 2\Phi^T P^T Q e_{j-1} + Q_b \beta_{j-1} \\
+        &+ Q_b \beta_{j-1} + 2 Q_b \delta_j \beta
+    \end{split}
+~\label{eq:cost_deriv_del_beta_short}
+\end{equation}
+
+Setting the derivative $\frac{\partial J}{\partial \left[\delta_j \beta \right]} = 0$ and re-arranging, we find
+\begin{equation}
+    -2\left(R_b + Q_b\right) \delta_j \beta = 2\left(R_b + Q_b \right)\beta_{j-1} - 2\Phi^T P^T Q e_{j-1}
+\end{equation}
+
+Now we define the $\mathcal{C}$ matrix we see in Eq.~\ref{eq:conjuct_setup_matrix}
+\begin{equation}
+    \mathcal{C} = R_b + Q_b
+\end{equation}
+and divide both sides of our equation by $2$ so
+\begin{equation}
+    -\mathcal{C} \delta_j \beta = \mathcal{C}\beta_{j-1} - \Phi^T P^T Q e_{j-1}
+\end{equation}
+
+Remember the $\delta_j$ operator defined as in Eq.~\ref{eq:delta_operator}. Reversing that, we see
+\begin{equation}
+    -\mathcal{C} \left(\beta_j - \beta_{j-1}\right) = \mathcal{C}\beta_{j-1} - \Phi^T P^T Q e_{j-1}
+\end{equation}
+
+Subtracting $\mathcal{C}\beta_{j-1}$ from both sides,
+\begin{equation}
+    -\mathcal{C} \beta_j = - \Phi^T P^T Q e_{j-1}
+\end{equation}
+
+$\mathcal{C}$ can be shown to be $b \times b$, so multiplying it by its inverse produces the identity matrix. We left multiply by $-\mathcal{C}^{-1}$ to get
+\begin{equation}
+    \beta_j = \mathcal{C}^{-1} \Phi^T P^T Q e_{j-1}
+\end{equation}
+
