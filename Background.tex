@@ -528,7 +528,8 @@ Bringing back the aforementioned discount factor $\gamma$, we modify the cost fu
     \label{eq:discounted_cost_function}
 \end{equation}
 In the LQR process, we are looking for a controller that minimizes the cost function, $J$.
-The next important idea is the Principle of Optimality. Put simply, if the optimal path from Point A to point C goes through Point B, then the optimal path from Point B to Point C is a sub-set of the path from Point A to Point C. Figure~\ref{fig:principle_optimality} shows a two-step process: The red path from A to C through B is optimal (with minimum cost = 4 + 6 = 10). The principle of optimality states that if one starts from B then the optimal path to C must be the red path B-C. All other paths from B to C must cost more than 6, for example, the purple path that costs 10. The paths A-B1 and A-B2 cost less than the red path A-B, but the higher costs associated with their subsequent paths B1-C and B2-C result in higher total cost than the minimum cost. In addition, we can reason that all other paths from A to B such as the green path must cost more than 4. Otherwise, the statement that the red path A-B-C being the optimal path is contradicted.\footnote{Image from (Phan \textbf{Optimal State-Space System Identification and Control (in progress)} - Chp8)}\myworries{cite properly}
+The next important idea is the Principle of Optimality. Put simply, if the optimal path from Point A to point C goes through Point B, then the optimal path from Point B to Point C is a sub-set of the path from Point A to Point C. Figure~\ref{fig:principle_optimality} shows a two-step process: The red path from A to C through B is optimal (with minimum cost = 4 + 6 = 10). The principle of optimality states that if one starts from B then the optimal path to C must be the red path B-C. All other paths from B to C must cost more than 6, for example, the purple path that costs 10. The paths A-B1 and A-B2 cost less than the red path A-B, but the higher costs associated with their subsequent paths B1-C and B2-C result in higher total cost than the minimum cost. In addition, we can reason that all other paths from A to B such as the green path must cost more than 4. Otherwise, the statement that the red path A-B-C being the optimal path is contradicted. 
+Image from \cite{Phan2025} - Chp8.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Principal of Optimality - PhanChp8.png}}
@@ -596,9 +597,7 @@ Examining where that places the poles (Figure~\ref{fig:big_Q_poles}) and the inp
     \caption{Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=100. Control is achieved within 200 samples, and under maximum input amplitudes of 55N}
 \end{figure}
 
-\myworries{Frueh and Phan, Phan and Frueh - two papers}
 \myworries{Lip service to other pepers doing ILC and such - lit review}
-\myworries{Fix basis graphs - mass 1 and mass 2}
 
 \FloatBarrier~If we were inclined to tweak the parameters, perhaps the inputs were beyond the capabilities of our actual system, we could easily do so. If one were to scale $R$ by a factor of ten (or $Q$ by a factor of 0.1), then the following controller $F_{big R}$,  poles (Figure~\ref{fig:big_R_poles}), and IO data (Figures~\ref{fig:big_R_mass_1} -~\ref{fig:big_R_input_2}) would result:
 

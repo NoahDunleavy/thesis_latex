@@ -16,7 +16,8 @@
 \captionsetup{justification=centering}
 \usepackage{placeins} %for floatbarrier - forces images before next section starts
 \usepackage{matlab-prettifier}  %matlab code coloring
-\usepackage{acronym}
+\usepackage{natbib} %bilbio formatting
+\usepackage{acronym} %to set up acronym referencing
 \usepackage{xcolor} %todo flag text
 \usepackage[dvipsnames]{xcolor} %more colors
 \newcommand\myworries[1]{\textcolor{red}{#1}}
@@ -104,7 +105,6 @@
 \chapter{Matlab Simulations and Examples}
 \include{Matlab Code/Background Code}
 \include{Matlab Code/Basis Functions Code}
-\include{Matlab Code/Background Code}
 \include{Matlab Code/Derive and Demo Conjugates}
 \include{Matlab Code/RL on ILC Code}
 \chapter{Matlab Functions}
@@ -126,9 +126,11 @@
 \include{Matlab Code/Policy Learning for Iterative Learning Control}
 \include{Matlab Code/Random Range}
 \include{Matlab Code/Render Poles}
-
+\chapter{References}
+\bibliographystyle{plain}
+\bibliography{references}
 \singlespacing%
 
-% \chapter{References}
+
 
 \end{document}
