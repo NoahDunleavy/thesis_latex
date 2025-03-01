@@ -4,13 +4,12 @@
 
 \FloatBarrier\section{Conjugate Basis Functions}
 ~\label{sec:conjugate_basis_functions}
-Since the major challenge to being able to dynamically select our input basis functions is their ability to produce similar outputs, we then want to find a set of inputs which produce independent (or orthogonal) outputs on a system. The framework for this exists in \myworries{Frueh and Phan 2000: LQL}
-\myworries{Condition is just diagnonal. Change the definition, say we just need it diagnoal but for our ease we will make it I}
+Since the major challenge to being able to dynamically select our input basis functions is their ability to produce similar outputs, we then want to find a set of inputs which produce independent (or orthogonal) outputs on a system. 
 
 \FloatBarrier\subsection{What are Conjugate Basis Functions}
 Conjugate Basis Functions are a special case of Basis Functions, defined for a system and cost. Whereas before we had functions that only had to be independent of each other, now the functions must be independent in the output the produce and the cost they incur. 
 
-Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions}~\ref{sub:what_are_basis}, and then some. As \myworries{Frueh and Phan} describe in their paper on \ac{LQL}, the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
+Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions}~\ref{sub:what_are_basis}, and then some. As \cite{FruehPhan1998} describe in their paper on \ac{LQL}, the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
 
 Suppose we have $e$ episodes worth of data, and we run one more episode to improve our $\Phi$ and $\beta$. The properties of LQL dictate that
 \begin{equation}
@@ -253,7 +252,7 @@ Notice we have removed any dependency on $\underline{d}$ and we can conveniently
     {\left[\underline{\delta y}^e\right]}_b  = P\Phi_u
 \end{equation}
 
-Next we must define our cost matrices $R$ and $Q$ so we may compute \textbf{W}. Unlike our earlier \myworries{RL on ILC}, we can set $R = 0_{r_{ILC} \times r_{ILC}}$ without problem. We then set $Q = 100I_{n_{ILC} \times n_{ILC}}$. Thus
+Next we must define our cost matrices $R$ and $Q$ so we may compute \textbf{W}. Here we set $R = 0_{r_{ILC} \times r_{ILC}}$\footnote{Unlike in our RL examples where small $R$s can lead to numerical ill-conditioning, the construction of our conjunct condition matrix $\mathcal{C}$ prevents this. Since it relies on $P$ and $Q$ as well, we can simplify our math by removing $R$ from our computations. It would be possible to conversely set $Q = 0$ and have $R \neq 0$.} and $Q = 100I_{n_{ILC} \times n_{ILC}}$. Thus
 \begin{equation}
     \textbf{W} = {\left[\underline{\delta y}^e\right]}_b^T Q {\left[\underline{\delta y}^e\right]}_b
 \end{equation}
