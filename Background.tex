@@ -529,7 +529,7 @@ In our journey to control, we will work through multiple time steps, each with t
     J\ =\ \sum_{k=0}^{\infty}U\left(k\right)
     \label{eq:cost_function}
 \end{equation}
-Bringing back the aforementioned discount factor $\gamma$, we modify the cost function such that we can adjust the time horizon of consequence. So long as $0<\gamma \l 1$, we can introduce it such that as $k$ goes to $\infty$, the impact of the infinite horizon utility reduces to zero\footnote{When $\gamma = 1$, we can only make this reduction if $U(k \to \infty)$ stabilizes and goes to $0$}. This is additionally useful as we want to be able to induce stability in finite-time. This presents us with our discounted cost function
+Bringing back the aforementioned discount factor $\gamma$, we modify the cost function such that we can adjust the time horizon of consequence. So long as $0<\gamma < 1$, we can introduce it such that as $k$ goes to $\infty$, the impact of the infinite horizon utility reduces to zero\footnote{When $\gamma = 1$, we can only make this reduction if $U(k \to \infty)$ stabilizes and goes to $0$}. This is additionally useful as we want to be able to induce stability in finite-time. This presents us with our discounted cost function
 \begin{equation}
     J\ =\ \sum_{k=0}^{\infty}{\gamma ^k U\left(k\right)}
     \label{eq:discounted_cost_function}
