@@ -25,7 +25,7 @@ It is logical to draw parallels from this formulation to that our ABCD formulati
 \end{equation}
 Where our `state' is now the error $e_j$ and our `input' is the change in inputs $\delta_{j+1}\underline{u}$. We will refer to the error term as our `ILC State' and the change in inputs as our `ILC Input'. 
 
-As previously shown, our `ILC State' ($n_{ILC}$) is now a $pm \times1$ vector, and our `ILC Input' ($r_{ILC}$) is $pr \times1$. However, a state is still and state, and an input is an input. So the principals of RL still apply to find a controller, now demarked $\mathcal{L}$, that sends our error state to zero. Thus our utility function that defines the cost function that the found controller will minimize is
+As previously shown, our `ILC State' ($n_{ILC}$) is now a $pm \times1$ vector, and our `ILC Input' ($r_{ILC}$) is $pr \times1$. However, a state is still a state, and an input is an input. So the principals of RL still apply to find a controller, now demarked $\mathcal{L}$, that sends our error state to zero. Thus our utility function that defines the cost function that the found controller will minimize is
 \begin{equation}
     U_j = {\delta_j \underline{u}}^T R {\delta_j \underline{u}} + {e_j}^T Q {e_j}
     \label{eq:ilc_utility}
@@ -55,7 +55,7 @@ Using the complete knowledge afforded to us in simulation, we can find the $20 \
     \mathcal{L}_{LQR}^\gamma=\left[\begin{matrix}0.0198&-0.0000&\cdots&0.2288&0.1583\\0.0001&0.0393&\cdots&0.1583&0.3778\\\vdots&\vdots&&\vdots&\vdots\\-0.0000&-0.0000&\cdots&0.0198&0.0001\\-0.0000&-0.0000&\cdots&-0.0000&0.0393\\\end{matrix}\right]
     \label{eq:ilc_lqr_controller}
 \end{equation}
-Given our ILC state-input dimensions, $X_j\left(k\right)$ will be $1 \times1,600$ $({\left(n+r\right)}^2={\left(20+20\right)}^2)$. This does not even mean 16 seconds from our systems $\Delta t\ = 0.01$ seconds, but it is 1,600 trials of 10 steps ($p$), which means 160 seconds (ideally) and lots of potentially wasted parts for a single controller update. In this example, we will learn five controllers.
+Given our ILC state-input dimensions, $X_j\left(k\right)$ will be $1 \times1,600$ $({\left(n+r\right)}^2={\left(20+20\right)}^2)$. This does not mean 16 seconds of data (from our systems $\Delta t\ = 0.01$ seconds), but it is 1,600 trials of 10 steps ($p$), which means 160 seconds (ideally) and lots of potentially wasted parts for a single controller update. In this example, we will learn five controllers.
 
 We start with a controller of all zeros, and begin learning just as before. There must be one initial trial outside of the learning to generate our first `state' of error. It is logical to have this be the open loop behavior, in which case the output $\underline{y}$ is equal to the noise and initial conditions parameter $\underline{d}$ (from Eq.~\ref{eq:y_Pu_d}). For each trial, we compute the change in inputs,
 \begin{equation}
@@ -95,11 +95,13 @@ With an error magnitude of $8.22\times {10}^{-11}$, computed as
     \frac{\left|\mathcal{L}_{policy}-\mathcal{L}_{LQR}^\gamma\right|}{p^2mr}
     \label{eq:controller_error_calc}
 \end{equation}
-Where we use the `norm' operator in the numerator to compute the absolute magnitude of the differences, then scale down by the number of elements in each controller. Computationally this result can be treated as zero. So via RL we can still extract the exact LQR controller. The controller learning process can be seen in Figures~\ref{fig:policy_ilc_F1}-~\ref{fig:policy_ilc_F20}.
+Where we use the `norm' operator in the numerator to compute the absolute magnitude of the differences, then scale down by the number of elements in each controller. 
+
+So via RL we can still extract the exact LQR controller. The controller learning process can be seen in Figures~\ref{fig:policy_ilc_F1}-~\ref{fig:policy_ilc_F20}.
 
 Each input number refers to the step along the process in which it is being applied, and the state refers to the errors of the previous trial. 
 
-Note that we only are showing a few select weights and inputs, as each of the twenty inputs are informed by each of the twenty errors, which would make for a very cluttered set of plots.
+Note that we only are showing a few select weights and inputs, as each of the twenty inputs are informed by twenty errors, which would make for a very cluttered set of plots.
 
 \begin{figure}[htbp] %controller histories
     \centering  %center align
@@ -167,7 +169,7 @@ Note that we only are showing a few select weights and inputs, as each of the tw
 \FloatBarrier~It is clear here that even over our nearly 10,000 trials, we did not perfectly capture our output. This is since our R weighting was relatively large. Further reductions of $R$ does not remove the existence of an LQR controller but introduces issues when computing the pseudo-inverse of $X_j$. 
 It is a requirement for $X_j$ to be well-conditioned and composed of sufficient linearly independent equations (full rank). When learning in ILC with a small $R$, we approach a point where both $e_j$ and $\delta_{j+1}u$ are near-zero and we lose the ability to even generate linearly-independent $X_j$s, if we are learning with sequential trials. This is because we tell the system it is ok to make big changes between trials, and in doing so it too-quickly sends our error $e_j$ to zero, meaning it no longer needs to generate a change in inputs $\delta_j \underline{u}$ -- our $X_j$ is then essentially all zeros.
 
-If one wishes to reduce $R$, there are multiple approaches. The first is to collect more trials per input controller. This will obviously increase the total number of trials needed to learn, but by by increasing our collections, we improve our odds of having enough linearly-independent samples. The next approach would be to completely randomize both `state' and `input', to ensure truly arbitrary $e_{j-1}$, $\delta_j\underline{u}$, $e_j$ triplets. This is easy in simulation, but impractical in reality where one likely wishes to learn as they are working through sequential steps. The final option, and the one shown below is to increase the magnitude of your exploration term.
+If one wishes to reduce $R$, there are multiple approaches. The first is to collect more trials per input controller. This will obviously increase the total number of trials needed to learn, but by increasing our collections, we improve our odds of having enough linearly-independent samples. The next approach would be to completely randomize both `state' and `input', to ensure truly arbitrary $e_{j-1}$, $\delta_j\underline{u}$, $e_j$ triplets -- this can also be accmplished with purely randomized inputs. The final option, and the one shown below, is to increase the magnitude of your exploration term.
 Whereas previous $v_j$ was normally distributed around 0, ranging from [-1, 1], we will now explore in the range of [-1000, 1000]. Keeping the same goal as defined in Eq.~\ref{eq:y1_y2_star}, but redefining our cost-matrices as
 \begin{equation}
     Q=100\cdot I_{20 \times 20}
@@ -186,7 +188,7 @@ Repeating our Policy Iteration learning process with our new $R$ and $v_j$ ampli
     \mathcal{L}_{LQR}^\gamma=\left[\begin{matrix}2,095.3&-44.6&\cdots&1.8&-0.5\\-22.4&2,050.8&\cdots&-0.5&1.4\\\vdots&\vdots&&\vdots&\vdots\\-0.9&0.1&\cdots&2,095.3&-22.4\\0.1&-6.7&\cdots&-44.6&2,050.8\\\end{matrix}\right]
     \label{eq:rl_ilc_policy_small_R_controller}
 \end{equation}
-With an error magnitude of $8.55\times{10}^{-6}$, computed as in Eq.~\ref{eq:controller_error_calc}. We see a much sharper error progression in Figure~\ref{fig:reduced_R_ilc_error} that is to be expected imposing such a small cost on the change of inputs. We see this occur right after the first learned controller is applied, which we defined with a small $R$, meaning it had very little penalty to make a large change in inputs - resulting in a sudden drop in error. The progression of controller weights, system outputs, and inputs can also be shown to have sharp drop upon application of the first learned controller. Due to the reduced $R$, we only run 100 trials without the exploration term, and it only takes less than a handful of those for the error to drop to zero.
+With an error magnitude of $8.55\times{10}^{-6}$, computed as in Eq.~\ref{eq:controller_error_calc}. We see a much sharper error progression in Figure~\ref{fig:reduced_R_ilc_error} that is to be expected when imposing such a small cost on the change of inputs. We see this occur right after the first learned controller is applied. The progression of controller weights, system outputs, and inputs can also be shown to have sharp drop upon application of the first learned controller. Due to the reduced $R$, we only run 100 trials without the exploration term, and it only takes less than a handful of those for the error to drop to zero.
 
 \begin{figure}[htbp] %controller histories
     \centering  %center align
@@ -252,6 +254,7 @@ With an error magnitude of $8.55\times{10}^{-6}$, computed as in Eq.~\ref{eq:con
 \end{figure}
 
 \FloatBarrier~The trade-offs of this approach are obvious. With such a large exploration term, while we are learning we produce no outputs like our goal, as shown in~\ref{fig:shaped_rl_small_R}. Additionally our controller progression is a lot jumpier - displaying characteristics of overshoot. Yet once we are done learning, we can apply this controller and within a very limited number of trials have zero error.
+
 As mentioned at the beginning of the example, this is a relatively low-resolution ILC problem, with $p=10$. What if we were to increase this to $p=100$ as with our basic ILC introduction problem?
 Our number of ILC states would climb from 20 to 200, as would our ILC inputs. Which would mean the dimensions of our $X_j$ would go from $1\times1,600$ to $1\times160,000$. $\textbf{P}_j$ just went from having $2.56\times{10}^6$ elements - already a lot - to $2.56\times{10}^{10}$. Monetarily and computationally this makes the RL approach very costly. In fact, if we set $p=100$, MATLAB will not even begin to try and solve the problem. When we go to pre-allocate the array that holds all the stacks of $X_j$s, we are met with the following error:
 \begin{center}
@@ -267,7 +270,7 @@ so if we want to learn even the most common of ILC problems, we have to somehow 
 \FloatBarrier\subsection{Example --- Input Decoupling on ILC}
 We have already shown that Input Decoupling can be used to reduce the dimensions of $X_j$ from $1\times\left(n+r\right)$ to $1\times\left(n+1\right)$, so it is a logical place to turn to when considering the costs of learning. In our ILC context, it will now take only 441 trials to update a single controller (though this must be done 20 times for a total of 8,820 trials for a complete attempt at $\mathcal{L}_{LQR}^\gamma$).
 
-However while it will take iterating through all $r$ inputs to arrive at the LQR controller, individual controller that we learn will help control the system regardless of whether it is yet our complete LQR.\@ Repeating the parameters and goal from earlier example of Policy Iteration (Eqs.~\ref{eq:y1_y2_star} and~\ref{eq:rl_ilc_params}), we predictably find the same $20 \times20$ controller $\mathcal{L}_{LQR}^\gamma$ (see Eq.~\ref{eq:ilc_lqr_controller}).
+However while it will take iterating through all $r$ inputs to arrive at the LQR controller, individual controllers that we learn will help control the system regardless of whether it is yet our complete LQR.\@ Repeating the parameters and goal from earlier example of Policy Iteration (Eqs.~\ref{eq:y1_y2_star} and~\ref{eq:rl_ilc_params}), we predictably find the same $20 \times20$ controller $\mathcal{L}_{LQR}^\gamma$ (see Eq.~\ref{eq:ilc_lqr_controller}).
 
 The learning process follows just as is the policy iteration example. The only difference being that we are only learning only one controller step at a time, and following input decoupling logic. So when we compute $\delta_j\underline{u}=\mathcal{L}e_{j-1}$, we modify only one of the terms with our exploration, such that
 \begin{equation}
@@ -275,9 +278,9 @@ The learning process follows just as is the policy iteration example. The only d
 \end{equation}
 Now our ILC to Input Decoupling analogies are
 \begin{align}
-    x\left(k\right)&\rightarrow e_{j-1}
-    u_i\left(k\right)&\rightarrow\delta_j\underline{u_i}
-    x\left(k+1\right)&\rightarrow e_j
+    x\left(k\right)&\rightarrow e_{j-1} \\
+    u_i\left(k\right)&\rightarrow\delta_j\underline{u_i} \\
+    x\left(k+1\right)&\rightarrow e_j \\
     F_i x\left(k\right)&\rightarrow\mathcal{L}_i e_j
 \end{align}
 So our $1 \times441$ $X_j$ is 
@@ -356,7 +359,7 @@ Which has an error of $1.15\times{10}^{-4}$, as computed in Eq.~\ref{eq:controll
     \caption{Shaped Output through Input Decoupling Trials when $Q/R=100$.}
 \end{figure}
 
-\FloatBarrier~The input decoupling approach ends up suffering from the same issues as the policy iteration approach, and then some. We could solve the same R issue the same way (more exploration), but we face the issue of rotating controllers. 
+\FloatBarrier~The input decoupling approach ends up suffering from the same issues as the policy iteration approach, and then some. We could solve the same $R$ issue the same way (more exploration), but we face the issue of rotating controllers. 
 
 While each controller update takes less collections than the Policy approach, it takes 20 controllers to arrive upon a complete controller like the one Policy produces. To generate 5 `complete' controllers (comprised of fresh controllers for all 20 inputs) it takes 44,100 trials via Input Decoupling versus  Policy Iteration's 8,000.
 
