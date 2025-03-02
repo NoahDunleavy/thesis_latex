@@ -7,9 +7,9 @@
 Since the major challenge to being able to dynamically select our input basis functions is their ability to produce similar outputs, we then want to find a set of inputs which produce independent (or orthogonal) outputs on a system. 
 
 \FloatBarrier\subsection{What are Conjugate Basis Functions}
-Conjugate Basis Functions are a special case of Basis Functions, defined for a system and cost. Whereas before we had functions that only had to be independent of each other, now the functions must be independent in the output the produce and the cost they incur. 
+Conjugate Basis Functions are a special case of Basis Functions, defined for a system and cost functions. Whereas before we had functions that only had to be independent of each other, now the functions must be independent in the output the produce and the cost they incur. 
 
-Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions}~\ref{sub:what_are_basis}, and then some. As \cite{FruehPhan1998} describe in their paper on \ac{LQL}, the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
+Conjugate Basis Functions have all the same properties shown in \textbf{What are Basis Functions} (Section ~\ref{sub:what_are_basis}), and then some. As Frueh and Phan describe in their paper on \ac{LQL}\footfullcite{FruehPhan1998}, the goal is to define basis functions such that when they are added to pre-existing basis space $\Phi$, the optimality of the functions already included does not change. So the parameters generated from one episode are a subset of those from the next.
 
 Suppose we have $e$ episodes worth of data, and we run one more episode to improve our $\Phi$ and $\beta$. The properties of LQL dictate that
 \begin{equation}
@@ -72,7 +72,7 @@ By the definition of the $\delta$ operator, we can write
     \label{eq:beta_j_with_conjunct}
 \end{equation}
 
-We will make one final step to simplify future logic, and that is assume every attempt is a deadbeat attempt. Meaning $j=1$ always. This enables us to substitute $e_{j=1}$ as our open loop error, and do away with episodic $\beta$ notation:
+We will make one final step to simplify future logic, and that is assume every attempt is a deadbeat attempt. Meaning $j=1$ always. This enables us to substitute $e_{j-1}$ as our open loop error $e_0$, and do away with episodic $\beta$ notation:
 \begin{equation}
     \beta = {\mathcal{C}}^{-1}\Phi^T P^T Q (\underline{y}^\ast - \underline{d})
     \label{eq:beta_j_with_conjunct_e_0}
@@ -95,9 +95,9 @@ Suppose we set $\eta = 2$. Our basis space $\Phi$ would then have 2 functions $\
         \mathcal{C}_2^{-1}\phi_2^T P^T Q e_{j-1}
     \end{bmatrix}
 \end{equation}
-where $\mathcal{C}_1$ and $\mathcal{C}_2$ are rows 1 and 2 of $\mathcal{C}$
+where $\mathcal{C}_1$ and $\mathcal{C}_2$ are rows 1 and 2 of $\mathcal{C}^{-1}$
 
-We would like it that if we expanded $\Phi$ to include $\phi_3$, that $\beta_3$ would be generated without impacting $\beta_1$ and $\beta_2$ -- as by the goal property of conjugate basis functions shown in Eq.~\ref{eq:conjugate_subspace}. Yet $\mathcal{C}$ is a function of $\Phi$ so we run the risk of our previous $\beta$s changing when $\Phi$ changes - that is unless $\mathcal{C}$ is somehow defined to behave as a constant. In the world of matrix math, that is any diagonal matrix. For our purposes, we will use th identity matrix for simplicity.
+We would like it that if we expanded $\Phi$ to include $\phi_3$, that $\beta_3$ would be generated without impacting $\beta_1$ and $\beta_2$ -- as by the goal property of conjugate basis functions shown in Eq.~\ref{eq:conjugate_subspace}. Yet $\mathcal{C}$ is a function of $\Phi$ so we run the risk of our previous $\beta$s changing when $\Phi$ changes - that is unless $\mathcal{C}$ is somehow defined to behave as a constant. In the world of matrix math, that is any diagonal matrix. For our purposes, we will use the identity matrix for simplicity.
 
 This brings us to our `conjunctionality condition':
 \begin{equation}
@@ -124,7 +124,7 @@ So long as the condition in Eq.~\ref{eq:conjuct_cond_I} is met, we can create $\
 \end{equation}
 
 \FloatBarrier\subsection{Extracting Conjugate Basis Functions}
-The issue we face now is we do not know $P$, so we must derive a method to extract $\beta$. We of course need a collection of input-output data, which is easily collected. We can more easily show the underlying logic with the batch approach, then we will explore a more computationally and logically efficient iterative approach.
+The issue we face now is we do not know $P$, so we must derive a method to extract $\beta$. We of course need a collection of input-output. We can more easily show the underlying logic with the batch approach, then we will explore a more computationally and logically efficient iterative approach.
 
 \FloatBarrier\subsubsection{The Batch Approach}
 Suppose we have a collection of episodic data for both input $\underline{u}_i^e$ and their associated output $\underline{y}_i^e$ where $i = 0, 1, \dots b$ and $b$ is the number of conjugate basis functions to generate. We can apply our $\delta$ operator to this data set to produce $\delta_1 \underline{u}^e,\ \delta_2 \underline{u}^e,\ \dots,\ \delta_b \underline{u}^e$ and the same sequence for our outputs. We will define the batch notation ${\left[{x}^e\right]}_b$
@@ -176,7 +176,7 @@ which can be re-written as
 \begin{equation}
     P \Phi = {\left[\delta\underline{y}^e\right]}_b {\left[\rho\right]}_b^{-1}
 \end{equation}
-and we will define $H_b = P \Phi$. 
+Define $H_b = P \Phi$. 
 
 Given this, we can write
 \begin{equation}
@@ -229,7 +229,7 @@ We then define our sequence of inputs as the basis functions chosen. It is not n
 
 The next step is to apply the $\delta$ operator. Eq.~\ref{eq:delta_operator} defined the operator to be the difference between the the previous and current trial. It is important to recognize this is largely arbitrary and we could change the order of the inputs to change our $\delta$ results without compromising the underlying logic. As such, we create a slightly modified operator, $\underline{\delta}$. This is just to add some notation to the deadbeat assumption we have been employing. We define this as:
 \begin{equation}
-    \underline{\delta x_j} = x_j - x_0
+    \underline{\delta}_j x = x_j - x_0
 \end{equation}
 
 Again note this changes none of our logic, it is purely for convenience. Now we can relate each change in input/output to our open loop response. So 
@@ -249,7 +249,7 @@ and
 
 Notice we have removed any dependency on $\underline{d}$ and we can conveniently represent our $\underline{\delta}_j\underline{u}^e$ as just the $\underline{u}^e$. Eq.~\ref{eq:del_y_batch_P_del_u_batch} can be seen to still apply. So we easily generate our batched output as
 \begin{equation}
-    {\left[\underline{\delta y}^e\right]}_b  = P\Phi_u
+    {\left[\underline{\delta y}^e\right]}_b  = P {\left[\underline{\delta u}^e\right]}_b
 \end{equation}
 
 Next we must define our cost matrices $R$ and $Q$ so we may compute \textbf{W}. Here we set $R = 0_{r_{ILC} \times r_{ILC}}$\footnote{Unlike in our RL examples where small $R$s can lead to numerical ill-conditioning, the construction of our conjunct condition matrix $\mathcal{C}$ prevents this. Since it relies on $P$ and $Q$ as well, we can simplify our math by removing $R$ from our computations. It would be possible to conversely set $Q = 0$ and have $R \neq 0$.} and $Q = 100I_{n_{ILC} \times n_{ILC}}$. Thus
@@ -297,7 +297,7 @@ The associated $\beta^\ast$ can be calculated as
 \label{eq:conjugate_beta_star}
 \end{equation}
 
-One will note that after 8 basis functions, the coefficients drop to 0. This is because once we have tried all the inputs that make up $\underline{u}^\ast$, we can perfectly the true signal without any additional information. If we apply $\underline{u} = \Phi \beta^\ast$, we see we capture our goal output perfectly (Figure~\ref{fig:batch_learned})
+One will note that after 8 basis functions, the coefficients drop to 0. This is because once we have tried all the inputs that make up $\underline{u}^\ast$, we can perfectly produce the true signal without any additional information. If we apply $\underline{u} = \Phi \beta^\ast$, we see we capture our goal output perfectly (Figure~\ref{fig:batch_learned})
 
 \begin{figure}[htbp] 
     \centering  
