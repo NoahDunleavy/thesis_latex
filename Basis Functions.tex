@@ -39,7 +39,7 @@ where each $\phi_i$ is a ($\ell \times 1$) vector. The only condition on each ba
     \phi_i \cdot \phi_j = 0,\ \text{for}\ i \ne j
     \label{eq:orthogonal_basis}
 \end{equation}
-Put another way, $\Phi$ must be full rank. 
+where $\cdot$ is the dot operator. Put another way, $\Phi$ must be full rank. 
 
 To represent a signal in terms of basis functions, we then use a $\eta \times 1$ weighting vector $\beta$. 
 \begin{equation}
@@ -61,7 +61,7 @@ In the ideal scenario, a signal can be captured with a single $\beta$. This happ
         -2\\ 8\\ 13\\ -4\\ 9
     \end{bmatrix}
 \end{equation}
-The Basis Space also does not necessarily need to be $I_{\ell \times \ell}$. So long as it is full rank, a basis space of $\ell$ basis functions can perfectly capture any signal. An added feature of the basis space as we have defined it, is its' width will never exceed its height. That is, it will always be a tall matrix (square at most), as $\eta \le l$. This fact, coupled with the full rank nature, ensures that the a left-side product between the space's pseudo-inverse and itself will always be the identity matrix.
+The Basis Space also does not necessarily need to be $I_{\ell \times \ell}$. So long as it is full rank, a basis space of $\ell$ basis functions can perfectly capture any signal. An added feature of the basis space as we have defined it, is its width will never exceed its height. That is, it will always be a tall matrix (square at most), as $\eta \le \ell$. This fact, coupled with the full rank nature, ensures that the a left-side product between the space's pseudo-inverse and itself will always be the identity matrix.
 
 \begin{equation}
     I_{\eta \times \eta} = \Phi^+ \Phi
@@ -89,13 +89,13 @@ and have a useful property that they are all orthogonal with respect to one anot
     T_{n+1}(x) &= 2xT_n(x) - T_{n-1}(x)\label{eq:cheby_recurrence}
 \end{align}
 
-Earlier functions, due to their lower frequency, help capture macro behaviors in a signal. As one progresses further in the process, the higher frequency signals capture the finer details. To those familiar with Fourier Analysis, you will be familiar with this behavior of marginal enhancements with each additional, higher frequency. Or it is not unlike in a Taylor Expansion, where we similarly see diminishing returns on accuracy from each additional component added. 
+Earlier functions, due to their lower frequency, help capture macro behaviors in a signal. As one progresses further in the process, the higher frequency signals capture the finer details. To those familiar with Fourier Analysis, you will recognize this behavior of marginal enhancements with each additional, higher frequency. Or it is not unlike in a Taylor Expansion, where we similarly see diminishing returns on accuracy from each additional component added. 
 
 \FloatBarrier\subsubsection{Example --- Matlab Creation of Chebyshev Polynomials}
 
 To utilize the features of Chebyshev Polynomials, we must first create them. Since they are only orthogonal over the domain of $x \in [-1, 1]$, that is where we will restrict ourselves for their generation. Recalling we wish to capture a signal of $\ell$ points, we will then define our $x$ from $-1 \rightarrow 1$ in steps of $\frac{2}{\ell}$. This can be accomplished in Matlab by setting our $x$ to \texttt{x = linspace(-1, 1, $\ell$)'}\footnote{Note the ' to transpose the vector into the column format} -- this is our $T_1$ (Eq.~\ref{eq:cheby_T1}). We must similarly create a $\ell \times 1$ of all 1s to serve as our $T_0$ (Eq.~\ref{eq:cheby_T0}). To generate $\eta$ functions, we then iterate as described in Eq.~\ref{eq:cheby_recurrence}. The process can also be seen in Code Appendix~\ref{code:gen_cheby}
 
-In the presented example, we set $l=100$ and $\eta = 20$, generating a $\Phi$ that is $100 \times 20$. Figure~\ref{fig:example_chebys} shows our $T_0$, $T_1$, and some select iteratively generated functions. You will see that the x-axis units are `Chebyshev Steps' that go from $0 \rightarrow 99$, however rest assured these map to $x$ values of -1 and 1.
+In the presented example, we set $\ell=100$ and $\eta = 20$, generating a $\Phi$ that is $100 \times 20$. Figure~\ref{fig:example_chebys} shows our $T_0$, $T_1$, and some select iteratively generated functions. You will see that the x-axis units are `Chebyshev Steps' that go from $0 \rightarrow 99$, even though we numerically said they had to go from $-1 \to 1$. Numerically the functions must be defined in this range, but for application the can be viewed purely as data points along a signal of any length, and the real values of $-1$ and $1$ no longer hold any meaning.
 \begin{figure}[htbp] 
     \centering  
     \includegraphics[width=1\textwidth]{{Basis Functions/Example Cheby Functions.pdf}} %figure is as wide as text
@@ -107,7 +107,7 @@ We can now utilize these functions to generate a wide array of complex signals. 
 \begin{figure}[htbp] 
     \centering  
     \includegraphics[width=1\textwidth]{{Basis Functions/Example Cheby Signal.pdf}} 
-    \caption{Example Signal constructed from Chebyshev Polynomials and Weights}
+    \caption{Example Signal constructed from $\eta = 20$ Chebyshev Polynomials of length $\ell = 100$}
 ~\label{fig:example_cheby_signal}
 \end{figure}
 
@@ -138,7 +138,7 @@ which, due to the tall nature of the basis spaces, can be reversed as
     \alpha &= \Phi_y^+ \underline{y}   \label{eq:a_pinv_Ty_y} \\
     \beta &= \Phi_u^+ \underline{u}    \label{eq:b_pinv_Tu_u}
 \end{align}
-It is important to note that these reverse operations are not unique. In the reverse, $\Phi_y^+ \underline{y}$ gives us the projection of $\underline{y}$ into the basis space defined by $\Phi_y$ -- the same goes for $\underline{u}$ and $\Phi_u$. The projection can be thought of `how much is captured' when going from one space to another. The most intuitive interpretation is to call it a shadow. Just as the shadow of a tree is telling us how much of its 3-D representation can be expressed in 2-D, the projection of $\underline{y}$ onto $\Phi_y$ tells us how much of $\underline{y}$ can be described in $\Phi_y$. However this `shadow' does not tell us if there is some data behind our proverbial tree.This allows multiple $\underline{y}$s and $\underline{u}$s to produce the same $\alpha$ and $\beta$, so long as the differences in the $\underline{y}$s and $\underline{u}$s occur in the null space (outside) of their respective basis spaces.
+It is important to note that when our basis spaces are not well-defined, these reverse operations become approximations. $\Phi_y^+ \underline{y}$ gives us the projection of $\underline{y}$ into the basis space defined by $\Phi_y$ -- the same goes for $\underline{u}$ and $\Phi_u$. The projection can be thought of `how much is captured' when going from one space to another. The most intuitive interpretation is to call it a shadow. Just as the shadow of a tree is telling us how much of its 3-D representation can be expressed in 2-D, the projection of $\underline{y}$ onto $\Phi_y$ tells us how much of $\underline{y}$ can be described in $\Phi_y$. However this `shadow' does not tell us if there is some data behind our proverbial tree.This allows multiple $\underline{y}$s and $\underline{u}$s to produce the same $\alpha$ and $\beta$, so long as the differences in the $\underline{y}$s and $\underline{u}$s occur in the null space (outside) of their respective basis spaces.
 
 Substituting these identities into Eq.~\ref{eq:y_Pu_d}, we can re-write it as
 \begin{equation}
@@ -219,7 +219,7 @@ An important note moving forward is that some of the shaped outputs look like ar
 
 The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. In other words, we will have \ac{FIPO} describing their respective spaces.
 
-We can always construct a basis space to capture $\underline{y}^\ast$ by setting one of the functions of $\Phi_y$ equal to $\underline{y}^\ast$, so this is the first logical one to challenge. However we must ensure our input can be captured in our input basis space,so we construct our input basis space out of the first 10 chebyshev polynomials\footnote{Each function must be 200 points in resolution,  as our number of ILC inputs is 200 ($p \times r$)}, using the method shown in Eq.~\ref{eq:cheby_recurrence}.
+We can always construct a basis space to capture $\underline{y}^\ast$ by setting one of the functions of $\Phi_y$ equal to $\underline{y}^\ast$, so this scenario could always be avoided with minimal dimensions. However we must ensure our input can be captured in our input basis space, so we construct our input basis space out of the first 10 chebyshev polynomials\footnote{Each function must be 200 points in resolution,  as our number of ILC inputs is 200 ($p \times r$)}, using the method shown in Eq.~\ref{eq:cheby_recurrence}.
 \begin{equation}
     \Phi_u = 
     \begin{bmatrix}
@@ -420,7 +420,7 @@ Having confirmed we have a $\Phi_u$ that meets earlier assumptions (input is ful
 
 Once again, now that we have our goal and our controller we can proceed to generate $e_0$. Unsurprisingly, we follow the exact same steps as before\footnote{See Appendix~\ref{code:ilc_sim} for a more explicit showing of this}.
 
-Here we begin to see the limits of our basis functions. While figure~\ref{fig:PIFO_alpha_error_progression} shows that we can send $e_\alpha$ to zero, no other parameter does so. Figure~\ref{fig:PIFO_error_progression} shows that through trials, we reach a steady state error. Recall earlier from Eq.~\ref{eq:a_pinv_Ty_y} that multiple $\underline{y}$s can produce the same $\alpha$. Here, even though we can capture $\underline{y}^\ast$ fully in our basis, we cannot see the error that exists outside of it in the null space. So even though though our input is not producing our $\underline{y}^\ast$, since our $e_\alpha$ goes to zero, our betas stop learning. 
+Here we begin to see the limits of our basis functions. While figure~\ref{fig:PIFO_alpha_error_progression} shows that we can send $e_\alpha$ to zero, no other parameter does so. Figure~\ref{fig:PIFO_error_progression} shows that through trials, we reach a steady state error. Recall earlier from Eq.~\ref{eq:a_pinv_Ty_y} that multiple $\underline{y}$s can produce the same $\alpha$. We are able to generate $\underline{y}^\ast$, but there is some additional $\underline{y}_{null}$ that exists outside of $\Phi_y$. So we can capture $\underline{y}^\ast$ fully in our basis, but cannot see the error that exists outside of it in the null space. Our input is not producing our $\underline{y}^\ast$, since our $e_\alpha$ goes to zero, our betas stop learning. 
 \begin{figure}[htbp] 
     \centering  
     \begin{subfigure}[b]{0.49\textwidth}
@@ -564,7 +564,7 @@ However, the learning history is quite different. Even though we appear to meet 
 We see that we are still able to send $e_\alpha \to 0$, or $\alpha \to 1$, but the other components do not follow. Once again we are faced with this steady-state error on the beta.
 
 \FloatBarrier\paragraph{SIFO}
-We now check the other scenario, where the spaces can be described with a set of \ac{SIFO}. We now setup similar to our POFI scenario, and set everything up the same. Except now when we extract $\underline{u}^\ast$ in Eq.~\ref{eq:u*_from_Py*}, we also use that to set our input basis space such that $\underline{u}^\ast = \Phi_u$. The goals can be seen in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}, and the inputs that get us there in Figures~\ref{fig:SIFO_input_1} and~\ref{fig:SIFO_input_2} -- nothing new here.
+We now check the other scenario, where the spaces can be described with a set of \ac{SIFO}. This is an extreme version of our POFI example, so we set it up the same. The difference being we extract $\underline{u}^\ast$ in Eq.~\ref{eq:u*_from_Py*}, we also use that to set our input basis space such that $\underline{u}^\ast = \Phi_u$. The goals can be seen in Figures~\ref{fig:PIFO_output_1} and~\ref{fig:PIFO_output_2}, and the inputs that get us there in Figures~\ref{fig:SIFO_input_1} and~\ref{fig:SIFO_input_2} -- nothing new here.
 \begin{figure}[htbp] 
     \centering 
     \begin{subfigure}[b]{0.49\textwidth}
@@ -686,7 +686,7 @@ where $1 \leq j \leq \ell$, marking what basis function we draw from $\Phi_{full
 
 One would hope that after sufficient episodes, there would be a $\Phi^e$ found such that $\underline{u}^\ast$ is included.
 
-\FloatBarrier\subsubsection{Example}
+\FloatBarrier\subsubsection{Example -- Rolling Basis Space}
 First we set up the problem as done in the FIPO example, with $\underline{u}^\ast$ shown in Figures~\ref{fig:FIPO_input_1} and~\ref{fig:FIPO_input_2} and $\underline{y}^\ast$ in Figures~\ref{fig:FISO_output_1} and~\ref{fig:FISO_output_2}.
 
 Although we have a signal of length $\ell = 200$\footnote{$n_{ILC} = r_{ILC} = 200$}, we do not need $\ell$ basis functions to ensure we capture our $\underline{u}^\ast$. Recall for our FIPO example, we defined $\underline{u}^\ast$ in the space of Chebyshev Polynomials $T_0 \to T_9$, so we can define $\Phi_{full}$ as we define $\Phi_u$ in Eq.~\ref{eq:Tu_in_cheby} to ensure we capture $\underline{u}^\ast$. If we did not know this to be the case, we would have to define $\Phi_{full}$ to be a full rank $200 \times 200$ matrix to ensure we spanned the whole input space.
