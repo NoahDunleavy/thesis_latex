@@ -647,9 +647,9 @@ It can be noted that stabilization takes much longer (around eight seconds), and
 
 \FloatBarrier\section{Iterative Learning Control} %ILC
 ~\label{sec:ILC}
-Switching gears, we will introduce now another form of system. The previous models have all been iterative in time (i.e.\ adjust next input based on last samples state), but there is a form of control that focuses on trials. This is logical for and applied in the manufacturing process, where the desired output is not a `zero' state, but rather zero error. \ac{ILC} is particularly useful for its ability to factor out repeated noise and function to produce machined outputs regardless of initial condition or repeated disturbances.
+Switching gears, we will introduce now another form of system. The previous models have all been iterative in time (i.e.\ adjust next input based on last samples state), but there is a form of control that focuses on trials. This is logical for and applied in the manufacturing process, where the desired output is not a `zero' state, but rather zero error. \ac{ILC} is particularly useful for its ability to factor out repeated noise and function to produce machined outputs. This relies on the fact that in repeated tasks the initial conditions can be made to be repeated, even if they are not explicitly known\footfullcite{9374773}\footfullcite{4178138}.
 
-Iterative Learning Control employs a system representation that is expanded to factor in the temporal element of control steps. Instead of each step ($k$) trying to send the states to zero, we now want each trial ($j$) to send the error on our outputs to zero. 
+Iterative Learning Control employs a system representation that is expanded to factor in the temporal element of control steps. Instead of each step ($k$) trying to send the states to zero, we now want each trial ($j$) to send the error on our outputs to zero\footfullcite{1636313}. 
 The first step is to define our output, denoted as $\underline{y}$, occurring over p time steps. That is, y is a $pm\times 1$. Similarly, there is then a sequence of inputs, denoted as $\underline{u}$ that when applied, will get us here -- it will be $pr\times 1$. 
 
 Finally, there exists a matrix $P$ that can be constructed out of $A$, $B$, $C$, and $D$ matrices such that the entire output captured from an input sequence can be represented as 

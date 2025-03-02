@@ -26,10 +26,10 @@ and the addition of one additional basis function would have it such that
     \end{bmatrix}
 \end{equation}
 
-\FloatBarrier\subsubsection{The Conjugate LQR Controller}
+\FloatBarrier\subsection{The Conjugate LQR Controller}
 We know the conditions to ensure a found controller captures $\underline{y}^\ast$ in the basis space, so that is not what we will be testing here. We are now interested the scenario where we do \underline{not} capture $\underline{u}^\ast$ in our $\Phi$, but we still find a controller in this space. It should be that if we find $F_{\phi_1}$ and $F_{\phi_2}$ separately, they would have the exact same parameters as controller $F^{\Phi_2}$\footnote{So long as they all use the same basis space on the output.}.
 
-\FloatBarrier\paragraph{Example -- LQR in The Conjugate Space}
+\FloatBarrier\subsubsection{Example -- LQR in The Conjugate Space}
 We know our RL techniques are capable of extracting the discount LQR controller, so we will cut through the noise in our example and simply use \textit{discounted\_LQR}.
 
 We return to our earlier $\underline{y}^\ast$ of a circle. We set $p = 10$, and use Eq.~\ref{eq:y1_y2_star} to set the goal. Our first step is to generate our conjugate basis functions. We use the batch approach in this example. With the parameters
@@ -113,7 +113,7 @@ For completeness, we will run an ILC Trial as we did when exploring the requirem
 ~\label{fig:conj_ilc_shape}
 \end{figure}
 
-\FloatBarrier\subsubsection{Dynamic Conjugate Basis Space}
+\FloatBarrier\subsection{Dynamic Conjugate Basis Space}
 Now we have shown that one controller can be learned at a time, in any order, with any number at a time, regardless of the representative space chosen. This will allow us to revisit our idea of a dynamic input basis space explored earlier in Section~\ref{sub:dynamic_arb_basis}.
 
 For our dynamic basis space, there are a few different scenarios to consider. Recall our starting notation in section~\ref{sec:basis_functions} where our input basis space had notation $\Phi_u$ and our output had notation $\Phi_y$. We will re-introduce this now to consider our options.
@@ -308,14 +308,14 @@ If we have shown we can learn one controller at a time, then it should stand to 
 \FloatBarrier\paragraph{Example -- $\Phi_y = \underline{y}^\ast$}
 The first step is to establish our basis functions. $\Phi_u$ will be our conjugate basis functions $\Phi$, and $\Phi_y = 100\underline{y}^\ast$. We have previously shown that there is some trade-off between the magnitudes of the basis functions, that can lead to ill-conditioning. For this example, it was found that scaling $\underline{y}^\ast$ by 100 (bringing the norm to 316) was sufficient to prevent issues. 
 
-We then set our LQR parameters as
+We then set our LQR parameters as\footnote{Similar to the scaling of $\Phi_y$, there is potential for future work here. The produced result of this approach of $Q/R = 100$ is not the same when we scale both items down by 10. Why the ratio no longer seems to be the absolute determining factor for LQR outcomes is worth nailing down.}
 \begin{equation}
     \begin{split}
         Q = 1000 \quad R = 10I_{r_{ILC} \times r_{ILC}} \\
         \gamma = 0.8 \quad v(k) \in \left[-1, 1\right]
     \end{split}
 \end{equation}
-Similar to the scaling of $\Phi_y$, there is potential for future work here. The produced result of this approach of $Q/R = 100$ is not the same when we scale both items down by 10.\myworries{Here}
+
 
 We then iteratively learn $F_{\phi_i}$s. For each $\phi_i$, our $Q$ stays fixed at $100$ since we only have one `output' $\alpha$, but our $R$ rolls along the diagonals of $R$. In this example, that they are all the same value, but it is an important consideration to be aware of. As before, we stack each learned $F_{\phi_i}$ and find after all $20$ possible controllers
 \begin{equation}
