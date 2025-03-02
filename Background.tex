@@ -7,15 +7,15 @@ This section is dedicated to providing the base information of Modern Control Th
 
 To those familiar with the Thayer School of Engineering's curriculum, it is very similar to the content of ENGS145 - Modern Control Theory.
 
-We begin with system formulation and representation in the matrix form, and how we resolve the difference between the continuous nature of the world, and the discrete ability of computers. Here, we use the \ac{ZOH} approach. 
+We begin with system formulation and representation in the matrix form, and how we resolve the difference between the continuous nature of the world and the discrete limitations of computers. Here, we use the \ac{ZOH} approach. 
 
 Next the idea of pole placement is introduced, and it is demonstrated that the further from the origin the poles are, the longer control takes. A deadbeat controller is used to highlight this, which is the time-optimal solution for any system.
 
-One will note that the deadbeat controller, while time optimal, requires significant control effort that may not be realistic or safe for a real system. That leads us to our introduction of the \ac{LQR} controller, which minimizes a cost function defined system inputs and states. 
+One will note that the deadbeat controller, while time optimal, requires significant control effort that may not be realistic or safe for a real system. That leads us to our introduction of the \ac{LQR} controller, which minimizes a cost function defined by system inputs and states. 
 
-Next we introduce the \ac{ILC} problem and show that it can learn to generate any output (so long as permitted by the physical characteristics of the system). 
+Next we introduce the \ac{ILC} problem and show that it can learn to generate any goal output (so long as permitted by the physical characteristics of the system), regardless of initial conditions or noise. 
 
-Finally, we address the assumption of perfect knowledge not typically possible in the real world. The process of \ac{RL} is shown via the Policy Iteration and Input Decoupling method. They can be shown to find the \ac{LQR} controller as defined by its cost function. 
+Finally, we address the assumption of perfect knowledge not typically possible in the real world. The machine learning process of \ac{RL} is shown via the Policy Iteration and Input Decoupling method. They can be shown to find the \ac{LQR} controller as defined by its cost function. 
 
 \FloatBarrier\section{Introduction to Continuous State Space} %Intro to State Space
 A key step for Control Theory is construction of a system model, commonly represented as $A_c$, $B_c$, $C$ and $D$. $A_c$ captures the impact that the current state will have on the next state and $B_c$ captures how inputs will impact the next state. The matrix $C$ captures how states are translated to measured outputs and $D$ captures how inputs are directly measured on outputs. Any linear system, regardless of complexity and variations, can be modelled exactly as follows:
@@ -42,7 +42,7 @@ Most, if not all, of the world's physical systems can be modelled as a spring-ma
 ~\label{fig:spring_mass_system}
 \end{figure}
 
-One can see that we have two masses, connected in series with springs and dampers, and bounded on one end with a wall. Constructing the equations of motion for the system simply follows Newton's second law $(F\ =\ ma)$, employing Hooke's $(F\ =\ -kx)$ and Damping Laws $(F=-cv)$. Recognizing that the derivative of position is velocity, and the derivative of velocity is acceleration, it can be shown that the equations of motion (EoM) for each mass are shown in Eqs.~\ref{eq:x1_eom} and~\ref{eq:x2_eom}.
+We have two masses, connected in series with springs and dampers, and bounded on one end with a wall. Constructing the equations of motion for the system simply follows Newton's second law $(F\ =\ ma)$, employing Hooke's $(F\ =\ -kx)$ and Damping Laws $(F=-cv)$. Recognizing that the derivative of position is velocity, and the derivative of velocity is acceleration, it can be shown that the equations of motion (EoM) for each mass are as shown in Eqs.~\ref{eq:x1_eom} and~\ref{eq:x2_eom}.
 
 \begin{equation}
     \begin{split}
@@ -60,7 +60,7 @@ One can see that we have two masses, connected in series with springs and damper
     \label{eq:x2_eom}
 \end{equation}
 
-The next step is to select our `states'. For every energy-storing element in a system there will be one state. Our system stores energy as kinetic energy in the masses, and potential energy in the springs - we have four energy-storing elements and thus four states. It is most common and logical in spring-mass problems to select the position and velocity of the masses as these states:
+From here we select our `states'. For every energy-storing element in a system there will be one state. Our system stores energy as kinetic energy in the masses, and potential energy in the springs - we have four energy-storing elements and thus four states. It is most common and logical in spring-mass problems to select the position and velocity of the masses as these states:
 \begin{equation} 
     x =
     \begin{bmatrix}
@@ -69,7 +69,7 @@ The next step is to select our `states'. For every energy-storing element in a s
     \label{eq:state_vector}
 \end{equation}
 
-Now for our inputs: these also are commonly and easily expressed as direct scalars of themselves. As such, our state vector and input vector is as follows:
+Now for our inputs: these also are commonly and easily expressed as direct scalars of themselves. As such, our input vector is as follows:
 \begin{equation} 
     u =
     \begin{bmatrix}
@@ -78,7 +78,7 @@ Now for our inputs: these also are commonly and easily expressed as direct scala
     \label{eq:input_vector}
 \end{equation}
 
-Recall the idea of our model is to capture what the change in states will be, given current states and inputs. In the continuous format, the change in states is captured in the time derivative of the state vector, as shown in Eq.~\ref{eq:state_vector_derivative} below
+Recall the idea of our model is to capture what the change in states will be -- given current states and inputs. In the continuous format, the change in states is captured in the time derivative of the state vector, as shown in Eq.~\ref{eq:state_vector_derivative} below
 \begin{equation} 
     \dot x =
     \begin{bmatrix}
@@ -107,7 +107,7 @@ With all this matrix information, it is now time to construct our continuous sta
     \label{eq:spring_mass_state_space_continuous}
 \end{equation}
 
-Recognizing this simple system is already messy, further substitutions can be made by formatting the masses, spring constants, and damping coefficients into a Mass (\ref{eq:mass_matrix}), Stiffness (\ref{eq:stiffness_matrix}), and Damping (\ref{eq:dampning_matrix}) Matrices. These are known as physical parameter matrices.
+Recognizing this simple system is already messy, further substitutions can be made by formatting the masses, spring constants, and damping coefficients into Mass (\ref{eq:mass_matrix}), Stiffness (\ref{eq:stiffness_matrix}), and Damping (\ref{eq:dampning_matrix}) Matrices. These are known as physical parameter matrices.
 \begin{equation}
     M = 
     \begin{bmatrix}
@@ -133,7 +133,7 @@ Recognizing this simple system is already messy, further substitutions can be ma
     \label{eq:dampning_matrix}
 \end{equation}
 
-This would allow us to re-express our equations of motion in a single line as in Eq.~\ref{eq:compact_eom}
+This allows us to express our equations of motion in a single line as in Eq.~\ref{eq:compact_eom}
 \begin{equation}
     \begin{bmatrix}
         \ddot{x}_1 \\ \ddot{x}_2
@@ -168,6 +168,8 @@ and our state-space model can now be written as
     \label{eq:spring_mass_state_space_continuous_compact}
 \end{equation}
 This is exactly the format for the state-space model we described earlier in Eq.~\ref{eq:continuous_state_space_model}.
+
+
 Now we put some numbers to our example so we can simulate behavior. We will define our system as follows
 \begin{align}
     m_1 = 1\, \text{kg} \quad m_2 = 0.5\, \text{kg} \\
@@ -240,7 +242,7 @@ To explicitly complete the connection to Eq.~\ref{eq:continuous_state_space_mode
     \label{eq:Ac_Bc_real}
 \end{equation}
 
-We now only need one more piece of information to completely describe this system's behavior, and that is its initial conditions. We will choose to display the first mass one meter to the right of its' resting position and have the second mass moving to the right at two meters per second.
+We now only need one more piece of information to completely describe this system's behavior, and that is its initial conditions. We will choose to displace the first mass one meter to the right of its resting position and have the second mass moving to the right at two meters per second.
 \begin{equation}
     x_0 =
     \begin{bmatrix}
@@ -249,7 +251,7 @@ We now only need one more piece of information to completely describe this syste
     \label{eq:initial_conditions_real}
 \end{equation}
 
-Armed with the information to completely model the system, we now decide on our outputs. Recall Eq.~\ref{eq:continuous_state_space_output} relating the current state and inputs to the output, $y$ via matrices $C$ and $D$. For our system we will choose to only record the block positions ($x_1$ and $x_2$) as our outputs. Monitoring those two states 
+Armed with the information to completely model the system, we now decide on our outputs. Recall Eq.~\ref{eq:continuous_state_space_output} relating the current state and inputs to the output $y$, via matrices $C$ and $D$. For our system we will choose to only record the block positions ($x_1$ and $x_2$) as our outputs. Monitoring those two states 
 is represented simply in matrix form
 \begin{equation}
     y = 
@@ -280,7 +282,7 @@ where we will once again explicitly note
     \label{eq:C_D_real}
 \end{equation}
 
-The resulting outputs from simulation out this system can be seen in Fig.~\ref{fig:continuous_open_mass_1} and Fig.~\ref{fig:continuous_open_mass_2}
+The resulting outputs from simulating out this system can be seen in Fig.~\ref{fig:continuous_open_mass_1} and Fig.~\ref{fig:continuous_open_mass_2}
 \begin{figure}[htbp]
     \centering  %center align
     \begin{subfigure}[b]{0.49\textwidth}
@@ -299,7 +301,7 @@ The resulting outputs from simulation out this system can be seen in Fig.~\ref{f
 
 \FloatBarrier\section{Discretization of a Continuous Model} %Discretization
 So far, we have been dealing with the ideal scenario of continuous time. While the models we constructed are exact, it is infeasible to collect outputs and apply inputs to a system at an infinite rate implied by a continuous model. Even if we were able to, it would be inefficient and impractical to run an infinite amount of calculations in an infinitely small time span. 
-Digital systems fix this by discretizing their actions and outputs at a sampling rate denoted by $\Delta t$ (typically in units of seconds).  That is, every $\Delta t$ a new output is collected and input applied. To maintain the exact nature of the above model, matrices $A_c(t)$ and $B_c(t)$ must be `discretized' through the \ac{ZOH} method. The process for doing so is shown in Eqs.~\ref{eq:Ac_to_A} and~\ref{eq:Bc_to_B}
+Digital systems fix this by discretizing their actions and outputs at a sampling rate denoted by $\Delta t$ (typically in units of seconds).  That is, every $\Delta t$ a new output is collected and input applied. To maintain the exact nature of the above model, matrices $A_c(t)$ and $B_c(t)$ must be `discretized' through the \ac{ZOH} method. The equations for doing so are shown in Eqs.~\ref{eq:Ac_to_A} and~\ref{eq:Bc_to_B}
 \begin{equation}
     A = e^{A_c \Delta t}
     \label{eq:Ac_to_A}
@@ -308,7 +310,7 @@ Digital systems fix this by discretizing their actions and outputs at a sampling
     B = \int_{0}^{\Delta t}  e^{A_c \alpha}\,d\alpha B_c 
     \label{eq:Bc_to_B}
 \end{equation}
-What this relationship now constitutes is rather than applying instantaneous inputs, inputs are applied every $\Delta t$ and held for $\Delta t$. The response of the system between samples is not fully captured in the model, but at every discrete time step $k$ the model-to-nature relationship is exact. The output collection matrices $C$ and $D$ do not need to be adjusted. We can re-write our continuous state-space models from Eqs.~\ref{eq:continuous_state_space_model} and~\ref{eq:continuous_state_space_output} as
+What this relationship now constitutes is rather than applying instantaneous inputs, inputs are applied every $\Delta t$ and held for $\Delta t$. The response of the system between samples is not fully captured in the model, but at every discrete time step $k$ the model-to-nature relationship is exact. The output collection matrices $C$ and $D$ do not need to be adjusted. We re-write our continuous state-space models from Eqs.~\ref{eq:continuous_state_space_model} and~\ref{eq:continuous_state_space_output} as
 \begin{equation}
     x(k+1) = Ax(k) + Bu(k)
     \label{eq:discrete_state_space_model}
@@ -324,7 +326,7 @@ An important notation distinction in discrete systems is the use of $k$ instead 
 \end{equation}
 As with all sampling and discretization, one must be wary of Nyquist sampling. A given system will have inherent `modes' - frequencies which it is easily excited and operates at. If your sampling rate $\Delta t$ is not sufficiently small, the exactness of the model will fail to capture crucial system dynamics.
 
-Providing all the above steps and criteria are observed, we will be left with a model that exactly matches that of a continuous system, even in the presence of computational limits.
+Providing all the above steps and criteria are observed, we will be left with a model that exactly matches that of a continuous system at the time steps specified.
 
 \FloatBarrier\subsection{Example --- Discretization} %Example - Discretization
 Continuing with our earlier model, we now seek to discretize it for practical computational techniques. We will set $\Delta t=0.01$ seconds, and apply equations~\ref{eq:Ac_to_A} and~\ref{eq:Bc_to_B}. The resulting discrete matrices are
@@ -381,7 +383,7 @@ From this zoomed out view, it can be difficult to believe that the exact relatio
 One thing to note -- moving forward, the discrete system model's x-axis will be expressed in terms of sample number $k$. For example, Figure~\ref{fig:zoomed_discrete_open_mass_1} axis will be marked with $k$ intervals 0 through 10, as opposed to time 0 through 0.1 seconds.
 
 \FloatBarrier\section{Defining Control} %Control
-With our model now modified to still be exact computationally, we can now proceed to do something with it. From a system model, it is now the goal to control the system. The simplest definition of `controlled' is once all states are zero -- this most classically is a system at rest. When the input to a system is some function of the system's states and/or outputs, we describe the system as `closed loop'. A typical controller demarcated by $F$ will be of dimensions $r\times n$ and is used to calculate inputs from collected data. As such, each input obeys the following control law when seeking stabilization (all states go to zero):
+With our model now modified to be exact computationally, we can now proceed to do something with it. From a system model, it is the goal to control the system. The simplest definition of `controlled' is once all states are zero -- this most classically is a system at rest. When the input to a system is some function of the system's states and/or outputs, we describe the system as `closed loop'. A typical controller demarcated by $F$ will be of dimensions $r\times n$ and is used to calculate inputs from collected data. As such, each input obeys the following control law when seeking stabilization (all states go to zero):
 \begin{equation}
     u(k) = Fx(k)
     \label{eq:control_law}
@@ -397,24 +399,25 @@ A controlled system means that $x\left(k\right)=0$, so as $k$ goes to infinity, 
     x(k+1)=\alpha x(k)
     \label{eq:scalar_control}
 \end{equation}
-Where $-1 < \alpha < 1$, then $\lim_{k \to \infty}{x(k) = 0}$. Taking this to a matrix-space preserves this intuition, only now instead of placing a scalar between -1 and 1, we seek to place the eigenvalues, or poles, of the system within the unit circle of the complex plane. Then regardless of any dynamics, a system will once again converge to zero. Poles placed at the boundary of the unit circle would denote an asymptotically stable system -- like a ball at the top of a hill, which will be stable until some force comes along and pushes it.
-For any system defined by their $A$ and $B$ matrices, it is relevant to check if it is controllable. This is thankfully quite simple thanks to the Controllability Matrix. Defined as
+Where $-1 < \alpha < 1$, then $\lim_{k \to \infty}{x(k) = 0}$. Taking this to a matrix-space preserves this intuition, only now instead of placing a scalar between -1 and 1, we seek to place the eigenvalues, or poles, of the system within the unit circle of the complex plane. Then regardless of any dynamics, a system will converge to a `controlled' zero state over sequential samples. Poles placed at the boundary of the unit circle would denote an asymptotically stable system -- like a ball at the top of a hill, which will be stable until some force comes along and pushes it.
+
+For any system defined by their $A$ and $B$ matrices, it is relevant to check if it is controllable. That is -- is it possible to actually send all the $n$ states to zero, with our selected $r$ inputs. This can be checked by examining the Controllability Matrix. Defined as
 \begin{equation}
     \mathcal{C}=\left[A^{\left(n-1\right)}B,\ldots,AB,B\right]
     \label{eq:controllability_matrix}
 \end{equation}
-If the Controllability Matrix $\mathcal{C}$ is full rank in rows, then the system is controllable (recall $n$ is the number of states). Full row rank means that no row of the matrix can be formulated through any linear combination of any of the other rows -- in other words, all rows are independent of one another\footnote{The same logic applies for full `column rank'}. If a matrix is said to be `full rank', then it will have a rank (number of linearly independent rows/columns) equal to its smallest dimension. So a full-rank $4 \times 2$ matrix will have rank of 2.
+If the Controllability Matrix $\mathcal{C}$ is full rank in rows, then the system is controllable. Full row rank means that no row of the matrix can be formulated through any linear combination of any of the other rows -- in other words, all rows are independent of one another\footnote{The same logic applies for full `column rank'}. If a matrix is said to be `full rank', then it will have a rank (number of linearly independent rows/columns) equal to its smallest dimension. So a full-rank $4 \times 2$ matrix will have rank of 2.
 
 \FloatBarrier\subsection{Example --- Basic Control with Pole Placement} %Example - Pole Placement Control
-There are practically an infinite number of controllers $F$ that could send our system to stability. The closer the poles are placed to the origin, the more rapid the convergence of the system will be. To illustrate this, we will first place the poles of our controlled moderately far from the origin, as seen in~\ref{fig:simple_poles}. Placement is done using MATLAB's \textit{place} function and then verified. Poles must always come in conjugate pairs, as visible in the reflection over the imaginary axis.
+There is an infinite number of controllers $F$ that could send our system to stability. The closer the poles of $(A+BF)$ are placed to the origin, the more rapid the convergence of the system will be. To illustrate this, we will first place the poles of our controlled moderately far from the origin, as seen in~\ref{fig:simple_poles}. Placement is done using MATLAB's \textit{place} function and then verified. Poles must always come in conjugate pairs, as visible in the reflection over the imaginary axis.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Simple Pole Placement}}
-    \caption{Pole locations for a Dual-Spring-Mass system when manually placed them at locations $0.5 +- 0.5i$ and $-0.7 +- 0.1i$}%
+    \caption{Pole locations for a Dual-Spring-Mass system when manually placed at locations $0.5 \pm 0.5i$ and $-0.7 \pm 0.1i$}%
     \label{fig:simple_poles}
 \end{figure}
 
-The poles, placed at $0.5 +- 0.5i$ and $-0.7 +- 0.1i$ result in controller $F_{simple}$
+The poles, placed at $0.5 \pm 0.5i$ and $-0.7 \pm 0.1i$ result in controller $F_{simple}$
 \begin{equation}
     F_{simple} = 
     \begin{bmatrix}
@@ -422,7 +425,7 @@ The poles, placed at $0.5 +- 0.5i$ and $-0.7 +- 0.1i$ result in controller $F_{s
     \end{bmatrix}
     \label{eq:simple_pole_controller}
 \end{equation}
-The way to interpret this controller (and framework for all future controllers) is best described with an example state, for which we will use our initial condition $x\left(0\right)$ as shown in Eq.~\ref{eq:initial_conditions_real}. The first row of the controller dictates how our first input ($u_1$ on $m_1$) is computed. In this case
+The way to interpret this controller (and framework for all future controllers) is best described with an example state, for which we will use our initial condition $x\left(0\right)$ as shown in Eq.~\ref{eq:initial_conditions_real}. The first row of the controller dictates how our first input ($u_1$ on $m_1$) is computed given current states $x(0)$ (see Eq.~\ref{eq:initial_conditions_real}). In this case
 \begin{equation}
     \begin{split}
         u_1\left(0\right)&=-40,364\cdot1+-67,217\cdot0+-161\cdot0+-71\cdot2\\
@@ -458,9 +461,11 @@ When the controller in Eq.~\ref{eq:simple_pole_controller} is applied to our dua
         \caption{}%
         \label{fig:simple_pole_input_2}
     \end{subfigure}
-    \caption{Position of Mass 1 and Mass 2 for our Dual-Spring-Mass system under closed-loop, state-feedback controller $F$. $F$ is designed such that the poles of ($A+BF$) are at $0.5 +- 0.5i$ and $-0.7 +- 0.1i$. Inputs 1 and 2 are generated as $u(k) = Fx(k)$}
+    \caption{Position of Mass 1 and Mass 2 for the Dual-Spring-Mass system under closed-loop, state-feedback controller $F$. $F$ is designed such that the poles of ($A+BF$) are at $0.5 \pm 0.5i$ and $-0.7 \pm 0.1i$. Inputs 1 and 2 are generated as $u(k) = Fx(k)$}
 \end{figure}
-\FloatBarrier~One will note that the system is stabilized after about twenty samples, or .2 seconds. The cost, however, is reflected in the inputs. What's known as the `control effort' applied is magnitudes more than the given state. This can be taken even further with a special type of controller known as a `deadbeat' controller. This is a controller which places the poles of a closed-loop system at the origin\footnote{MATLAB's \textit{place} function does not allow for multiple poles to be placed at the same location. Either use \textit{acker} or place poles very close to 0 ($\le 1\times 10^{-6}$)} and produces the time-optimal solution. Once again, the system poles are shown in Figure~\ref{fig:deadbeat_poles}
+\FloatBarrier~One will note that the system is stabilized after about twenty samples, or .2 seconds. The cost, however, is reflected in the inputs. What's known as the `control effort' applied is magnitudes more than the given state. 
+
+This can be taken even further with a special type of controller known as a `deadbeat' controller. This is a controller which places the poles of a closed-loop system at the origin\footnote{MATLAB's \textit{place} function does not allow for multiple poles to be placed at the same location. Either use \textit{acker} or place poles very close to 0 ($\le 1\times 10^{-6}$)} and produces the time-optimal solution. Once again, the system poles are shown in Figure~\ref{fig:deadbeat_poles}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Deadbeat Pole Placement}}
@@ -475,7 +480,7 @@ and produces controller $F_{deadbeat}$
     \end{bmatrix}
     \label{eq:deadbeat_controller}
 \end{equation}
-Its application results in the outputs and inputs denoted in Figures~\ref{fig:deadbeat_mass_1} -~\ref{fig:deadbeat_input_2}
+Its application results in the outputs and inputs shown in Figures~\ref{fig:deadbeat_mass_1} -~\ref{fig:deadbeat_input_2}
 \begin{figure}[htbp]
     \centering  %center align
     \begin{subfigure}[b]{0.49\textwidth}
@@ -507,29 +512,32 @@ Its application results in the outputs and inputs denoted in Figures~\ref{fig:de
 This pole placement method, while useful to demonstrate the requirements of a linear-feedback controller, is crude and often results in extreme states or inputs -- if not both. It would be useful then to be able to design a controller which can be tweaked more precisely to adhere to certain system limits.
 
 \FloatBarrier\section{Linear Quadratic Regulator Controller} %\ac{LQR}
-The \ac{LQR} Controller allows for the `weighting' of system states and inputs. What this means is that a controller can be designed that shies away from extreme inputs, at the cost of uncontrolled states, or conversely will take extreme steps to keep a system under control.
-This is done by introducing three new variables: $Q$, $R$, and $\gamma$. $Q$ is an $n\times n$ matrix which applies relative `costs' (or rewards as desired) to states of the system. Similarly, $R$ is a $r\times r$ matrix which weighs the inputs. $\gamma$ is a scalar value between 0 and 1 which informs the cost function how much to discount the future versus the now (hence it is sometimes referred to as the `discount factor'). 
+The \ac{LQR} Controller allows for the `weighting' of system states and inputs. What this means is that a controller can be designed that shies away from extreme inputs, at the expense of less controlled states, or conversely will make extreme inputs to bring a system under control.
+
+This is done by introducing three new variables: $Q$, $R$, and $\gamma$. $Q$ is an $n\times n$ matrix which applies relative `costs' (or rewards as desired) to states of the system. Similarly, $R$ is a $r\times r$ matrix which weights the inputs. $\gamma$ is a scalar value between 0 and 1 which informs the cost function how much to discount the future versus the now (hence it is sometimes referred to as the `discount factor'). 
+
 $Q$ and $R$ are then used to define the cost function we wish to minimize. It is most common to define them as identity matrices with some associated weight, but they truly can be set as whatever so long as they are symmetric ($Q=Q^T$ and $R=R^T$). We will only use the identity approach. What each component of the cost matrices $Q$ and $R$ tells us is how much cost to attribute to a component of the state or input, respectively, being away from zero. It is also important to note that weights are relative: a controller defined by $Q=100\cdot I_{n\times n}$ and $R=1\cdot I_{r\times r}$ will be the exact same as one defined by $Q=200\cdot I_{n\times n}$ and $R=2\cdot I_{r\times r}$.
 
 
-Each sample, $k$, we want to have a scalar cost as a function of our states and inputs. For a given time step, we generate a utility function $U\left(k\right)$
+Each sample, $k$, we want to have a scalar cost as a function of our states and inputs. For a given time step, we generate a utility function $U\left(k\right)$ which produces such a scalar value.
 \begin{equation}
     U\left(k\right)=u^T\left(k\right)Ru\left(k\right)+x^T\left(k\right)Q\ x\left(k\right)
     \label{eq:utility_function}
 \end{equation}
-In our journey to control, we will work through multiple time steps, each with their own $U\left(k\right)$, so in the whole process we will incur some net cost, $J$. The cost can be viewed as the summation of all these utilities along the way:
+In our journey to control, we will work through multiple time steps, each with their own $U\left(k\right)$, so in the whole process we will incur some net cost, $J$. The cost can be viewed as the summation of all these utilities along the infinite horizon.
 \begin{equation}
     J\ =\ \sum_{k=0}^{\infty}U\left(k\right)
     \label{eq:cost_function}
 \end{equation}
-Bringing back the aforementioned discount factor $\gamma$, we modify the cost function such that we can adjust the time horizon of consequence. Since $0<\gamma \le 1$, we can introduce it such that as $k$ goes to $\infty$, the impact of the infinite horizon utility reduces to zero. This is additionally useful as we want to be able to induce stability in finite-time. This presents us with our discounted cost function
+Bringing back the aforementioned discount factor $\gamma$, we modify the cost function such that we can adjust the time horizon of consequence. So long as $0<\gamma \l 1$, we can introduce it such that as $k$ goes to $\infty$, the impact of the infinite horizon utility reduces to zero\footnote{When $\gamma = 1$, we can only make this reduction if $U(k \to \infty)$ stabilizes and goes to $0$}. This is additionally useful as we want to be able to induce stability in finite-time. This presents us with our discounted cost function
 \begin{equation}
     J\ =\ \sum_{k=0}^{\infty}{\gamma ^k U\left(k\right)}
     \label{eq:discounted_cost_function}
 \end{equation}
-In the LQR process, we are looking for a controller that minimizes the cost function, $J$.
-The next important idea is the Principle of Optimality. Put simply, if the optimal path from Point A to point C goes through Point B, then the optimal path from Point B to Point C is a sub-set of the path from Point A to Point C. Figure~\ref{fig:principle_optimality} shows a two-step process: The red path from A to C through B is optimal (with minimum cost = 4 + 6 = 10). The principle of optimality states that if one starts from B then the optimal path to C must be the red path B-C. All other paths from B to C must cost more than 6, for example, the purple path that costs 10. The paths A-B1 and A-B2 cost less than the red path A-B, but the higher costs associated with their subsequent paths B1-C and B2-C result in higher total cost than the minimum cost. In addition, we can reason that all other paths from A to B such as the green path must cost more than 4. Otherwise, the statement that the red path A-B-C being the optimal path is contradicted. 
-Image from \cite{Phan2025} - Chp8.
+In the LQR process, we are looking for a controller that minimizes this cost function, $J$.
+
+The next important idea is the Principle of Optimality. Put simply, if the optimal path from Point A to point C goes through Point B, then the optimal path from Point B to Point C is a sub-set of the path from A to C. Figure~\ref{fig:principle_optimality} shows a two-step process: The red path from A to C through B is optimal (with minimum cost = 4 + 6 = 10). The principle of optimality states that if one starts from B then the optimal path to C must be the red path B-C. All other paths from B to C must cost more than 6, for example, the purple path that costs 10. The paths A-B1 and A-B2 cost less than the red path A-B, but the higher costs associated with their subsequent paths B1-C and B2-C result in higher total cost than the minimum cost. In addition, we can reason that all other paths from A to B such as the green path must cost more than 4. Otherwise, the statement that the red path A-B-C being the optimal path is contradicted\footfullcite{Phan2025}. 
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Principal of Optimality - PhanChp8.png}}
@@ -538,7 +546,7 @@ Image from \cite{Phan2025} - Chp8.
 \end{figure}
 
 
-What this tells us is that no matter what step we are in a process, so long as we make the optimal step for that current state, we will be walking along the optimal path. It is not necessary to predict out any number of steps -- by making the best decision for this moment in time, the controller will set itself up to continue to make the most optimal decisions. Solving for the Discounted LQR Controller can be quite convoluted, but it can be shown to satisfy:
+What this tells us is that no matter what state we are in for a process, so long as we make the optimal step for that current state, we will be walking along the optimal path. It is not necessary to predict out any number of steps -- by making the best decision for this moment in time, the controller will set itself up to continue to make the most optimal decisions. Solving for the Discounted LQR Controller can be quite convoluted, but it can be shown to satisfy:
 \begin{equation}
     F_{LQR}^\gamma=-\frac{1}{\sqrt\gamma}{\left(B^T PB+R_\gamma\right)}^{-1} B^T PA_\gamma
     \label{eq:discounted_LQR_solution}
@@ -597,16 +605,15 @@ Examining where that places the poles (Figure~\ref{fig:big_Q_poles}) and the inp
     \caption{Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=100. Control is achieved within 200 samples, and under maximum input amplitudes of 55N}
 \end{figure}
 
-\myworries{Lip service to other pepers doing ILC and such - lit review}
-
-\FloatBarrier~If we were inclined to tweak the parameters, perhaps the inputs were beyond the capabilities of our actual system, we could easily do so. If one were to scale $R$ by a factor of ten (or $Q$ by a factor of 0.1), then the following controller $F_{big R}$,  poles (Figure~\ref{fig:big_R_poles}), and IO data (Figures~\ref{fig:big_R_mass_1} -~\ref{fig:big_R_input_2}) would result:
+\FloatBarrier~If we were inclined to tweak the parameters, perhaps the inputs were beyond the capabilities of our actual system, we could easily do so. Scale $R$ by a factor of ten (or $Q$ by a factor of 0.1), then the following controller $F_{big\,R}$ (Eq.~\ref{eq:big_R_lqr_ex}),  poles (Figure~\ref{fig:big_R_poles}), and IO data (Figures~\ref{fig:big_R_mass_1} -~\ref{fig:big_R_input_2}) would result:
 
 \begin{equation}
-    F_{big R} = 
+    F_{big\,R} = 
     \begin{bmatrix}
         0.9118   & 0.1270 &  -0.3027 &  -0.0489\\
         -3.2549   & 3.8474  & -0.1148  & -0.4485
     \end{bmatrix}
+    \label{eq:big_R_lqr_ex}
 \end{equation}
 
 \begin{figure}[htbp]
@@ -643,14 +650,14 @@ Examining where that places the poles (Figure~\ref{fig:big_Q_poles}) and the inp
     \caption{Positions of Mass 1 and 2 under a state-feedback controller defined under LQR parameters of Q/R=10. Control is achieved within 800 samples, and under maximum input amplitudes of 9N}
 \end{figure}
 
-It can be noted that stabilization takes much longer (around eight seconds), and the poles are much closer to the border of the unit circle. Setting $R=0_{2\times 2}$ logically does place poles at the unit circle, but it also places two at the unit circle border. This is because a deadbeat controller leads to extreme velocities -- a state we do not capture in the output but is factored into the cost. Without the presence of input weights, the controller solely focuses on states - all equally weighted in our case.
+It can be noted that stabilization takes much longer (around eight seconds), and the poles are much closer to the border of the unit circle. The more we reduce $R$, the closer our poles get to the origin of the complex plane. It is important to note that $R=0$ does \underline{not} result in a deadbeat controller. Given that every state is weighted equally, and velocity is a state, a $R=0$ controller would seek to balance both displacement and velocity. This is best seen numerically by looking at Mass 1 of our example. It starts at $x=1$ with no velocity -- incurring a cost of $100$. A deadbeat controller would attempt to bring shift the mass such that $x=0$ in one step $k$, over a period of $\Delta t = 0.01$ seconds. A change is position of $1$m over $0.01$ seconds implies a velocity, or $\dot{x}_1$, of $100$. No controller that views position and velocity as equally expensive would make this decision.
 
 \FloatBarrier\section{Iterative Learning Control} %ILC
 ~\label{sec:ILC}
-Switching gears, we will introduce now another form of system. The previous models have all been iterative in time (i.e.\ adjust next input based on last samples state), but there is a form of control that focuses on trials. This is logical for and applied in the manufacturing process, where the desired output is not a `zero' state, but rather zero error. \ac{ILC} is particularly useful for its ability to factor out repeated noise and function to produce machined outputs. This relies on the fact that in repeated tasks the initial conditions can be made to be repeated, even if they are not explicitly known\footfullcite{9374773}\footfullcite{4178138}.
+Switching gears, we will introduce now another form of system. The previous models have all been iterative in time (i.e.\ adjust next input based on last samples state), but there is a form of control that focuses on trials. This is logical for / applied in the manufacturing process, where the desired output is not a `zero' state, but rather zero error. \ac{ILC} is particularly useful for its ability to factor out repeated noise and function to produce machined outputs. This relies on the fact that in repeated tasks the initial conditions can be made to be repeated, even if they are not explicitly known\footfullcite{9374773}\footnote{,}\footfullcite{4178138}.
 
 Iterative Learning Control employs a system representation that is expanded to factor in the temporal element of control steps. Instead of each step ($k$) trying to send the states to zero, we now want each trial ($j$) to send the error on our outputs to zero\footfullcite{1636313}. 
-The first step is to define our output, denoted as $\underline{y}$, occurring over p time steps. That is, y is a $pm\times 1$. Similarly, there is then a sequence of inputs, denoted as $\underline{u}$ that when applied, will get us here -- it will be $pr\times 1$. 
+The first step is to define our output, denoted as $\underline{y}$, occurring over p time steps. That is, $\underline{y}$ is a $pm\times 1$ column vector. Similarly, there is then a sequence of inputs, denoted as $\underline{u}$ that when applied, will get us here -- it will be $pr\times 1$. 
 
 Finally, there exists a matrix $P$ that can be constructed out of $A$, $B$, $C$, and $D$ matrices such that the entire output captured from an input sequence can be represented as 
 \begin{equation}
@@ -668,8 +675,19 @@ where $\underline{d}$ captures disturbances and initial conditions. All the abov
     P=\left[\begin{matrix}CB&D&0&0&0\\CAB&CB&D&0&0\\CA^2B&CAB&CB&\ddots&0\\\vdots&\vdots&\vdots&\ddots&D\\CA^{p-1}B&CA^{p-2}B&CA^{p-3}B&\cdots&CB\\\end{matrix}\right]
     \label{ILC_P}
 \end{equation}
-Note that in the ILC process we do not try to control $y\left(0\right)$ or even model it. We cannot control initial conditions and therefore do not worry about them.
-As ILC is the pursuit of a desired output, we will mark that as ${\underline{y}}^ \ast $ and it stands that the input that gets us there is marked as ${\underline{u}}^ \ast $. That is:
+\begin{equation}
+    \underline{d} = 
+    \begin{bmatrix}
+        C \\ CA \\ CA^2 \\ \vdots \\ CA^{p-1}
+    \end{bmatrix}
+    x(0) + \omega\underline{d} = 
+    \begin{bmatrix}
+        C \\ CA \\ CA^2 \\ \vdots \\ CA^{p-1}
+    \end{bmatrix}
+    x(0) + \omega
+\end{equation}
+See that the $\underline{d}$ vector factors in both how the initial conditions propogate through the system and how any additional noise $\omega$ play a role. Also note that in the ILC process we do not try to control $y\left(0\right)$ or even model it. We cannot control initial conditions and therefore do not worry about them.
+As ILC is the pursuit of a desired output, we will call this goal output ${\underline{y}}^ \ast $. From Eq.~\ref{eq:y_Pu_d}, there is a sequence of inputs $\underline{u}$ that gets us our goal output. Call this ${\underline{u}}^ \ast $.
 \begin{equation}
     {\underline{y}}^\ast=P{\underline{u}}^\ast+\underline{d}
     \label{eq:y*_Pu*_d}
@@ -749,7 +767,7 @@ With our goal in hand, we now choose a controller. As earlier illustrated, the o
     \label{eq:ilc_controller}
 \end{equation}
 
-Plotting the normalization of the error term for each trial, scaled down by the number of outputs in each trial, we can see below that the error rapidly drops to zero.
+Plotting the normalization of the error term for each trial, scaled down by the number of outputs in each trial, we can see in Figure~\ref{fig:ilc_error} that the error rapidly drops to zero.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Placed Controller ILC - Error Progression}}
@@ -757,7 +775,7 @@ Plotting the normalization of the error term for each trial, scaled down by the 
     \label{fig:ilc_error}
 \end{figure}
 
-Further showing the progression of the individual outputs and inputs (Figures~\ref{fig:ilc_mass_1} -~\ref{fig:ilc_input_2}) as well as the shaped output in Figure~\ref{fig:ilc_shaped_circle} (where $x_1$'s position is the x-axis and $x_2$'s position is the y-axis), you can see as the system `learns' to draw the circle. Trial 1 matches our open-loop response, but even Trial 2 much more closely matches our goal (marked by the dotted red line). It is convenient here that the initial conditions of the system match those of the initial goal outputs, but we will shortly show that it is not necessary.
+Further showing the progression of the individual outputs and inputs (Figures~\ref{fig:ilc_mass_1} -~\ref{fig:ilc_input_2}) as well as the shaped output in Figure~\ref{fig:ilc_shaped_circle} (where $x_1$'s position is the x-axis and $x_2$'s position is the y-axis), you can see as the system `learns' to draw the circle. Trial 1 matches our open-loop response, but even Trial 2 much more closely matches our goal (marked by the dotted red line). By trial 10, we draw our perfect circle. It is convenient here that the initial conditions of the system match those of the initial goal outputs, but we will next show that it is not necessary.
 
 \begin{figure}[htbp]
     \centering  %center align
@@ -793,7 +811,8 @@ Further showing the progression of the individual outputs and inputs (Figures~\r
     \label{fig:ilc_shaped_circle}
 \end{figure}
 
-\FloatBarrier~To demonstrate ILC's ability to learn arbitrary shapes, a $p=500$ point resolution, mouse-drawn version of the word `Dartmouth' was introduced as the ${\underline{y}}^\ast$. Utilizing the same controller shown in Eq.~\ref{eq:ilc_controller}, we can similarly learn the exact inputs required to generate our desired output. The sharp jump from the starting position (1, 0) is the point $(y_1\left(0\right),y_2\left(0\right))$ which we have previously mentioned we cannot control. As such, the ${\underline{y}}^\ast$ does not start at that point, but rather at the green `play' symbol
+\FloatBarrier~To demonstrate ILC's ability to learn arbitrary shapes\footnote{To ILC, every shape is as arbitrary as the last.}, a $p=500$ point resolution, mouse-drawn `Dartmouth' is introduced as the ${\underline{y}}^\ast$. Utilizing the same controller shown in Eq.~\ref{eq:ilc_controller}, we can similarly learn the exact inputs required to generate our desired output. The disregard for initial conditions can be seen in the vertical line that appears - starting from $(1, 0)$ and going for the green play/triangle symbol at the top of the `D' where the goal output begins. 
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{{General Intro/Dartmouth ILC - Shaped Output.pdf}}
@@ -818,7 +837,7 @@ Further showing the progression of the individual outputs and inputs (Figures~\r
 
 \FloatBarrier\section{Reinforcement Learning} %RL
 Until now we have been assuming that we always know the $A,\ B,\ C$, and $D$ matrices. This is a bold assumption, not often matched in reality. It is then desirable to be able to construct a model-free controller for a given system.
-Recall our earlier cost function seen in Eq.~\ref{eq:discounted_cost_function}. We can choose to restrict our time horizon down from infinity, and now look $s$ steps ahead. We can then create a cost-to-go function $V(k)$:
+Recall our earlier cost function seen in Eq.~\ref{eq:discounted_cost_function}. We can choose to restrict our time horizon down from infinity, and now look $s$ steps ahead. We create a cost-to-go function $V(k)$:
 \begin{equation}
     V\left(k\right)=\sum_{i=0}^{s-1}{\gamma^i U\left(k+1\right)=U\left(k\right)+\gamma U\left(k+1\right)+\cdots+\gamma^{s-1}U\left(k+s-1\right)}
     \label{eq:cost_to_go}
@@ -833,7 +852,7 @@ Substituting Eq.~\ref{eq:gamma_inc_cost_to_go} into~\ref{eq:cost_to_go}, the rel
     V\left(k\right)=\gamma V\left(k+1\right)+U\left(k\right)-\gamma^s U\left(k+s\right)
     \label{eq:expanded_recurrence}
 \end{equation}
-This is known as the recurrence equation. So long as $\gamma<\ 1$ and $s$ is sufficiently large,
+This is known as the recurrence equation. So long as $\gamma<\ 1$ and $s$ is sufficiently large\footnote{Or $U(k+s)$ is stable.},
 \begin{equation}
     V\left(k\right)=\gamma V\left(k+1\right)+U\left(k\right)
     \label{eq:recurrence}
@@ -879,7 +898,7 @@ Now Eq.~\ref{eq:supervector_expanded_ctg} can be re-written as
     \label{eq:supervector_ctg}
 \end{equation}
 
-The above formulations make it easier to now represent our Q-function. The Q-function is defined by the current state and input of a system and defined with respect to a controller $F$. Its logic is as follows: suppose we are at state $x\left(k\right)$ and have just made input $u\left(k\right)$ -- both can be arbitrary. However, from time k+1 to infinity, our next state $(x(k+1),\ x(k+2),\ \ldots)$ will be a function of our previous state and input, as described in Eq.~\ref{eq:discrete_state_space_model}. And our inputs $(u(k+1),\ u(k+2),\ \ldots)$ will follow the control law described in Eq.~\ref{eq:control_law}. Thus the vector $x_s\left(k\right)$ can be expressed in terms of the current state $x\left(k\right)$, the current input $u\left(k\right)$, and all future inputs to $u\left(k+s-1\right)$ as
+The above formulations make it easier to represent our Q-function. The Q-function is defined by the current state and input of a system and defined with respect to a controller $F$. Its logic is as follows: suppose we are at state $x\left(k\right)$ and have just made input $u\left(k\right)$ -- both can be arbitrary. However, from time k+1 to infinity, our next state $(x(k+1),\ x(k+2),\ \ldots)$ will be a function of our previous state and input, as described in Eq.~\ref{eq:discrete_state_space_model}. And our inputs $(u(k+1),\ u(k+2),\ \ldots)$ will follow the control law described in Eq.~\ref{eq:control_law}. Thus the vector $x_s\left(k\right)$ can be expressed in terms of the current state $x\left(k\right)$, the current input $u\left(k\right)$, and all future inputs to $u\left(k+s-1\right)$ as
 \begin{equation}
     x_s\left(k\right)=P_1x\left(k\right)+P_2u_s\left(k\right)
     \label{eq:xs}
@@ -1093,7 +1112,7 @@ For every sample k, we first compute our $u\left(k\right)$. When learning, it is
     u\left(k\right)=Fx\left(k\right)+v\left(k\right)
     \label{eq:input_with_exploration}
 \end{equation}
-Where $v\left(k\right)$ is some random value intentionally added to the classic $u\left(k\right)$. Terminology-wise, this differentiates it from noise - which we would not know the value of. Due to the arbitrary nature of the triplets, it is also possible to make the input purely random and not based in any way on the current state. The input under that approach would be
+Where $v\left(k\right)$ is some exploration term intentionally added to the classic $u\left(k\right)$. This is not noise, as we do not know noise -- this is generated, known, and added by us to learn. Due to the arbitrary nature of the triplets, it is also possible to make the input purely random and not based in any way on the current state. The input under that approach would be
 \begin{equation}
     u\left(k\right)=v\left(k\right)
 \end{equation}
@@ -1141,7 +1160,7 @@ which matches our $F_{LQR}^\gamma$ exactly to at least 4 decimal places. Its app
     \end{subfigure}
     \caption{Input-Output Data of our Dual-Spring-Mass system under 5 Policy Iteration Trials of 36 samples/steps each. Learning parameters of Q/R = 100 and $\gamma = 0.8$. After 5 controllers, the learning stops and exploration $v(k)$ is no longer applied to the input for the final 20 trials.}
 \end{figure}
-Notice how even for the first 36 trials there is variation on the input due to the exploration term, and the final 20 trials are much smoother as they follow a strict control law without exploration. In Figures~\ref{fig:policy_F1_history} and~\ref{fig:policy_F2_history} we can see how the various parameters converged through the learning process. Each figure corresponds to a different input / controller row, and different lines are the impact that each state has on the input.
+Notice how even for the first 36 trials there is variation on the input due to the exploration term, and the final 20 trials are much smoother as they follow a strict control law without exploration. In Figures~\ref{fig:policy_F1_history} and~\ref{fig:policy_F2_history} we can see how the various parameters converged through the learning process. Each figure corresponds to a different input / controller row, and different lines are the impact that each state has on the input. After just two trials we see we almost perfectly capture our end controller, which ends up matching the $F_{LQR}^\gamma$.
 \begin{figure}[htbp]
     \centering  %center align
     \begin{subfigure}[b]{0.49\textwidth}
@@ -1160,7 +1179,7 @@ Notice how even for the first 36 trials there is variation on the input due to t
 
 
 \FloatBarrier\subsection{Input Decoupling} %Input Decoupling
-In Policy Iteration, we learn every input at a time which has an exponential relationship with the number of trials we must complete. Input Decoupling allows us to learn one input at a time, reducing the number of collections per controller from ${\left(n+r\right)}^2$ to ${\left(n+1\right)}^2$, but at the cost of needing to complete $r$ times as many learning trials. It can be easily shown that when $n^2\geq r$ Policy Iteration learns faster / in less trials. Input Decoupling will always reduce the number of trials needed for one input to learn, but rarely the whole controller. However, no learning-optimality is lost, and it is often that control on one input sends all states to zero (though at a sub-optimal rate). Recall our cost-to-go function (as defined in Eq.~\ref{eq:q_function})
+In Policy Iteration, we learn every input at the same time. Input Decoupling allows us to learn one input at a time, reducing the number of collections per controller from ${\left(n+r\right)}^2$ to ${\left(n+1\right)}^2$, but at the cost of needing to complete $r$ times as many learning trials. It can be easily shown that when $n^2\geq r$, Policy Iteration learns faster / in less trials. Input Decoupling will always reduce the number of trials needed for one input to learn, but rarely the whole controller. However, no learning-optimality is lost, and it is often that control on one input sends all states to zero (though at a sub-optimal rate). Recall our cost-to-go function (as defined in Eq.~\ref{eq:q_function})
 \begin{equation}
     Q\left(x\left(k\right),u\left(k\right)\right)={\left[\begin{matrix}x\left(k\right)\\u\left(k\right)\\\end{matrix}\right]}^T\textbf{P}\left[\begin{matrix}x\left(k\right)\\u\left(k\right)\\\end{matrix}\right] 
     \tag{\ref{eq:q_function}}
@@ -1175,7 +1194,7 @@ Which can be produced by our similarly-represented stacked controller
     F=\left[\begin{matrix}F_1\\F_2\\\vdots\\F_r\\\end{matrix}\right]
     \label{eq:stacked_controllers}
 \end{equation}
-Where each $F_i$ is a$ 1\times n$ vector. In general, for input $u_i\left(k\right)$, we can re-write Eq.~\ref{eq:stacked_inputs} and~\ref{eq:stacked_controllers} as
+Where each $F_i$ is a $1\times n$ vector. In general, for input $u_i\left(k\right)$, we can re-write Eq.~\ref{eq:stacked_inputs} and~\ref{eq:stacked_controllers} as
 \begin{align}
     u(k) &= \left[\begin{matrix}
         u_{Ti}(k) \\
@@ -1213,7 +1232,7 @@ Just as we did for Policy Iteration, we now define a recurrence equation like th
 \begin{equation}
     Q_i\left(x\left(k\right),u_i\left(k\right)\right)=\gamma Q_i\left(x\left(k+1\right),u_i\left(k+1\right)\right)+U\left(k\right)
 \end{equation}
-Where the exact same logic of optimality and cost minimization applies as it did in the Policy Iteration example. It can be shown that each optimal input-decoupled Q-function satisfies its own recurrence equation. That is
+Where the exact same logic of optimality and cost minimization applies as it did in the Policy Iteration example. It can be shown that each optimal input-decoupled Q-function satisfies its own recurrence equation\footfullcite{Phan2025}. That is
 \begin{equation}
     Q_i\left(x\left(k\right),u_i\left(k\right)\right)=\gamma \min_{u_{i\left(k+1\right)}} Q_i\left(x\left(k+1\right),u_i\left(k+1\right)\right)+U_i\left(k\right)
 \end{equation}
@@ -1253,16 +1272,16 @@ Once again we turn to the system in Figure~\ref{fig:spring_mass_system}, Eqs.~\r
 
 As before, our system has four states $(n=4)$ and two inputs $(r=2)$ but we only learn one input at a time now. So each $X_j\left(k\right)$ will be $1\times25$ ${\left(n+1\right)}^2={\left(4+1\right)}^2$ versus the Policy Iteration's 36. 
 We once again set the number of controllers to learn, the number of inputs per controller, and an initial controller.
-Now we still compute $u\left(k\right)$, but only learn on $u_i\left(k\right)$. That is
+We still compute $u\left(k\right)$, but only learn on $u_i\left(k\right)$. So $u(k) = Fx(k)$, but then we modify input $i$ as
 \begin{equation}
     u_i(k)=F_i x\left(k\right)+v\left(k\right)
 \end{equation}
-When $v\left(k\right)$ is some random value. We could also purely randomize our input as
+Where $v\left(k\right)$ is some random value. We could also purely randomize our input as
 \begin{equation}
     u_i\left(k\right)=v\left(k\right)
 \end{equation}
 
-We then apply it to the system to produce $x\left(k+1\right)$. With our $u_i\left(k\right),x\left(k\right)$, $x\left(k+1\right)$ triplet. Following Eq.~\ref{eq:Xij} we formulate $X_{i_j}(k)$. At the same time, we will compute the utility $U\left(k\right)$ as defined in Eq.~\ref{eq:utility_function}.
+We then apply it to the system to produce $x\left(k+1\right)$. With our $u_i\left(k\right),x\left(k\right)$, $x\left(k+1\right)$ triplet, following Eq.~\ref{eq:Xij} we formulate $X_{i_j}(k)$. At the same time, we will compute the utility $U\left(k\right)$ as defined in Eq.~\ref{eq:utility_function}.
 For our system, we will repeat this process 24 more times before we can update the controller once. We compute $\textbf{P}_{i_j}^S$ from Eq.~\ref{eq:PjXjU} (using $X_{i_j}(k)$ in place of $X_{j}(k)$), and undo the stack operator by reshaping it into a $5 \times5$ matrix. Symmetry is imposed once again.
 
 Refer to Eq.~\ref{eq:Pi_matrix} to extract the components to solve for our next controller as shown in Eq.~\ref{eq:Fi_from_Pi_iterative}. In input decoupling, we grab the bottom right scalar of  $\textbf{P}_{i_j}$ as $\textbf{P}_{i_{uu}}$, and the bottom left $1\times4$ block as ${{\textbf{P}}_{{i}_{xu}}}^T$. We then use those parameters to update our controller and repeat the process.
@@ -1301,7 +1320,7 @@ Which once again matches our LQR controller exactly. The learning process and ap
         \caption{}%
         \label{fig:id_input_2}
     \end{subfigure}
-    \caption{Input-Output Data of Dual-Spring-Mass system under Input Decoupled Learning. 5 passes are made on each input, of which we have two, and requires 25 trials each. Learning is halted fir the final 20 trials which can be seen by both inputs being smooth at the same time.}
+    \caption{Input-Output Data of Dual-Spring-Mass system under Input Decoupled Learning. 5 passes are made on each input, of which we have two, and requires 25 trials each. Learning is halted for the final 20 trials which can be seen by both inputs being smooth at the same time.}
 \end{figure}
 
 
