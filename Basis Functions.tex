@@ -169,7 +169,7 @@ meaning that each trials $\alpha_j$, now marked with the $j$ subscript to indica
 \end{align}
 Once again applying the $\delta$ operator and following the same logical steps shown in the pure-form ILC derivation, we can write our new ILC Equation in the basis spaces $\Phi_y$ and $\Phi_u$
 \begin{equation}
-    \alpha_{j+1} = I \alpha_{j} - H \delta_{j+1}\beta
+    e_{\alpha_{j+1}} = I e_{\alpha_{j}} - H \delta_{j+1}\beta
 \end{equation}
 
 Our new model, while still adhering to the $ABCD$ format of Eq.~\ref{eq:discrete_state_space_model} and the ILC format of Eq.~\ref{eq:ILC_law}, now has controllable dimensions. Just as going from state-space to ILC took our number of states from $n \rightarrow n_{ILC} = pn$, in the transition to basis space we have taken our state count from $n_{ILC} \rightarrow \eta_y$, where $\eta_y \le n_{ILC}$. The same can be shown for our inputs. It can also be shown at every step of the derivation process that if $\Phi_y$ and $\Phi_u$ are set to the identity matrix, we perfectly match the earlier full-dimension ILC.%
