@@ -216,7 +216,6 @@ An important note moving forward is that some of the shaped outputs look like ar
 
 \FloatBarrier\paragraph{{FIPO}}
 ~\label{par:fipo}
-
 The first assumption we will relax is that the output basis space captures $\underline{y}^\ast$. That is our $\underline{u}^\ast$ will fully be described in $\Phi_u$, but $\underline{y}^\ast$ will only partially be in $\Phi_y$. In other words, we will have \ac{FIPO} describing their respective spaces.
 
 We can always construct a basis space to capture $\underline{y}^\ast$ by setting one of the functions of $\Phi_y$ equal to $\underline{y}^\ast$, so this scenario could always be avoided with minimal dimensions. However we must ensure our input can be captured in our input basis space, so we construct our input basis space out of the first 10 chebyshev polynomials\footnote{Each function must be 200 points in resolution,  as our number of ILC inputs is 200 ($p \times r$)}, using the method shown in Eq.~\ref{eq:cheby_recurrence}.
@@ -777,7 +776,7 @@ In Figure~\ref{fig:rolling_basis_betas_forced} we `force' the learned input that
     \label{fig:rolling_basis_betas_forced}
 \end{figure}
 
-\FloatBarrier\subsubsection{Summary of Dyanmic Spaces}
+\FloatBarrier\subsubsection{Summary of Dynamic Spaces}
 While it is possible to start with a finite number, $\eta$, of basis functions $\phi$ to create a dynamic basis space which better captures $\underline{u}$, there is no guarantee to create one that captures $\underline{u}^\ast$. 
 
 There are two main reasons for the failings of this approach. Recall that there are numerous $\underline{y}$s that can produce the same same $\alpha$ for a given $\Phi$. Additionally, while our basis functions may be independent of one another, as stated in Eq.~\ref{eq:orthogonal_basis}, they are not necessarily independent in the response they illicit from the system in the basis space. So in addition to the different $\underline{y}$s that can get us $\alpha^\ast$, there are also multiple $\underline{u}$s to get us to $\alpha^\ast$. Since different inputs can lead to the same `perceived' output through the lens of a basis space, defining our basis space and functions as such do not ensure that we are able to find the optimal $\underline{u}^\ast$
