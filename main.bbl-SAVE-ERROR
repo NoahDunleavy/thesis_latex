@@ -1,0 +1,381 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{1636313}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=09670a9b44b51b3230bf65f37732fc58}{%
+           family={Bristow},
+           familyi={B\bibinitperiod},
+           given={D.A.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6c9859a96aac0eb9bc92da51c095085}{%
+           family={Tharayil},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c494c63a9b9256e1b500a099b5f79cf}{%
+           family={Alleyne},
+           familyi={A\bibinitperiod},
+           given={A.G.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{fullhash}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{fullhashraw}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{bibnamehash}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{authorbibnamehash}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{authornamehash}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{authorfullhash}{23289d869358ea5fec6f8ee4db0191bf}
+      \strng{authorfullhashraw}{23289d869358ea5fec6f8ee4db0191bf}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Control Systems Magazine}
+      \field{number}{3}
+      \field{title}{A survey of iterative learning control}
+      \field{volume}{26}
+      \field{year}{2006}
+      \field{pages}{96\bibrangedash 114}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1109/MCS.2006.1636313
+      \endverb
+      \keyw{Iterative methods;Learning systems;Control systems;Open loop systems;Error correction;Radio control;Adaptive control;Chemical industry;Muscles;Motion control}
+    \endentry
+    \entry{FruehPhan1998}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=64903ca414063a572395f87ee481133f}{%
+           family={Frueh},
+           familyi={F\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfd1a05e2491fa5832d7c18c5266f959}{%
+           family={Phan},
+           familyi={P\bibinitperiod},
+           given={M.Q.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{24e766153045e23a7b0bce031eeece94}
+      \strng{fullhash}{24e766153045e23a7b0bce031eeece94}
+      \strng{fullhashraw}{24e766153045e23a7b0bce031eeece94}
+      \strng{bibnamehash}{24e766153045e23a7b0bce031eeece94}
+      \strng{authorbibnamehash}{24e766153045e23a7b0bce031eeece94}
+      \strng{authornamehash}{24e766153045e23a7b0bce031eeece94}
+      \strng{authorfullhash}{24e766153045e23a7b0bce031eeece94}
+      \strng{authorfullhashraw}{24e766153045e23a7b0bce031eeece94}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 37th IEEE Conference on Decision and Control (Cat. No.98CH36171)}
+      \field{title}{Linear quadratic optimal learning control (LQL)}
+      \field{volume}{1}
+      \field{year}{1998}
+      \field{pages}{678\bibrangedash 683 vol.1}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/CDC.1998.760762
+      \endverb
+      \keyw{Optimal control;Cost function;Control system synthesis;Trajectory;Control systems;Aerospace engineering;History;Data mining;Iterative algorithms;Automatic control}
+    \endentry
+    \entry{4178138}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bf7e4e35feba7e5d5a3319134796fa16}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Kevin\bibnamedelima L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc012cb35dabc84a8f3be9e5436141e0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={YangQuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=94fa0b6115767ff5497fd47bab1bb834}{%
+           family={Ahn},
+           familyi={A\bibinitperiod},
+           given={Hyo-Sung},
+           giveni={H\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{fullhash}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{fullhashraw}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{bibnamehash}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{authorbibnamehash}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{authornamehash}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{authorfullhash}{a1a926efdc7896965645cc82e4d9ef0d}
+      \strng{authorfullhashraw}{a1a926efdc7896965645cc82e4d9ef0d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 45th IEEE Conference on Decision and Control}
+      \field{title}{Iterative Learning Control: A Tutorial and Big Picture View}
+      \field{year}{2006}
+      \field{pages}{2352\bibrangedash 2357}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/CDC.2006.377582
+      \endverb
+      \keyw{Tutorial;Convergence;Robust control;Humans;Robots;Inductors;Hard disks;Servomechanisms;Learning systems;Control systems;Iterative learning control;monotonic convergence;super-vector framework;iteration-variant robustness}
+    \endentry
+    \entry{doi:10.2514/1.I010037}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6d1240f32cfc61ae83505e57ae7481c6}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Nhan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{fullhash}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{fullhashraw}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{bibnamehash}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{authorbibnamehash}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{authornamehash}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{authorfullhash}{6d1240f32cfc61ae83505e57ae7481c6}
+      \strng{authorfullhashraw}{6d1240f32cfc61ae83505e57ae7481c6}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a model-reference adaptive control approach for systems with unstructured uncertainty based on two least-squares parameter estimation methods: gradient-based method and recursive least-squares method. The unstructured uncertainty is approximated by Chebyshev orthogonal polynomial basis functions. The use of orthogonal basis functions improves the function approximation significantly and enables better convergence of parameter estimates. The least-squares gradient adaptive control achieves superior parameter convergence as compared to the standard model-reference adaptive control. Flight control simulations were conducted with four adaptive controllers: least-squares gradient adaptive control, recursive least-squares adaptive control, standard model-reference adaptive control, and neural-network adaptive control. The results show that the recursive least-squares adaptive control achieves better robustness as measured by a time-delay margin, while the least-squares gradient adaptive control achieves better tracking performance than both the standard model-reference adaptive control and neural-network adaptive control.}
+      \field{journaltitle}{Journal of Aerospace Information Systems}
+      \field{number}{6}
+      \field{title}{Least-Squares Model-Reference Adaptive Control with Chebyshev Orthogonal Polynomial Approximation}
+      \field{volume}{10}
+      \field{year}{2013}
+      \field{pages}{268\bibrangedash 286}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.2514/1.I010037
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.2514/1.I010037
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2514/1.I010037
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2514/1.I010037
+      \endverb
+    \endentry
+    \entry{Phan2025}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bfd1a05e2491fa5832d7c18c5266f959}{%
+           family={Phan},
+           familyi={P\bibinitperiod},
+           given={M.Q.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{fullhash}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{fullhashraw}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{bibnamehash}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{authorbibnamehash}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{authornamehash}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{authorfullhash}{bfd1a05e2491fa5832d7c18c5266f959}
+      \strng{authorfullhashraw}{bfd1a05e2491fa5832d7c18c5266f959}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Writing in Process}
+      \field{title}{Optimal State-Space System Identification and Control}
+    \endentry
+    \entry{PhanFrueh1996}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bfd1a05e2491fa5832d7c18c5266f959}{%
+           family={Phan},
+           familyi={P\bibinitperiod},
+           given={M.Q.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64903ca414063a572395f87ee481133f}{%
+           family={Frueh},
+           familyi={F\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8318bb675ba8d5a43111c150afc53820}
+      \strng{fullhash}{8318bb675ba8d5a43111c150afc53820}
+      \strng{fullhashraw}{8318bb675ba8d5a43111c150afc53820}
+      \strng{bibnamehash}{8318bb675ba8d5a43111c150afc53820}
+      \strng{authorbibnamehash}{8318bb675ba8d5a43111c150afc53820}
+      \strng{authornamehash}{8318bb675ba8d5a43111c150afc53820}
+      \strng{authorfullhash}{8318bb675ba8d5a43111c150afc53820}
+      \strng{authorfullhashraw}{8318bb675ba8d5a43111c150afc53820}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of 35th IEEE Conference on Decision and Control}
+      \field{title}{Learning control for trajectory tracking using basis functions}
+      \field{volume}{3}
+      \field{year}{1996}
+      \field{pages}{2490\bibrangedash 2492 vol.3}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/CDC.1996.573465
+      \endverb
+      \keyw{Trajectory;Aerodynamics;Time varying systems;Control systems;Process control;Iterative methods;Learning systems;Error correction;Electrical equipment industry;PD control}
+    \endentry
+    \entry{9374773}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=39758370a279bcd4f809a17aa354098c}{%
+           family={Saab},
+           familyi={S\bibinitperiod},
+           given={Samer\bibnamedelima Said},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1393f864d06603c6c8ab234d2fe6570}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87fe8cc386a2eb9a6ff5550c8faccceb}{%
+           family={Orabi},
+           familyi={O\bibinitperiod},
+           given={Mohamad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5cad83451f4e0eb9f677617cdedeefa}{%
+           family={Kors},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1faef6c793269be35f066f8fc1f30589}{%
+           family={Jaafar},
+           familyi={J\bibinitperiod},
+           given={Rayana\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{722c3219b242fb9716072f1de1571cf5}
+      \strng{fullhash}{f3ce4dc6941ea0aeffbf1afdf5a7bfbc}
+      \strng{fullhashraw}{f3ce4dc6941ea0aeffbf1afdf5a7bfbc}
+      \strng{bibnamehash}{722c3219b242fb9716072f1de1571cf5}
+      \strng{authorbibnamehash}{722c3219b242fb9716072f1de1571cf5}
+      \strng{authornamehash}{722c3219b242fb9716072f1de1571cf5}
+      \strng{authorfullhash}{f3ce4dc6941ea0aeffbf1afdf5a7bfbc}
+      \strng{authorfullhashraw}{f3ce4dc6941ea0aeffbf1afdf5a7bfbc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{number}{2}
+      \field{title}{Iterative Learning Control: Practical Implementation and Automation}
+      \field{volume}{69}
+      \field{year}{2022}
+      \field{pages}{1858\bibrangedash 1866}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TIE.2021.3063866
+      \endverb
+      \keyw{Trajectory;Robots;Convergence;Position measurement;Adaptive control;Process control;Task analysis;Industrial robot manipulator;initial state mismatch;iterative learning control (ILC);proportional–integral–derivative (PID) control}
+    \endentry
+    \entry{ZHANG2019314}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6e7ab47541b4ede448caf124675ea535}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yueqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97c40e9e35d07d91328ff305c60722c4}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4839d82e3bf44d967c1aff32be8a7d2}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Zhan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{fullhash}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{fullhashraw}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{bibnamehash}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{authorbibnamehash}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{authornamehash}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{authorfullhash}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \strng{authorfullhashraw}{1deb4a8711ae24c0a7ebab7ad844801b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Iterative learning control is a control system design method that is able to achieve high tracking performance by repeatedly executing a task and learning the best input from previous attempts of performing the task. Reinforcement learning is a machine learning method that determines the best action such that some utility function (reward) is maximised by repeatedly interacting with the environment (system) and learning the best action policy based on the reward received from such interactions. These two methods belong to different subject disciplines but share a number of similarities. The relationship between these two design approaches, however, has not been investigated in detail. This paper presents a preliminary study on the relationship between iterative learning control and reinforcement learning, hopefully shedding some light on how these two areas can benefit each other in future research.}
+      \field{issn}{2405-8963}
+      \field{journaltitle}{IFAC-PapersOnLine}
+      \field{note}{13th IFAC Workshop on Adaptive and Learning Control Systems ALCOS 2019}
+      \field{number}{29}
+      \field{title}{A Preliminary Study on the Relationship Between Iterative Learning Control and Reinforcement Learning}
+      \field{volume}{52}
+      \field{year}{2019}
+      \field{pages}{314\bibrangedash 319}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ifacol.2019.12.669
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2405896319326187
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2405896319326187
+      \endverb
+      \keyw{Iterative learning control,reinforcement learning}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
