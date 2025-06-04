@@ -24,6 +24,7 @@
 %\singlespacing        %% 1-spacing (default)
 %\onehalfspacing       %% 1,5-spacing
 %\doublespacing        %% 2-spacing
+\usepackage{pdfpages}
 
 %Set Matlab code format
 %[frame=single, numbers=left, style=Matlab-Pyglike]
@@ -54,7 +55,8 @@
 \begin{document}
 \pagenumbering{roman}        %% roman page numbers for front matter
 \renewcommand\thepage{}
-\include{TitlePage}
+%\include{TitlePage}
+\includepdf[pages=1]{cover_page.pdf}
 \newpage
 % a blank page follows the title page, this page is not numbered
 \mbox{}
